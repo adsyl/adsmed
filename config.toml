@@ -2,6 +2,7 @@ title = "ads"
 #baseURL = "https://gohugo-theme-ananke.pages.dev"
 #baseURL = "https://adsyl.github.io/ads.github.io/"
 baseURL = "https://adsmed.vercel.app/"
+
 languageCode = "zh-cn"
 theme = 'ananke'
 publishDir = "docs"
@@ -9,7 +10,7 @@ resourceDir = "../resources"
 
 DefaultContentLanguage = "zh"
 SectionPagesMenu = "main"
-pagination.pagerSize = 6           
+#"pagination.pagerSize" = 6           
 googleAnalytics = ""
 enableRobotsTXT = true
 
