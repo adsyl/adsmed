@@ -8,7 +8,7 @@ resourceDir = "../resources"
 
 DefaultContentLanguage = "zh"
 SectionPagesMenu = "main"
-"pagination.pagerSize" = 6           
+#"pagination.pagerSize" = 6           
 googleAnalytics = ""
 enableRobotsTXT = true
 
