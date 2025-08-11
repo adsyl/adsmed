@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>[&#34;Scene&#34;] on 爱得生</title>
-    <link>http://localhost:1313/ads.github.io/tags/scene/</link>
+    <link>http://localhost:1313/tags/scene/</link>
     <description>Recent content in [&#34;Scene&#34;] on 爱得生</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 27 Jul 2025 10:58:08 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/ads.github.io/tags/scene/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/scene/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chapter I: The Best Wish</title>
-      <link>http://localhost:1313/ads.github.io/service/cha/</link>
+      <link>http://localhost:1313/service/cha/</link>
       <pubDate>Sun, 27 Jul 2025 10:58:08 -0400</pubDate>
-      <guid>http://localhost:1313/ads.github.io/service/cha/</guid>
+      <guid>http://localhost:1313/service/cha/</guid>
       <description>&lt;p&gt;The sixth of January, 1482, is not, however, a day of which history has&lt;/p&gt;&#xA;&lt;p&gt;preserved the memory. There was nothing notable in the event which thus&lt;/p&gt;&#xA;&lt;p&gt;set the bells and the bourgeois of Paris in a ferment from early morning.&lt;/p&gt;&#xA;&lt;p&gt;It was neither an assault by the Picards nor the Burgundians, nor a hunt&lt;/p&gt;&#xA;&lt;p&gt;led along in procession, nor a revolt of scholars in the town of Laas, nor&lt;/p&gt;&#xA;&lt;p&gt;an entry of “our much dread lord, monsieur the king,” nor even a pretty&lt;/p&gt;</description>
     </item>
   </channel>
