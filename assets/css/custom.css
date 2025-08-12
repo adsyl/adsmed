@@ -1,0 +1,27 @@
+/* * 这里编写适用于所有设备的通用样式，例如调整字体、颜色等
+*/
+
+/* * 媒体查询：仅对手机（屏幕宽度小于等于 767px）应用样式
+*/
+@media (max-width: 767px) {
+  .list-page {
+    padding: 1rem; /* 调整页面的内边距 */
+  }
+  .list-page .post-entry {
+    margin-bottom: 2rem; /* 增加手机端文章卡片之间的间距 */
+  }
+  .list-page .post-entry h2 {
+    font-size: 1.5rem; /* 减小手机端文章标题的字体大小 */
+  }
+}
+
+/* * 媒体查询：仅对电脑/平板（屏幕宽度大于等于 768px）应用样式
+*/
+@media (min-width: 768px) {
+  .list-page .post-list {
+    /* 使用 CSS Grid 实现多列布局 */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 让文章列表以三列显示 */
+    gap: 2rem; /* 设置卡片之间的间隙 */
+  }
+}

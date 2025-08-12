@@ -3,7 +3,7 @@
     {{ .Content }}
   </article>
 
-  {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
+  {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages.定义一个部分以获取最近的文章。对于 Hugo 0.20，这将默认使用页面数量最多的部分 */}}
   {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "post") }}
   {{ $show_recent_posts := site.Params.ananke.show_recent_posts }}
   {{ $section := collections.Where $.Site.RegularPages "Section" "in" $mainSections }}
