@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on 爱得生医疗</title>
-    <link>https://devcows.github.io/hugo-universal-theme/authors/</link>
+    <link>http://localhost:1313/authors/</link>
     <description>Recent content in Authors on 爱得生医疗</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 01 Aug 2025 21:29:20 +0200</lastBuildDate>
-    <atom:link href="https://devcows.github.io/hugo-universal-theme/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>John Doe</title>
-      <link>https://devcows.github.io/hugo-universal-theme/authors/john-doe/</link>
+      <link>http://localhost:1313/authors/john-doe/</link>
       <pubDate>Fri, 01 Aug 2025 21:29:20 +0200</pubDate>
-      <guid>https://devcows.github.io/hugo-universal-theme/authors/john-doe/</guid>
+      <guid>http://localhost:1313/authors/john-doe/</guid>
       <description></description>
     </item>
   </channel>

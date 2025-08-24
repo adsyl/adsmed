@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>基础检查 on 爱得生医疗</title>
-    <link>https://devcows.github.io/hugo-universal-theme/tags/%E5%9F%BA%E7%A1%80%E6%A3%80%E6%9F%A5/</link>
+    <link>http://localhost:1313/tags/%E5%9F%BA%E7%A1%80%E6%A3%80%E6%9F%A5/</link>
     <description>Recent content in 基础检查 on 爱得生医疗</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 08 Oct 2023 11:36:22 +0000</lastBuildDate>
-    <atom:link href="https://devcows.github.io/hugo-universal-theme/tags/%E5%9F%BA%E7%A1%80%E6%A3%80%E6%9F%A5/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E5%9F%BA%E7%A1%80%E6%A3%80%E6%9F%A5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>试管检查项目汇总</title>
-      <link>https://devcows.github.io/hugo-universal-theme/blog/021%E8%AF%95%E7%AE%A1%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/</link>
+      <link>http://localhost:1313/blog/021%E8%AF%95%E7%AE%A1%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/</link>
       <pubDate>Sun, 08 Oct 2023 11:36:22 +0000</pubDate>
-      <guid>https://devcows.github.io/hugo-universal-theme/blog/021%E8%AF%95%E7%AE%A1%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/</guid>
+      <guid>http://localhost:1313/blog/021%E8%AF%95%E7%AE%A1%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/</guid>
       <description>&lt;p&gt;试管所需的检查项目详见下图，这些项目&lt;strong&gt;大部分在当地都可以免费做&lt;/strong&gt;【政府福利，免费孕检】&lt;/p&gt;</description>
     </item>
   </channel>

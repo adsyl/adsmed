@@ -1,4 +1,4 @@
-baseurl = "https://devcows.github.io/hugo-universal-theme/" 
+baseurl = "https://adsmed.vercel.app/" 
 # Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
 title = "爱得生医疗"
 theme = 'universal'
