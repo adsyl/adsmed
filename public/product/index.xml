@@ -1,40 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>产品专区 on 爱得生</title>
-    <link>http://localhost:1313/product/</link>
-    <description>Recent content in 产品专区 on 爱得生</description>
+    <title>Product on 爱得生医疗</title>
+    <link>https://devcows.github.io/hugo-universal-theme/product/</link>
+    <description>Recent content in Product on 爱得生医疗</description>
     <generator>Hugo</generator>
-    <language>zh</language>
-    <lastBuildDate>Mon, 06 Nov 2023 21:26:22 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/product/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <atom:link href="https://devcows.github.io/hugo-universal-theme/product/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>你适合哪种试管套餐？</title>
-      <link>http://localhost:1313/product/01%E5%9F%BA%E7%A1%80%E5%A5%97%E9%A4%90%E6%9C%8D%E5%8A%A1/</link>
-      <pubDate>Mon, 06 Nov 2023 21:26:22 +0000</pubDate>
-      <guid>http://localhost:1313/product/01%E5%9F%BA%E7%A1%80%E5%A5%97%E9%A4%90%E6%9C%8D%E5%8A%A1/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://ooo.0x0.ooo/2023/11/16/Oefnkb.gif&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;针对不同的客户情况，我们提供两种基础套餐及对应的个性化整体服务方案&lt;/p&gt;&#xA;&lt;p&gt;结合年龄，基于&lt;strong&gt;获卵数&lt;/strong&gt;和&lt;strong&gt;宫腔情况&lt;/strong&gt;的评估，有两种基础套餐分别适用于不同的人群&lt;/p&gt;&#xA;&lt;p&gt;两种基础套餐分别是“&lt;strong&gt;单周期试管婴儿基础套餐A&lt;/strong&gt;*”和“&lt;strong&gt;2年内无限次包促排移植套餐&lt;/strong&gt;”&lt;/p&gt;</description>
+      <title></title>
+      <link>https://devcows.github.io/hugo-universal-theme/product/basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://devcows.github.io/hugo-universal-theme/product/basic/</guid>
+      <description></description>
     </item>
     <item>
-      <title>单周期基础套餐A</title>
-      <link>http://localhost:1313/product/basica/</link>
-      <pubDate>Thu, 26 Oct 2023 10:10:00 +0800</pubDate>
-      <guid>http://localhost:1313/product/basica/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://ooo.0x0.ooo/2023/11/17/OelTxC.jpg&#34; alt=&#34;OelTxC.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;在本套餐的基础上，可以额外加购补充移植计划、补充PGT计划及进口药物升级计划。&lt;/p&gt;&#xA;&lt;p&gt;本套餐在面向符合&lt;strong&gt;年龄≤32岁，Amh≥3，AFC≥10，子宫情况良好等&lt;/strong&gt;条件的女性时，因其单周期可能获卵数较理想，且子宫情况良好，&lt;strong&gt;一般预期经过2-3次移植就能实现成功受孕&lt;/strong&gt;。因其&lt;strong&gt;单次ivf周期的成功率可以超过75%&lt;/strong&gt;，故更具性价比。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>多周期安心套餐</title>
-      <link>http://localhost:1313/product/advanced/</link>
-      <pubDate>Thu, 26 Oct 2023 10:10:00 +0800</pubDate>
-      <guid>http://localhost:1313/product/advanced/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://ooo.0x0.ooo/2023/11/17/OelUJL.jpg&#34; alt=&#34;OelUJL.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;在本套餐的基础上，可以额外加购补充促排计划、补充PGT计划及进口药物升级计划。&lt;/p&gt;&#xA;&lt;p&gt;本套餐在面向符合&lt;strong&gt;年龄＞35岁，AFC＜5等&lt;/strong&gt;条件的女性时，其&lt;strong&gt;单周期成功率可能只有50%左右&lt;/strong&gt;，需要通过多次的促排和移植，以实现&lt;strong&gt;累计成功率&lt;/strong&gt;的提升。因此，多次促排和移植是必要的。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>升级服务计划</title>
-      <link>http://localhost:1313/product/value-added/</link>
-      <pubDate>Thu, 26 Oct 2023 10:10:00 +0800</pubDate>
-      <guid>http://localhost:1313/product/value-added/</guid>
-      <description>&lt;p&gt;针对不同的客户需求，我们在主套餐的基础上，提供不同的升级服务建议！&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ooo.0x0.ooo/2025/07/27/OY9z26.jpg&#34; alt=&#34;OY9z26.jpg&#34;&gt;&lt;/p&gt;</description>
+      <title></title>
+      <link>https://devcows.github.io/hugo-universal-theme/product/pro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://devcows.github.io/hugo-universal-theme/product/pro/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

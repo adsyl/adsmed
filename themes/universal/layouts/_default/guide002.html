@@ -1,0 +1,211 @@
+{{/* 这是我们的自定义布局文件。
+  Hugo 会用这个文件来渲染指定了 layout: "guide" 的页面。
+*/}}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>试管开奖注意事项：耐心与希望的等待</title>
+    {{/* 使用 Hugo 的变量来设置标题，更灵活 */}}
+    <title>{{ .Title }}</title> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Harmony -->
+    <!-- Application Structure Plan: 本宣教网页采用单页垂直布局，内容分为引言、什么是“开奖”、开奖前准备、如何正确“开奖”、开奖结果解读（阳性、阴性、生化妊娠）、开奖后行动及重要提示。此结构旨在以患者为中心，通过清晰的分块和易懂的语言，帮助患者理解试管开奖过程，管理情绪，并指导下一步行动。 -->
+    <!-- Visualization & Content Choices: 主要使用文本内容、列表和Unicode图标。通过卡片式布局和颜色区分，增强视觉清晰度。不涉及图表和复杂JS交互，专注于信息传递的直接性和易读性。所有可视化均未使用SVG或Mermaid JS。 -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #F5F5F4;
+            color: #374151;
+            line-height: 1.6;
+        }
+        .container-main {
+            max-width: 960px;
+        }
+        .section-card {
+            background-color: #ffffff;
+            border-radius: 1rem; /* rounded-2xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+            padding: 2rem; /* p-8 */
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        .info-box {
+            background-color: #F0F9FA; /* Light teal background */
+            border-left: 4px solid #4DB6AC; /* Teal border */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .result-positive {
+            background-color: #E6FFFA; /* Light green */
+            border-left-color: #38A169; /* Green */
+        }
+        .result-negative {
+            background-color: #FFF5F5; /* Light red */
+            border-left-color: #E53E3E; /* Red */
+        }
+        .result-biochem {
+            background-color: #FEFCE8; /* Light yellow */
+            border-left-color: #D69E2E; /* Yellow */
+        }
+        details > summary {
+            list-style: none; /* Remove default arrow */
+        }
+        details > summary::-webkit-details-marker {
+            display: none; /* Remove default marker for Chrome */
+        }
+        details > summary::before {
+            content: '▶️'; /* Custom arrow icon */
+            margin-right: 0.5rem;
+            transition: transform 0.2s;
+        }
+        details[open] > summary::before {
+            content: '🔽'; /* Custom arrow icon when open */
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 text-center">
+            <div class="text-2xl font-bold text-gray-700">试管开奖注意事项</div>
+        </nav>
+    </header>
+
+    <main class="container-main mx-auto px-4 py-8 md:py-12">
+        <section class="section-card">
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6">试管开奖注意事项：耐心与希望的等待 🌟</h1>
+            <p class="text-lg text-gray-700 mb-6">
+                您好！经过漫长而充满期待的试管婴儿周期，现在终于迎来了“开奖”这一关键时刻。我们知道，这段等待充满各种情绪，忐忑、紧张、希望交织。这份宣教网页旨在为您提供清晰的指导，帮助您在开奖前、开奖时和开奖后，都能更从容、更科学地应对。
+            </p>
+            <p class="text-gray-600">请记住，无论结果如何，您都已付出了巨大的努力和勇气，这本身就是一场胜利。我们将与您一同面对。💖</p>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">什么是“开奖”？ 🤔</h2>
+            <p class="text-gray-700 mb-6">
+                在试管婴儿助孕过程中，“开奖”通常指的是在胚胎移植后的一段时间，通过医学检测来确认是否成功怀孕。这是评估移植结果的最关键一步。
+            </p>
+            <div class="info-box">
+                <h3 class="font-semibold text-lg text-teal-700 mb-2">开奖时间点 🗓️</h3>
+                <p class="text-gray-600">通常在胚胎移植后的**第10-14天**进行血液检查。移植囊胚（培养5-6天）的患者可能在移植后第9-12天检测，移植卵裂期胚胎（培养2-3天）的患者可能在移植后第12-14天检测。</p>
+            </div>
+            <div class="info-box">
+                <h3 class="font-semibold text-lg text-teal-700 mb-2">主要检测方式 🔬</h3>
+                <p class="text-gray-600">**血液HCG（人绒毛膜促性腺激素）检测**是确认怀孕的金标准。HCG是受精卵着床后，由胚胎滋养层细胞分泌的一种激素。其数值可以判断是否怀孕，以及胚胎发育的初步情况。</p>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">开奖前的准备：身心舒缓是关键 🧘‍♀️</h2>
+            <p class="text-gray-700 mb-6">等待期可能会让您感到焦虑，但保持放松的心情对胚胎着床和您的身体都有益。以下是一些建议：</p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="info-box">
+                    <h3 class="font-semibold text-lg text-teal-700 mb-2">心理调适 🧠</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>**转移注意力：** 寻找一些轻松的爱好或活动，例如看电影、听音乐、阅读、轻度散步。</li>
+                        <li>**与伴侣或亲友交流：** 分享您的感受，获得支持。</li>
+                        <li>**冥想或深呼吸：** 每天花几分钟进行放松练习，有助于缓解紧张情绪。</li>
+                        <li>**避免过度搜索：** 减少在网络上搜索“成功经验”或“失败案例”，这些信息可能增加您的焦虑。</li>
+                    </ul>
+                </div>
+                <div class="info-box">
+                    <h3 class="font-semibold text-lg text-teal-700 mb-2">身体注意事项 💪</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>**继续按医嘱用药：** 移植后的黄体支持药物（如黄体酮）非常重要，务必按时按量服用，切勿自行停药或减量。</li>
+                        <li>**保持适度活动：** 避免剧烈运动和重体力劳动，但可以进行温和的日常活动，如散步。</li>
+                        <li>**均衡饮食：** 保持清淡、易消化的饮食，多吃蔬菜水果，避免辛辣刺激性食物。</li>
+                        <li>**避免性生活：** 移植后至确认妊娠前，建议避免性生活。</li>
+                        <li>**观察身体变化：** 适当关注身体细微变化，但不要过度解读，例如少量出血、腹胀等可能是正常现象，也可能预示其他情况，应及时咨询医生。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">如何正确“开奖”？ 🧪</h2>
+            <p class="text-gray-700 mb-6">请严格按照医生的指示进行开奖检测。**请勿过早或过多使用早孕试纸。**</p>
+            
+            <div class="info-box">
+                <h3 class="font-semibold text-lg text-teal-700 mb-2">为什么不建议过早用早孕试纸？ 🚫</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>**结果不准确：** 胚胎移植早期，尿液HCG浓度较低，早孕试纸可能显示“白板”或弱阳，给您带来不必要的心理压力或误判。</li>
+                    <li>**影响心情：** 过早的阴性结果可能打击您的信心，影响后续的情绪和药物依从性。</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h3 class="font-semibold text-lg text-teal-700 mb-2">正确的检测方式 🏥</h3>
+                <p class="text-gray-600">在医生指定的时间（通常是移植后第10-14天），前往医院进行**血液HCG检测**。这是最准确、最可靠的检测方法，能够给出HCG的具体数值，帮助医生判断是否怀孕以及HCG的翻倍情况。</p>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">开奖结果解读：每种结果都值得被理解 💬</h2>
+            
+            <div class="space-y-4">
+                <div class="info-box result-positive">
+                    <h4 class="font-semibold text-lg text-green-700 mb-2">✅ 阳性结果：恭喜！</h4>
+                    <p class="text-green-600">您的血液HCG值达到医生判断的怀孕标准，这意味着胚胎成功着床。这是一个令人欣喜的好消息！但请记住，这只是第一步，后续仍需遵医嘱进行检查和保胎。</p>
+                </div>
+                <div class="info-box result-negative">
+                    <h4 class="font-semibold text-lg text-red-700 mb-2">❌ 阴性结果：别气馁</h4>
+                    <p class="text-red-600">如果您的血液HCG值未达到怀孕标准，可能意味着本次移植未能成功着床。虽然结果令人失望，但请不要气馁。试管婴儿的成功率并非100%，一次失败并不代表永远失败。许多患者在多次尝试后最终成功。</p>
+                </div>
+                <div class="info-box result-biochem">
+                    <h4 class="font-semibold text-lg text-yellow-700 mb-2">💔 生化妊娠：了解情况</h4>
+                    <p class="text-yellow-600">生化妊娠是指HCG值升高，但未能发展为临床妊娠（即超声检查未发现宫内孕囊）。这通常是胚胎自身质量问题或子宫内膜环境不佳所致。虽然短暂喜悦后是失落，但它至少证明您的子宫具备接受胚胎的能力，下一次成功的希望仍在。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">开奖后的行动：下一步怎么走？ 👣</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="info-box result-positive">
+                    <h3 class="font-semibold text-lg text-green-700 mb-2">阳性后的步骤 🎉</h3>
+                    <ul class="list-disc list-inside text-green-600 space-y-2">
+                        <li>**遵医嘱复查：** 医生会安排您定期复查HCG，观察HCG的翻倍情况，并进行孕酮等指标的检测。</li>
+                        <li>**超声检查：** 通常在HCG翻倍良好后，移植后28-35天左右进行第一次B超，确认宫内妊娠、胎心胎芽情况。</li>
+                        <li>**继续保胎：** 在医生的指导下继续黄体支持，切勿自行停药。</li>
+                        <li>**保持良好心态：** 继续维持健康的生活习惯，迎接宝宝的到来。</li>
+                    </ul>
+                </div>
+                <div class="info-box result-negative">
+                    <h3 class="font-semibold text-lg text-red-700 mb-2">阴性或生化妊娠后的步骤 🔄</h3>
+                    <ul class="list-disc list-inside text-red-600 space-y-2">
+                        <li>**与医生沟通：** 预约医生进行复诊，了解本次失败的原因分析，例如胚胎质量、子宫内膜状况、免疫因素等。</li>
+                        <li>**评估下次方案：** 医生会根据本次情况，评估您是否适合进行下一次移植，并调整后续的治疗方案。</li>
+                        <li>**身心调理：** 给予自己足够的时间来调整情绪和身体，为下一次尝试做好准备。</li>
+                        <li>**重新规划：** 如果需要，可以重新评估备孕策略，考虑是否进行更多检查或调整生活方式。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">重要提示 💡</h2>
+            <div class="space-y-4 text-gray-700">
+                <p><strong>相信专业医生：</strong> 您的主治医生最了解您的具体情况。所有疑惑和担忧，请务必第一时间咨询医生，切勿自行判断或更改治疗方案。</p>
+                <p><strong>自我关怀：</strong> 这是一个充满挑战的旅程，请务必关注您的心理健康。允许自己有情绪，并寻求家人、朋友或专业人士的帮助。</p>
+                <p><strong>坚持与希望：</strong> 试管婴儿的道路可能崎岖，但每一次尝试都是离成功更近一步。保持积极的心态和对未来的希望，是您最强大的力量。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16 md:mt-24">
+        <div class="container-main mx-auto px-6 py-8 text-center text-sm">
+            <p class="mb-2">本宣教网页信息仅供参考，不能替代专业医疗建议。</p>
+            <p>&copy; 2025 爱得生医疗. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

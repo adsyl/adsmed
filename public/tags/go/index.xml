@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on 爱得生医疗</title>
+    <link>https://devcows.github.io/hugo-universal-theme/tags/go/</link>
+    <description>Recent content in Go on 爱得生医疗</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 27 Jul 2025 13:47:08 +0200</lastBuildDate>
+    <atom:link href="https://devcows.github.io/hugo-universal-theme/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go is for lovers</title>
+      <link>https://devcows.github.io/hugo-universal-theme/blog/forlove/</link>
+      <pubDate>Sun, 27 Jul 2025 13:47:08 +0200</pubDate>
+      <guid>https://devcows.github.io/hugo-universal-theme/blog/forlove/</guid>
+      <description>&lt;p&gt;Hugo uses the excellent [go][] [html/template][gohtmltemplate] library for&#xA;its template engine. It is an extremely lightweight engine that provides a very&#xA;small amount of logic. In our experience that it is just the right amount of&#xA;logic to be able to create a good static website. If you have used other&#xA;template systems from different languages or frameworks you will find a lot of&#xA;similarities in go templates.&lt;/p&gt;&#xA;&lt;p&gt;This document is a brief primer on using go templates. The [go docs][gohtmltemplate]&#xA;provide more details.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

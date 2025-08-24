@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AMH on 爱得生</title>
-    <link>http://localhost:1313/tags/amh/</link>
-    <description>Recent content in AMH on 爱得生</description>
+    <title>AMH on 爱得生医疗</title>
+    <link>https://devcows.github.io/hugo-universal-theme/tags/amh/</link>
+    <description>Recent content in AMH on 爱得生医疗</description>
     <generator>Hugo</generator>
-    <language>zh</language>
+    <language>zh-cn</language>
     <lastBuildDate>Mon, 09 Oct 2023 23:33:11 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/amh/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://devcows.github.io/hugo-universal-theme/tags/amh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一文读懂抗缪勒氏管激素（AMH）</title>
-      <link>http://localhost:1313/news/021%E6%8A%97%E7%BC%AA%E5%8B%92%E7%AE%A1%E6%B0%8F%E6%BF%80%E7%B4%A0amh/</link>
+      <link>https://devcows.github.io/hugo-universal-theme/blog/021%E6%8A%97%E7%BC%AA%E5%8B%92%E7%AE%A1%E6%B0%8F%E6%BF%80%E7%B4%A0amh/</link>
       <pubDate>Mon, 09 Oct 2023 23:33:11 +0000</pubDate>
-      <guid>http://localhost:1313/news/021%E6%8A%97%E7%BC%AA%E5%8B%92%E7%AE%A1%E6%B0%8F%E6%BF%80%E7%B4%A0amh/</guid>
+      <guid>https://devcows.github.io/hugo-universal-theme/blog/021%E6%8A%97%E7%BC%AA%E5%8B%92%E7%AE%A1%E6%B0%8F%E6%BF%80%E7%B4%A0amh/</guid>
       <description>&lt;p&gt;AMH在性腺发育及性别分化过程中发挥重要作用，AMH水平与卵巢内小窦卵泡数量成正比，当卵泡随年龄增大被逐渐消耗时，AMH浓度随之降低。&lt;/p&gt;</description>
     </item>
   </channel>

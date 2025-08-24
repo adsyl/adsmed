@@ -1,0 +1,376 @@
+baseurl = "https://devcows.github.io/hugo-universal-theme/" 
+# Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
+title = "爱得生医疗"
+theme = 'universal'
+#themesDir = "../.."
+resourceDir = "../resources"
+languageCode = "zh-cn"
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "zh"
+
+# 定义自动生成文章摘要时的字数，这里是 70 个单词
+summaryLength = 70
+
+# 禁用对列表页（如文章列表页）标题的复数化处理
+pluralizelisttitles = false
+
+[services]
+    # 配置 Disqus 评论服务
+    [services.disqus]
+        shortname = ""
+    # 配置 Google Analytics，如果为空，则不启用
+    [services.googleAnalytics]
+        id = ""
+
+# 配置网站的分页功能
+[pagination]
+    pagerSize = 8
+
+# Main menu
+[menu]
+[[menu.main]]
+    name       = "主页"
+    identifier = "menu.home"
+    url        = "/"
+    weight     = 1
+
+[[menu.main]]
+    name       = " 关于我们"
+    url        = "/"
+    weight     = 1
+    parent     = "menu.home"
+
+[[menu.main]]
+    name       = " Application"
+    url        = "/"
+    weight     = 2
+    parent     = "menu.home"
+
+[[menu.main]]
+    name       = " Startup"
+    url        = "/"
+    weight     = 3
+    parent     = "menu.home"
+
+
+[[menu.main]]
+    name       = "产品"
+    identifier = "menu.product"
+    url        = "/img/1214.jpg"
+    weight     = 2
+
+[[menu.main]]
+    name       = "基础套餐"
+    identifier = "section.product1"
+    url        = ""
+    weight     = 1
+    parent     = "menu.product"
+    post       = 1
+
+[[menu.main]]
+    name       = "Accordions"
+    url        = ""
+    weight     = 1
+    parent     = "section.product1"
+
+[[menu.main]]
+    name       = "Alerts"
+    url        = ""
+    weight     = 2
+    parent     = "section.product1"
+
+[[menu.main]]
+    name       = "无忧套餐"
+    identifier = "section.product2"
+    url        = ""
+    weight     = 2
+    parent     = "menu.product"
+    post       = 2
+
+[[menu.main]]
+    name       = "Default Sticky Header"
+    url        = ""
+    weight     = 1
+    parent     = "section.product2"
+
+[[menu.main]]
+    name       = "No Sticky Header"
+    url        = ""
+    weight     = 2
+    parent     = "section.product2"
+
+[[menu.main]]
+    name       = "升级计划"
+    identifier = "section.product3"
+    url        = ""
+    weight     = 3
+    parent     = "menu.product"
+    post       = 2
+
+[[menu.main]]
+    name       = "Buttons"
+    url        = ""
+    weight     = 3
+    parent     = "section.product3"
+
+[[menu.main]]
+    name       = "Light Header"
+    url        = ""
+    weight     = 3
+    parent     = "section.product3"
+
+[[menu.main]]
+    name       = "服务"
+    identifier = "menu.service"
+    url        = "/img/1215.jpg"
+    weight     = 3
+
+[[menu.main]]
+    name       = "服务流程"
+    identifier = "section.sop"
+    url        = ""
+    weight     = 1
+    parent     = "menu.service"
+    post       = 1
+
+[[menu.main]]
+    name       = "咨询及评估"
+    url        = ""
+    weight     = 1
+    parent     = "section.sop"
+
+[[menu.main]]
+    name       = "检查及签约"
+    url        = ""
+    weight     = 2
+    parent     = "section.sop"
+
+[[menu.main]]
+    name       = "服务交付"
+    url        = ""
+    weight     = 3
+    parent     = "section.sop"
+
+[[menu.main]]
+    name       = "后期随访"
+    url        = ""
+    weight     = 4
+    parent     = "section.sop"
+
+[[menu.main]]
+    name       = "服务标准"
+    identifier = "section.about"
+    url        = ""
+    weight     = 2
+    parent     = "menu.service"
+    post       = 2
+
+[[menu.main]]
+    name       = "关于我们"
+    url        = ""
+    weight     = 1
+    parent     = "section.about"
+
+[[menu.main]]
+    name       = "我们的团队"
+    url        = ""
+    weight     = 2
+    parent     = "section.about"
+
+[[menu.main]]
+    name       = "相关工具"
+    identifier = "section.tool"
+    url        = ""
+    weight     = 3
+    parent     = "menu.service"
+    post       = 2
+
+[[menu.main]]
+    name       = "三代试管成功率自测工具"
+    url        = "/pgt-calculator"
+    weight     = 1
+    parent     = "section.tool"
+
+[[menu.main]]
+    name       = "博客"
+    identifier = "menu.blog"
+    url        = "/blog/"
+    weight     = 5
+
+[[menu.main]]
+    name       = "Blog Listing Big"
+    url        = "/blog/"
+    weight     = 1
+    parent     = "menu.blog"
+
+[[menu.main]]
+    name       = "FAQ"
+    identifier = "menu.faq"
+    url        = "/faq/"
+    weight     = 6
+
+[[menu.main]]
+    name       = "联系"    
+    identifier = "contact"
+    url        = "/contact/"
+    weight     = 7
+
+
+# Top bar social links menu 定义网站顶部栏的菜单项，通常用于放置联系方式或社交媒体链接。
+[[menu.topbar]]
+    weight = 1
+    name = "wechat"
+    url = "https://tophub.today/"
+    pre = "<i class='fab fa-2x fa-weixin'></i>"
+
+[[menu.topbar]]
+    weight = 2
+    name = "qq"
+    url = "https://www.xiaohongshu.com/"
+    pre = "<i class='fab fa-2x fa-qq'></i>"
+
+[[menu.topbar]]
+    weight = 3
+    name = "alipay"
+    url = "https://www.bilibili.com/"
+    pre = "<i class='fab fa-2x fa-alipay'></i>"
+
+[[menu.topbar]]
+    weight = 4
+    name = "weibo"
+    url = "https://dig.ichouti.cn/"
+    pre = "<i class='fab fa-2x fa-weibo'></i>"
+
+
+[params]
+    viewMorePostLink = "/blog/"  #指向“查看更多文章”链接的地址。
+    author = "adsmed"
+    defaultKeywords = ["爱得生", "试管", "三代"]   #用于 SEO 的默认关键词
+    mainSections = ["blog"]
+    defaultDescription = "爱得生是一家专业的三代试管服务商"  #用于 SEO 的默认描述
+
+    # Social media
+    facebook_site = "" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
+    twitter_site = "GoHugoIO" # the Twitter handle of your site (without the '@')
+    default_sharing_image = "img/sharing-default.png"
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "pink"
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 50 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - register your account to https://formspree.io/register
+    # - login and create new form
+    # - set your form's endpoint url under 'formspree_action' below
+    # - upload the generated site to your server
+    # - test a dummy email yourself
+    # - you're done. Happy mailing!
+    #
+    # Enable the contact form by entering your Formspree.io endpoint url
+    formspree_action = "https://formspree.io/sample/of/endpoint"
+    contact_form_ajax = false
+
+    enableRecaptchaInContactForm = false
+    googleRecaptchaKey = "site_key_for_google_recaptcha"
+
+    about_us = "<p>一家专业的三代试管服务商.</p>"
+    copyright = "Copyright (c) 2015 - 2025, 爱得生医疗; All Rights Reserved."
+
+    # Format dates with Go's time formatting
+    date_format = "2006/01/02"
+   
+
+    dropdown_mouse_over = false  #false网站下拉菜单通过点击来展开，true通过鼠标悬停。
+
+    disabled_logo = false
+    logo_text = "爱得生医疗"
+    logo = "img/logo.png"
+    logo_small = "img/logo1.png"
+    contact_url = "/contact/"
+    address = """<p class="text-uppercase"><strong>爱得生医疗</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br><strong>中国 武汉</strong>
+      </p>
+      """
+
+[permalinks]
+    blog = "/blog/:contentbasename/"
+
+# Enable or disable top bar with social icons
+[params.topbar]
+    enable = true
+    text = """<p class="hidden-sm hidden-xs">Contact us on +420 777 555 333 or adsmedical@proton.me</p>
+      <p class="hidden-md hidden-lg"><a href="tel:+420 777 555 333" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+      <a href="mailto:adsmedical@proton.me" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
+      </p>
+      """
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = true    #侧边栏中显示一个列表，列出你网站上的所有文章分类
+    tags = true              #侧边栏中显示一个列表，列出你网站上的所有文章标签
+    search = true          #侧边栏中显示一个搜索框，让用户可以搜索网站内容。
+
+#用于配置网站上的**客户轮播图（carousel）**功能的参数组
+[params.carouselCustomers]
+    items = 6
+    auto_play = false   #true轮播图自动滚动，false手动点击导航按钮查看下一组项目
+    slide_speed = 2000
+    pagination_speed = 1000
+
+#专门用于设置网站上推荐语（用户评价）展示区域的轮播图行为的参数组
+[params.carouselTestimonials]
+    items = 4
+    auto_play = false
+    slide_speed = 2000
+    pagination_speed = 1000
+
+#配置网站菜单下方轮换图的显示方式
+[params.carouselHomepage]
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    enable = true
+    auto_play = true
+    slide_speed = 2000
+    pagination_speed = 1000
+
+#配置网站**特色功能（features）**区块的显示方式。
+[params.features]
+    enable = true
+    cols = 3 # Default: 3, Available values 2,3,4,6
+    # All features are defined in their own files. You can find example items at 'exampleSite/data/features'
+
+
+[params.testimonials]
+    enable = true
+    # All testimonials are defined in their own files. You can find example items at 'exampleSite/data/testimonials'
+    # For more information take a look at the README.
+    title = "推荐"
+    subtitle = "我们与许多客户合作过，我们总是希望听到他们从合作中得到快乐和满意。看看我们的客户对我们的评价。"
+
+[params.see_more]
+    enable = true
+    icon = "far fa-file-alt"
+    title = "您想了解更多吗?"
+    subtitle = "我们提供了一些有用的自评工具和宣教信息供您浏览参考，以便您了解更多。"
+    link_url = "#"
+    link_text = "点击到其他主页"
+
+[params.recent_posts]
+    enable = true
+    title = "最新消息"
+    subtitle = "查看我们最新发布的博客文章，了解更多行业洞见和动态。"
+    hide_summary =true   #true 隐藏摘要，只显示文章标题和可能的日期或作者信息
+
+[params.footer.recent_posts]
+    enable = true
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    author = "authors"
