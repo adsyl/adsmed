@@ -2,243 +2,243 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/en/about/</loc>
+    <loc>https://adsmed.vercel.app/en/about/</loc>
     <lastmod>2023-10-26T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/about/"
+                href="https://adsmed.vercel.app/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/about/"
+                href="https://adsmed.vercel.app/en/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/product/</loc>
+    <loc>https://adsmed.vercel.app/en/product/</loc>
     <lastmod>2023-10-26T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/product/"
+                href="https://adsmed.vercel.app/product/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/product/"
+                href="https://adsmed.vercel.app/en/product/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/service/</loc>
+    <loc>https://adsmed.vercel.app/en/service/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/service/"
+                href="https://adsmed.vercel.app/service/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/service/"
+                href="https://adsmed.vercel.app/en/service/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/news/</loc>
+    <loc>https://adsmed.vercel.app/en/news/</loc>
     <lastmod>2023-10-26T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/news/"
+                href="https://adsmed.vercel.app/news/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/news/"
+                href="https://adsmed.vercel.app/en/news/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/</loc>
+    <loc>https://adsmed.vercel.app/en/</loc>
     <lastmod>2023-10-26T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/"
+                href="https://adsmed.vercel.app/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://adsmed.vercel.app/en/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/about/team/</loc>
+    <loc>https://adsmed.vercel.app/en/about/team/</loc>
     <lastmod>2023-10-26T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/about/team/"
+                href="https://adsmed.vercel.app/about/team/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/about/team/"
+                href="https://adsmed.vercel.app/en/about/team/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/news/activities/</loc>
+    <loc>https://adsmed.vercel.app/en/news/activities/</loc>
     <lastmod>2023-10-26T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/news/activities/"
+                href="https://adsmed.vercel.app/news/activities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/news/activities/"
+                href="https://adsmed.vercel.app/en/news/activities/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/news/education/</loc>
+    <loc>https://adsmed.vercel.app/en/news/education/</loc>
     <lastmod>2023-10-26T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/news/education/"
+                href="https://adsmed.vercel.app/news/education/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/news/education/"
+                href="https://adsmed.vercel.app/en/news/education/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/product/advanced/</loc>
+    <loc>https://adsmed.vercel.app/en/product/advanced/</loc>
     <lastmod>2023-10-26T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/product/advanced/"
+                href="https://adsmed.vercel.app/product/advanced/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/product/advanced/"
+                href="https://adsmed.vercel.app/en/product/advanced/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/product/basic/</loc>
+    <loc>https://adsmed.vercel.app/en/product/basic/</loc>
     <lastmod>2023-10-26T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
-    <loc>http://localhost:1313/en/product/value-added/</loc>
-    <lastmod>2023-10-26T10:10:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/product/value-added/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/product/value-added/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/about/advantages/</loc>
+    <loc>https://adsmed.vercel.app/en/product/value-added/</loc>
     <lastmod>2023-10-26T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/about/advantages/"
+                href="https://adsmed.vercel.app/product/value-added/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/about/advantages/"
+                href="https://adsmed.vercel.app/en/product/value-added/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/service/key-points/</loc>
+    <loc>https://adsmed.vercel.app/en/about/advantages/</loc>
+    <lastmod>2023-10-26T10:10:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/service/key-points/"
+                href="https://adsmed.vercel.app/about/advantages/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/service/key-points/"
+                href="https://adsmed.vercel.app/en/about/advantages/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/service/pricing/</loc>
+    <loc>https://adsmed.vercel.app/en/service/key-points/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/service/pricing/"
+                href="https://adsmed.vercel.app/service/key-points/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/service/pricing/"
+                href="https://adsmed.vercel.app/en/service/key-points/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/service/process/</loc>
+    <loc>https://adsmed.vercel.app/en/service/pricing/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/service/process/"
+                href="https://adsmed.vercel.app/service/pricing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/service/process/"
+                href="https://adsmed.vercel.app/en/service/pricing/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/categories/</loc>
+    <loc>https://adsmed.vercel.app/en/service/process/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/categories/"
+                href="https://adsmed.vercel.app/service/process/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="https://adsmed.vercel.app/en/service/process/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/tags/</loc>
+    <loc>https://adsmed.vercel.app/en/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/tags/"
+                href="https://adsmed.vercel.app/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://adsmed.vercel.app/en/categories/"
+                />
+  </url><url>
+    <loc>https://adsmed.vercel.app/en/tags/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://adsmed.vercel.app/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://adsmed.vercel.app/en/tags/"
                 />
   </url>
 </urlset>

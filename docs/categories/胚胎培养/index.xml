@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>胚胎培养 on 爱得生</title>
-    <link>http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</link>
+    <link>https://adsmed.vercel.app/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</link>
     <description>Recent content in 胚胎培养 on 爱得生</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 15 Dec 2023 01:36:22 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://adsmed.vercel.app/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PGT临床检测流程</title>
-      <link>http://localhost:1313/news/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</link>
+      <link>https://adsmed.vercel.app/news/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Fri, 15 Dec 2023 01:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/news/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</guid>
+      <guid>https://adsmed.vercel.app/news/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</guid>
       <description>&lt;p&gt;之前我们讲到过“第三代试管婴儿”即胚胎植入前遗传学检测（PGT）技术，可以通过检测胚胎的遗传学因素，从胚胎层面阻断单基因病、染色体异常，选择合适的胚胎移植入宫腔，从而提高妊娠率、降低出生缺陷。那么PGT的流程是什么？&lt;/p&gt;</description>
     </item>
     <item>
       <title>PGT报告解读</title>
-      <link>http://localhost:1313/news/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</link>
+      <link>https://adsmed.vercel.app/news/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</link>
       <pubDate>Fri, 08 Dec 2023 01:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/news/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</guid>
+      <guid>https://adsmed.vercel.app/news/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</guid>
       <description>&lt;p&gt;本篇结合PGT报告单的实际图样来教大家怎么读懂属于你的那份报告。&lt;/p&gt;</description>
     </item>
     <item>
       <title>你的胚胎是几级？看完这些立马懂</title>
-      <link>http://localhost:1313/news/033%E8%83%9A%E8%83%8E%E5%8F%91%E8%82%B2%E5%92%8C%E7%AD%89%E7%BA%A7/</link>
+      <link>https://adsmed.vercel.app/news/033%E8%83%9A%E8%83%8E%E5%8F%91%E8%82%B2%E5%92%8C%E7%AD%89%E7%BA%A7/</link>
       <pubDate>Wed, 08 Nov 2023 20:32:33 +0000</pubDate>
-      <guid>http://localhost:1313/news/033%E8%83%9A%E8%83%8E%E5%8F%91%E8%82%B2%E5%92%8C%E7%AD%89%E7%BA%A7/</guid>
+      <guid>https://adsmed.vercel.app/news/033%E8%83%9A%E8%83%8E%E5%8F%91%E8%82%B2%E5%92%8C%E7%AD%89%E7%BA%A7/</guid>
       <description>&lt;p&gt;在试管婴儿的过程中，胚胎质量的好坏是影响移植成功率、以及未来宝宝健康与否的重要影响因素，所以在生殖中心，经常会有患者问道——医生，我这个胚胎4CB是什么意思？医生，我的胚胎是什么等级？医生，移植低级别的胚胎能怀孕吗？&lt;/p&gt;</description>
     </item>
     <item>
       <title>关于胚胎冷冻和解冻</title>
-      <link>http://localhost:1313/news/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</link>
+      <link>https://adsmed.vercel.app/news/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</link>
       <pubDate>Wed, 08 Nov 2023 01:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/news/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</guid>
+      <guid>https://adsmed.vercel.app/news/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</guid>
       <description>&lt;p&gt;由于促排卵药物的应用，一次试管婴儿治疗周期往往可以获得几枚、十几和甚至更多的胚胎，但一次胚胎移植，最多只能移植2枚胚胎，而剩下的优质胚胎则被建议冷冻保存。&lt;/p&gt;</description>
     </item>
   </channel>

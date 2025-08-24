@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>关于我们 on 爱得生</title>
-    <link>http://localhost:1313/about/</link>
+    <link>https://adsmed.vercel.app/about/</link>
     <description>Recent content in 关于我们 on 爱得生</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 26 Oct 2023 10:10:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://adsmed.vercel.app/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/about/team/</link>
+      <link>https://adsmed.vercel.app/about/team/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/team/</guid>
+      <guid>https://adsmed.vercel.app/about/team/</guid>
       <description>&lt;p&gt;##我们的团队&lt;/p&gt;&#xA;&lt;h3 id=&#34;团队成员&#34;&gt;团队成员&lt;/h3&gt;&#xA;&lt;h4 id=&#34;dr-张伟&#34;&gt;Dr. 张伟&lt;/h4&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/team/dr-zhang.jpg&#34; alt=&#34;Dr. 张伟&#34;&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;职位&lt;/strong&gt;: 主任医师，生育专家&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;专业领域&lt;/strong&gt;: 不孕不育治疗、IVF（试管婴儿）、女性内分泌失调&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;简介&lt;/strong&gt;: 张伟医生在生育治疗领域拥有超过15年的经验，致力于帮助夫妻实现生育梦想。作为中国领先的生育专家之一，张医生参与了数千例IVF治疗，取得了显著的成功率。张医生毕业于某某医科大学，并拥有多个国际认证。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;dr-李娜&#34;&gt;Dr. 李娜&lt;/h4&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://example.com/images/team/dr-li.jpg&#34; alt=&#34;Dr. 李娜&#34;&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;职位&lt;/strong&gt;: 副主任医师，妇科专家&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;专业领域&lt;/strong&gt;: 多囊卵巢综合症（PCOS）、宫外孕、女性健康管理&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;简介&lt;/strong&gt;: 李娜医生专注于妇科内分泌疾病的诊治，特别擅长PCOS和其他复杂的妇科问题。李医生在学术领域有着丰富的研究成果，并在国际医学期刊上发表多篇论文。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;dr-周涛&#34;&gt;Dr. 周涛&lt;/h4&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://example.com/images/team/dr-zhou.jpg&#34; alt=&#34;Dr. 周涛&#34;&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;职位&lt;/strong&gt;: 临床心理学家&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;专业领域&lt;/strong&gt;: 生育治疗心理辅导、情绪管理、夫妻关系治疗&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;简介&lt;/strong&gt;: 周涛博士专注于生育治疗过程中患者的心理健康，帮助患者应对治疗带来的情绪压力和焦虑。周博士在心理学领域有着深厚的学术背景，并为许多患者提供心理支持和辅导。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;我们的承诺&#34;&gt;我们的承诺&lt;/h2&gt;&#xA;&lt;p&gt;我们的医生团队致力于为每一位患者提供最专业、最贴心的医疗服务。从治疗方案的设计到每一个治疗细节，我们确保每一位患者都能够得到全面的关怀和支持。我们相信，通过专业的治疗和全方位的关爱，每一位患者都能拥有健康的未来。&lt;/p&gt;</description>
     </item>
     <item>
       <title>联系我们</title>
-      <link>http://localhost:1313/about/contact/</link>
+      <link>https://adsmed.vercel.app/about/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/contact/</guid>
+      <guid>https://adsmed.vercel.app/about/contact/</guid>
       <description>&lt;h2 id=&#34;联系我们&#34;&gt;联系我们&lt;/h2&gt;&#xA;&#xA;&#xA;&#xA;&lt;form class=&#34;black-80 sans-serif&#34; accept-charset=&#34;UTF-8&#34; action=&#34;https://formspree.io/f/myzpjkqg&#34; method=&#34;POST&#34; role=&#34;form&#34;&gt;&#xA;&#xA;    &lt;label class=&#34;f6 b db mb1 mt3 sans-serif mid-gray&#34;  for=&#34;name&#34;&gt;你的名字&lt;/label&gt;&#xA;    &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; class=&#34;w-100 f5 pv3 ph3 bg-light-gray bn&#34;  required placeholder=&#34; &#34;  aria-labelledby=&#34;name&#34;/&gt;&#xA;&#xA;    &lt;label class=&#34;f6 b db mb1 mt3 sans-serif mid-gray&#34; for=&#34;email&#34;&gt;电邮地址&lt;/label&gt;&#xA;    &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; class=&#34;w-100 f5 pv3 ph3 bg-light-gray bn&#34;  required placeholder=&#34; &#34;  aria-labelledby=&#34;email&#34;/&gt;&#xA;    &lt;div class=&#34;requirements f6 gray glow i ph3 overflow-hidden&#34;&gt;&#xA;      需要电子邮件地址。&#xA;    &lt;/div&gt;&#xA;&#xA;    &lt;label class=&#34;f6 b db mb1 mt3 sans-serif mid-gray&#34; for=&#34;message&#34;&gt;信息&lt;/label&gt;&#xA;    &lt;textarea id=&#34;message&#34; name=&#34;message&#34; class=&#34;w-100 f5 pv3 ph3 bg-light-gray bn h4&#34; aria-labelledby=&#34;message&#34;&gt;&lt;/textarea&gt;&#xA;&#xA;    &lt;input class=&#34;db w-100 mv2 white pa3 bn hover-shadow hover-bg-black bg-animate bg-black&#34; type=&#34;submit&#34; value=&#34;发送&#34; /&gt;&#xA;&#xA;&lt;/form&gt;&#xA;&#xA;&lt;p&gt;1.您可以通过填写以上表单联系我们，我们会尽快与您取得联系&#xA;2. &lt;strong&gt;请确保您的邮件地址准确无误&lt;/strong&gt;，并提供微信、电话等更详尽的信息，这将帮助我们更好地服务您。&lt;/p&gt;</description>
     </item>
     <item>
       <title>机构优势</title>
-      <link>http://localhost:1313/about/advantages/</link>
+      <link>https://adsmed.vercel.app/about/advantages/</link>
       <pubDate>Thu, 26 Oct 2023 10:10:00 +0800</pubDate>
-      <guid>http://localhost:1313/about/advantages/</guid>
+      <guid>https://adsmed.vercel.app/about/advantages/</guid>
       <description>&lt;p&gt;专业特需试管服务商&#xA;&lt;img src=&#34;https://ooo.0x0.ooo/2025/07/28/OY99DD.png&#34; alt=&#34;OY99DD.png&#34;&gt;&#xA;&lt;img src=&#34;https://ooo.0x0.ooo/2025/07/27/OY9z26.jpg&#34; alt=&#34;OY9z26.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>

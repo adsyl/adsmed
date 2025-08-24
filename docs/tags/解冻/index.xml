@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>解冻 on 爱得生</title>
-    <link>http://localhost:1313/tags/%E8%A7%A3%E5%86%BB/</link>
+    <link>https://adsmed.vercel.app/tags/%E8%A7%A3%E5%86%BB/</link>
     <description>Recent content in 解冻 on 爱得生</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 08 Nov 2023 01:36:22 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E8%A7%A3%E5%86%BB/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://adsmed.vercel.app/tags/%E8%A7%A3%E5%86%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于胚胎冷冻和解冻</title>
-      <link>http://localhost:1313/news/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</link>
+      <link>https://adsmed.vercel.app/news/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</link>
       <pubDate>Wed, 08 Nov 2023 01:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/news/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</guid>
+      <guid>https://adsmed.vercel.app/news/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</guid>
       <description>&lt;p&gt;由于促排卵药物的应用，一次试管婴儿治疗周期往往可以获得几枚、十几和甚至更多的胚胎，但一次胚胎移植，最多只能移植2枚胚胎，而剩下的优质胚胎则被建议冷冻保存。&lt;/p&gt;</description>
     </item>
   </channel>
