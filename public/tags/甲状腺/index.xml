@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>甲状腺 on 爱得生医疗</title>
-    <link>https://adsmed.vercel.app/tags/%E7%94%B2%E7%8A%B6%E8%85%BA/</link>
+    <link>http://localhost:1313/tags/%E7%94%B2%E7%8A%B6%E8%85%BA/</link>
     <description>Recent content in 甲状腺 on 爱得生医疗</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 10 Oct 2023 12:25:22 +0000</lastBuildDate>
-    <atom:link href="https://adsmed.vercel.app/tags/%E7%94%B2%E7%8A%B6%E8%85%BA/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E7%94%B2%E7%8A%B6%E8%85%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>甲状腺为什么对怀孕影响这么大</title>
-      <link>https://adsmed.vercel.app/blog/021%E7%94%B2%E7%8A%B6%E8%85%BA%E6%BF%80%E7%B4%A0/</link>
+      <link>http://localhost:1313/blog/021%E7%94%B2%E7%8A%B6%E8%85%BA%E6%BF%80%E7%B4%A0/</link>
       <pubDate>Tue, 10 Oct 2023 12:25:22 +0000</pubDate>
-      <guid>https://adsmed.vercel.app/blog/021%E7%94%B2%E7%8A%B6%E8%85%BA%E6%BF%80%E7%B4%A0/</guid>
+      <guid>http://localhost:1313/blog/021%E7%94%B2%E7%8A%B6%E8%85%BA%E6%BF%80%E7%B4%A0/</guid>
       <description>&lt;p&gt;甲状腺异常十分常见，这是育龄期妇女常见的内分泌疾病，仅次于糖尿病。事实上，甲状腺与妊娠密切相关。正常的甲状腺功能不仅仅在身体能量代谢及生长发育等方面发挥作用，而且与女性的生殖功能息息相关。目前很多生殖中心对首次来就诊的患者（包含不孕及备孕、流产患者）必查甲状腺功能。&lt;/p&gt;</description>
     </item>
   </channel>

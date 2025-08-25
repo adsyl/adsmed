@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>优惠活动 on 爱得生医疗</title>
+    <link>http://localhost:1313/categories/%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8/</link>
+    <description>Recent content in 优惠活动 on 爱得生医疗</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 24 Aug 2025 13:47:08 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>本月优惠</title>
+      <link>http://localhost:1313/blog/special_offers/</link>
+      <pubDate>Sun, 24 Aug 2025 13:47:08 +0200</pubDate>
+      <guid>http://localhost:1313/blog/special_offers/</guid>
+      <description>&lt;p&gt;优惠活动进行中&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

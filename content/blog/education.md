@@ -4,7 +4,7 @@ date = "2025-08-01T21:29:20+02:00"
 tags = ["golang", "programming", "theme", "hugo"]
 categories = ["programming","lorem","pseudo"]
 banner = "static/imges/660.jpg"
-authors = ["John Doe"]
+authors = ["ADS"]
 +++
 
 I'm a post with multiple categories in the frontmatter:

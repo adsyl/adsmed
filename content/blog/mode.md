@@ -1,10 +1,10 @@
 +++
-title = "Go is for lovers"
-date = "2025-07-27T13:47:08+02:00"
-tags = ["go"]
+title = "mode"
+date = "2025-08-24T13:47:08+02:00"
+tags = ["试管环节"]
 categories = ["programming"]
-banner = "img/banners/banner-2.jpg"
-facebook_author = "ads"
+banner = "img/banner.jpg"
+authors =  ["ADS"]
 +++
 
 Hugo uses the excellent [go][] [html/template][gohtmltemplate] library for

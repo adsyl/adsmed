@@ -56,7 +56,7 @@ pluralizelisttitles = false
 [[menu.main]]
     name       = "产品"
     identifier = "menu.product"
-    url        = "/img/1214.jpg"
+ #   url        = "/"
     weight     = 2
 
 [[menu.main]]
@@ -68,13 +68,13 @@ pluralizelisttitles = false
     post       = 1
 
 [[menu.main]]
-    name       = "Accordions"
-    url        = ""
+    name       = "单周期基础套餐A"
+    url        = "/product/basic"
     weight     = 1
     parent     = "section.product1"
 
 [[menu.main]]
-    name       = "Alerts"
+    name       = "单周期基础套餐B"
     url        = ""
     weight     = 2
     parent     = "section.product1"
@@ -88,13 +88,13 @@ pluralizelisttitles = false
     post       = 2
 
 [[menu.main]]
-    name       = "Default Sticky Header"
-    url        = ""
+    name       = "多周期安心套餐A"
+    url        = "/product/pro"
     weight     = 1
     parent     = "section.product2"
 
 [[menu.main]]
-    name       = "No Sticky Header"
+    name       = "多周期安心套餐B"
     url        = ""
     weight     = 2
     parent     = "section.product2"
@@ -108,8 +108,8 @@ pluralizelisttitles = false
     post       = 2
 
 [[menu.main]]
-    name       = "Buttons"
-    url        = ""
+    name       = "升级服务计划"
+    url        = "/product/value-added"
     weight     = 3
     parent     = "section.product3"
 
@@ -122,7 +122,7 @@ pluralizelisttitles = false
 [[menu.main]]
     name       = "服务"
     identifier = "menu.service"
-    url        = "/img/1215.jpg"
+    url        = ""
     weight     = 3
 
 [[menu.main]]
@@ -186,21 +186,33 @@ pluralizelisttitles = false
     post       = 2
 
 [[menu.main]]
-    name       = "三代试管成功率自测工具"
-    url        = "/pgt-calculator"
+    name       = "三代试管婴儿全流程"
+    url        = "/pgt-process"
     weight     = 1
     parent     = "section.tool"
 
 [[menu.main]]
-    name       = "博客"
+    name       = "三代试管成功率自测工具"
+    url        = "/pgt-calculator"
+    weight     = 2
+    parent     = "section.tool"
+
+[[menu.main]]
+    name       = "资讯"
     identifier = "menu.blog"
-    url        = "/blog/"
+    url        = ""
     weight     = 5
 
 [[menu.main]]
-    name       = "Blog Listing Big"
+    name       = "资讯列表"
     url        = "/blog/"
     weight     = 1
+    parent     = "menu.blog"
+
+[[menu.main]]
+    name       = "最新优惠"
+    url        = "/blog/Special_Offers"
+    weight     = 2
     parent     = "menu.blog"
 
 [[menu.main]]
@@ -277,7 +289,7 @@ pluralizelisttitles = false
     enableRecaptchaInContactForm = false
     googleRecaptchaKey = "site_key_for_google_recaptcha"
 
-    about_us = "<p>一家专业的三代试管服务商.</p>"
+    about_us = "<p>一家专业的三代试管服务商，专注于用心服务，以口碑赢得未来.</p>"
     copyright = "Copyright (c) 2015 - 2025, 爱得生医疗; All Rights Reserved."
 
     # Format dates with Go's time formatting
@@ -292,8 +304,6 @@ pluralizelisttitles = false
     logo_small = "img/logo1.png"
     contact_url = "/contact/"
     address = """<p class="text-uppercase"><strong>爱得生医疗</strong>
-        <br>13/25 New Avenue
-        <br>Newtown upon River
         <br><strong>中国 武汉</strong>
       </p>
       """
