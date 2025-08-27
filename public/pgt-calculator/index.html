@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>三代试管成功率自测</title>
+    <title>三代试管成功率自测 - 三代试管成功率自测</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -13,23 +12,39 @@
          
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;  
+            background-color: #FFF0F5;  
+            color: #333;
             min-height: 100vh;  
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 2.5rem 1rem;  
+            padding: 0;  
         }
-        .container-wrapper {
+        .container {
+            max-width: 1200px;  
+            margin: 0 auto;
+            padding: 1rem;
+            width: 100%;
+        }
+        .section-title {
+            color: #1e3a8a;  
+        }
+
+         
+        .page-content-wrapper {
             max-width: 960px;  
+            width: 100%;
+            margin: 2.5rem auto;  
+            padding: 0 1rem;  
+            box-sizing: border-box;  
         }
          
         .card {
             background-color: #ffffff;
             border-radius: 1rem;  
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-            width: 100%;  
+            padding: 1.5rem;  
+            margin-bottom: 2rem;  
         }
          
         .input-field {
@@ -60,9 +75,9 @@
             color: #6b7280;  
             margin-top: 1rem;
             padding: 1rem;
-            background-color: #eff6ff;  
+            background-color: #ffe4e6;  
             border-radius: 0.75rem;
-            border: 1px solid #bfdbfe;
+            border: 1px solid #ffc0cb;  
         }
          
         .result-box {
@@ -96,194 +111,210 @@
         }
     </style>
 </head>
-<body>
-    <div class="container-wrapper mx-auto p-6 md:p-10 card w-full">
-        <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">三代试管成功率自测工具</h1>
-        <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            请填写以下信息以获取您初步的**三代试管（PGT）活产率估算区间**和**影响因素分析**。
-            本工具旨在提供科学参考，**不能替代专业医生诊断和个性化评估**。
-        </p>
+<body class="antialiased">
+    
+    <header class="bg-gradient-to-r from-blue-700 to-blue-500 text-white p-6 shadow-md rounded-b-xl">
+        <div class="container flex flex-col items-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-2 text-center">三代试管成功率自测工具</h1>
+            <p class="text-xl md:text-2xl text-center font-light leading-relaxed">精准评估，助您了解成功希望</p>
+        </div>
+    </header>
 
-        <form id="pgtForm" class="space-y-6">
-            
-            <div>
-                <label for="age" class="block text-gray-700 font-medium mb-2">1. 您的年龄 (岁):</label>
-                <input type="number" id="age" name="age" min="18" max="50" required
-                       class="input-field focus:ring-2 focus:ring-blue-500">
-                <p id="ageError" class="error-message hidden">请输入一个介于18到50岁之间的有效年龄。</p>
-            </div>
-
-            
-            <div>
-                <label class="block text-gray-700 font-medium mb-2">2. 您的生育史:</label>
-                <div class="space-y-3">
-                    <p class="font-medium text-gray-600 mb-1">2.1 是否有过活产史 (包括自然怀孕和辅助生殖):</p>
-                    <div class="flex items-center space-x-4">
-                        <label class="inline-flex items-center">
-                            <input type="radio" name="liveBirths" value="yes" class="form-radio text-blue-600" required>
-                            <span class="ml-2">有</span>
-                        </label>
-                        <label class="inline-flex items-center">
-                            <input type="radio" name="liveBirths" value="no" class="form-radio text-blue-600" required>
-                            <span class="ml-2">无</span>
-                        </label>
-                    </div>
-                    <p id="liveBirthsError" class="error-message hidden">请选择是否有过活产史。</p>
-
-                    <p class="font-medium text-gray-600 mb-1 pt-3">2.2 是否有过反复流产史 (≥2次):</p>
-                    <div class="flex items-center space-x-4">
-                        <label class="inline-flex items-center">
-                            <input type="radio" name="recurrentMiscarriage" value="yes" class="form-radio text-blue-600" required>
-                            <span class="ml-2">有</span>
-                        </label>
-                        <label class="inline-flex items-center">
-                            <input type="radio" name="recurrentMiscarriage" value="no" class="form-radio text-blue-600" required>
-                            <span class="ml-2">无</span>
-                        </label>
-                    </div>
-                    <p id="recurrentMiscarriageError" class="error-message hidden">请选择是否有过反复流产史。</p>
-                </div>
-            </div>
-
-            
-            <div>
-                <label for="amh" class="block text-gray-700 font-medium mb-2">3. 您的AMH值 (ng/mL):</label>
-                <input type="number" id="amh" name="amh" step="0.1" min="0.0" required
-                       class="input-field focus:ring-2 focus:ring-blue-500">
-                <p class="text-sm text-gray-500 mt-1">
-                    AMH（抗缪勒氏管激素）是评估卵巢储备的重要指标。例如：1.5, 2.8, 0.7。
-                </p>
-                <p id="amhError" class="error-message hidden">请输入一个有效的AMH值（大于等于0）。</p>
-            </div>
-
-            
-            <div>
-                <label for="afc" class="block text-gray-700 font-medium mb-2">4. 您的基础窦卵泡数 (AFC) (双侧卵巢):</label>
-                <input type="number" id="afc" name="afc" min="0" max="30" required
-                       class="input-field focus:ring-2 focus:ring-blue-500">
-                <p class="text-sm text-gray-500 mt-1">
-                    AFC是超声检查下可观察到的卵泡数量，反映卵巢对促排卵的反应。
-                </p>
-                <p id="afcError" class="error-message hidden">请输入一个介于0到30之间的窦卵泡数。</p>
-            </div>
-
-            
-            <div>
-                <label for="uterineCondition" class="block text-gray-700 font-medium mb-2">5. 您的子宫情况:</label>
-                <select id="uterineCondition" name="uterineCondition" required
-                        class="input-field focus:ring-2 focus:ring-blue-500">
-                    <option value="">请选择</option>
-                    <option value="normal">正常 (无明显异常)</option>
-                    <option value="fibroids_polyps_managed">子宫肌瘤/息肉 (已处理或不影响着床)</option>
-                    <option value="adenomyosis_endo">子宫腺肌症/重度子宫内膜异位症</option>
-                    <option value="congenital_anomalies">子宫畸形 (如纵膈子宫等，已纠正或评估不影响)</option>
-                    <option value="other_unmanaged">其他未处理或严重子宫问题</option>
-                </select>
-                <p id="uterineConditionError" class="error-message hidden">请选择您的子宫情况。</p>
-            </div>
-
-            
-            <div>
-                <label class="block text-gray-700 font-medium mb-2">6. 其他相关病史:</label>
-                <div class="space-y-3">
-                    <p class="font-medium text-gray-600 mb-1">6.1 您的身高和体重 (用于计算BMI):</p>
-                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                        <div class="w-full sm:w-1/2">
-                            <label for="heightCm" class="block text-gray-600 text-sm mb-1">身高 (cm):</label>
-                            <input type="number" id="heightCm" name="heightCm" min="100" max="250" required
-                                   class="input-field focus:ring-2 focus:ring-blue-500">
-                            <p id="heightCmError" class="error-message hidden">请输入有效身高 (100-250 cm)。</p>
-                        </div>
-                        <div class="w-full sm:w-1/2">
-                            <label for="weightKg" class="block text-gray-600 text-sm mb-1">体重 (kg):</label>
-                            <input type="number" id="weightKg" name="weightKg" min="30" max="200" step="0.1" required
-                                   class="input-field focus:ring-2 focus:ring-blue-500">
-                            <p id="weightKgError" class="error-message hidden">请输入有效体重 (30-200 kg)。</p>
-                        </div>
-                    </div>
-
-                    <p class="font-medium text-gray-600 mb-1 pt-3">6.2 您的其他慢性疾病或自身免疫情况:</p>
-                    <select id="otherMedicalHistory" name="otherMedicalHistory" required
-                            class="input-field focus:ring-2 focus:ring-blue-500">
-                        <option value="">请选择</option>
-                        <option value="none">无主要慢性疾病或自身免疫疾病</option>
-                        <option value="mild_managed">有轻度慢性病 (如甲状腺功能减退等)，已良好管理</option>
-                        <option value="immune_severe_managed">有自身免疫疾病或严重慢性病，但已在管理中</option>
-                        <option value="unmanaged_severe">有未控制的严重慢性疾病或复杂自身免疫问题</option>
-                    </select>
-                    <p id="otherMedicalHistoryError" class="error-message hidden">请选择其他相关病史。</p>
-                </div>
-            </div>
-
-            <button type="submit" class="btn-primary w-full text-lg font-semibold mt-6">
-                评估我的成功率
-            </button>
-        </form>
-
-        <div id="results" class="result-box hidden">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">评估结果</h2>
-            <p class="text-lg text-gray-700 mb-3">
-                基于您提供的信息，您的三代试管活产率估算区间约为：
-                <span class="font-bold text-green-700 text-xl" id="successRateRange"></span>
+    
+    <main class="page-content-wrapper">
+        <section class="card">
+            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+                请填写以下信息以获取您初步的**三代试管（PGT）活产率估算区间**和**影响因素分析**。
+                本工具旨在提供科学参考，**不能替代专业医生诊断和个性化评估**。
             </p>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">影响因素分析:</h3>
-            <ul id="factorAnalysis" class="list-disc pl-5 text-gray-700 space-y-2">
+
+            <form id="pgtForm" class="space-y-6">
                 
-            </ul>
-        </div>
-
-        <div id="errorMessageContainer" class="disclaimer hidden mt-8 bg-red-50 text-red-700 border-red-200">
-            <h3 class="font-bold mb-2">错误提示：</h3>
-            <p id="generalErrorMessage"></p>
-        </div>
-
-        <div class="disclaimer mt-8">
-            <h3 class="font-bold mb-2">重要免责声明：</h3>
-            <p>
-                本工具提供的成功率估算仅供参考，基于公开医学数据和普遍影响因素的简化模型。
-                **它不能替代专业的医生咨询、诊断和治疗方案制定。**
-                每个人的身体状况、基因背景和具体治疗方案都独一无二。请务必咨询您的生殖医学专家，获取最准确的个人评估和建议。
-            </p>
-        </div>
-
-        <div class="mt-10 p-6 card">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">三代试管（PGT）常见问题解答</h2>
-            <div class="space-y-4 text-gray-700">
                 <div>
-                    <h3 class="font-semibold text-lg">1. 三代试管能保证成功吗？</h3>
-                    <p>不能。三代试管（PGT）主要通过对胚胎进行染色体或基因筛查，选择健康的胚胎进行移植，从而显著提高活产率并降低流产风险。但它不能保证每次移植都成功，最终的成功率受多种因素影响，包括女性年龄、卵巢功能、子宫环境和医生技术等。</p>
+                    <label for="age" class="block text-gray-700 font-medium mb-2">1. 您的年龄 (岁):</label>
+                    <input type="number" id="age" name="age" min="18" max="50" required
+                            class="input-field focus:ring-2 focus:ring-blue-500">
+                    <p id="ageError" class="error-message hidden">请输入一个介于18到50岁之间的有效年龄。</p>
                 </div>
+
+                
                 <div>
-                    <h3 class="font-semibold text-lg">2. 我的AMH值低/AFC少，是不是就没希望了？</h3>
-                    <p>AMH值低或AFC少意味着卵巢储备功能下降，可能获卵数较少，但这不代表完全没有希望。这些指标只是预测性参考，您的实际卵子质量和个体反应更为关键。医生会根据您的具体情况调整促排卵方案，并评估其他指标，提供个性化建议。</p>
+                    <label class="block text-gray-700 font-medium mb-2">2. 您的生育史:</label>
+                    <div class="space-y-3">
+                        <p class="font-medium text-gray-600 mb-1">2.1 是否有过活产史 (包括自然怀孕和辅助生殖):</p>
+                        <div class="flex items-center space-x-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="liveBirths" value="yes" class="form-radio text-blue-600" required>
+                                <span class="ml-2">有</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="liveBirths" value="no" class="form-radio text-blue-600" required>
+                                <span class="ml-2">无</span>
+                            </label>
+                        </div>
+                        <p id="liveBirthsError" class="error-message hidden">请选择是否有过活产史。</p>
+
+                        <p class="font-medium text-gray-600 mb-1 pt-3">2.2 是否有过反复流产史 (≥2次):</p>
+                        <div class="flex items-center space-x-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="recurrentMiscarriage" value="yes" class="form-radio text-blue-600" required>
+                                <span class="ml-2">有</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="recurrentMiscarriage" value="no" class="form-radio text-blue-600" required>
+                                <span class="ml-2">无</span>
+                            </label>
+                        </div>
+                        <p id="recurrentMiscarriageError" class="error-message hidden">请选择是否有过反复流产史。</p>
+                    </div>
                 </div>
+
+                
                 <div>
-                    <h3 class="font-semibold text-lg">3. 如何提高三代试管的成功率？</h3>
-                    <p>提高成功率的关键包括：
-                        <ul class="list-disc pl-5 mt-2">
-                            <li>选择经验丰富、设备先进的生殖中心和医生。</li>
-                            <li>严格遵医嘱，按时用药，定期复诊。</li>
-                            <li>保持健康的生活方式，均衡饮食，适度运动，避免烟酒。</li>
-                            <li>减轻心理压力，保持积极心态。</li>
-                            <li>必要时进行生育力评估，处理影响怀孕的其他医学问题。</li>
-                        </ul>
+                    <label for="amh" class="block text-gray-700 font-medium mb-2">3. 您的AMH值 (ng/mL):</label>
+                    <input type="number" id="amh" name="amh" step="0.1" min="0.0" required
+                            class="input-field focus:ring-2 focus:ring-blue-500">
+                    <p class="text-sm text-gray-500 mt-1">
+                        AMH（抗缪勒氏管激素）是评估卵巢储备的重要指标。例如：1.5, 2.8, 0.7。
                     </p>
+                    <p id="amhError" class="error-message hidden">请输入一个有效的AMH值（大于等于0）。</p>
                 </div>
+
+                
                 <div>
-                    <h3 class="font-semibold text-lg">4. 三代试管主要适用于哪些人群？</h3>
-                    <p>三代试管主要适用于有遗传疾病风险、高龄、反复流产、反复种植失败、染色体异常（如平衡易位）的夫妇。通过胚胎植入前遗传学检测（PGT），可以筛查出染色体非整倍体、单基因遗传病或染色体结构重排等问题。</p>
+                    <label for="afc" class="block text-gray-700 font-medium mb-2">4. 您的基础窦卵泡数 (AFC) (双侧卵巢):</label>
+                    <input type="number" id="afc" name="afc" min="0" max="30" required
+                            class="input-field focus:ring-2 focus:ring-blue-500">
+                    <p class="text-sm text-gray-500 mt-1">
+                        AFC是超声检查下可观察到的卵泡数量，反映卵巢对促排卵的反应。
+                    </p>
+                    <p id="afcError" class="error-message hidden">请输入一个介于0到30之间的窦卵泡数。</p>
+                </div>
+
+                
+                <div>
+                    <label for="uterineCondition" class="block text-gray-700 font-medium mb-2">5. 您的子宫情况:</label>
+                    <select id="uterineCondition" name="uterineCondition" required
+                             class="input-field focus:ring-2 focus:ring-blue-500">
+                        <option value="">请选择</option>
+                        <option value="normal">正常 (无明显异常)</option>
+                        <option value="fibroids_polyps_managed">子宫肌瘤/息肉 (已处理或不影响着床)</option>
+                        <option value="adenomyosis_endo">子宫腺肌症/重度子宫内膜异位症</option>
+                        <option value="congenital_anomalies">子宫畸形 (如纵膈子宫等，已纠正或评估不影响)</option>
+                        <option value="other_unmanaged">其他未处理或严重子宫问题</option>
+                    </select>
+                    <p id="uterineConditionError" class="error-message hidden">请选择您的子宫情况。</p>
+                </div>
+
+                
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">6. 其他相关病史:</label>
+                    <div class="space-y-3">
+                        <p class="font-medium text-gray-600 mb-1">6.1 您的身高和体重 (用于计算BMI):</p>
+                        <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                            <div class="w-full sm:w-1/2">
+                                <label for="heightCm" class="block text-gray-600 text-sm mb-1">身高 (cm):</label>
+                                <input type="number" id="heightCm" name="heightCm" min="100" max="250" required
+                                        class="input-field focus:ring-2 focus:ring-blue-500">
+                                <p id="heightCmError" class="error-message hidden">请输入有效身高 (100-250 cm)。</p>
+                            </div>
+                            <div class="w-full sm:w-1/2">
+                                <label for="weightKg" class="block text-gray-600 text-sm mb-1">体重 (kg):</label>
+                                <input type="number" id="weightKg" name="weightKg" min="30" max="200" step="0.1" required
+                                        class="input-field focus:ring-2 focus:ring-blue-500">
+                                <p id="weightKgError" class="error-message hidden">请输入有效体重 (30-200 kg)。</p>
+                            </div>
+                        </div>
+
+                        <p class="font-medium text-gray-600 mb-1 pt-3">6.2 您的其他慢性疾病或自身免疫情况:</p>
+                        <select id="otherMedicalHistory" name="otherMedicalHistory" required
+                                 class="input-field focus:ring-2 focus:ring-blue-500">
+                            <option value="">请选择</option>
+                            <option value="none">无主要慢性疾病或自身免疫疾病</option>
+                            <option value="mild_managed">有轻度慢性病 (如甲状腺功能减退等)，已良好管理</option>
+                            <option value="immune_severe_managed">有自身免疫疾病或严重慢性病，但已在管理中</option>
+                            <option value="unmanaged_severe">有未控制的严重慢性疾病或复杂自身免疫问题</option>
+                        </select>
+                        <p id="otherMedicalHistoryError" class="error-message hidden">请选择其他相关病史。</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary w-full text-lg font-semibold mt-6">
+                    评估我的成功率
+                </button>
+            </form>
+
+            <div id="results" class="result-box hidden">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">评估结果</h2>
+                <p class="text-lg text-gray-700 mb-3">
+                    基于您提供的信息，您的三代试管活产率估算区间约为：
+                    <span class="font-bold text-green-700 text-xl" id="successRateRange"></span>
+                </p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">影响因素分析:</h3>
+                <ul id="factorAnalysis" class="list-disc pl-5 text-gray-700 space-y-2">
+                    
+                </ul>
+            </div>
+
+            <div id="errorMessageContainer" class="disclaimer hidden mt-8 bg-red-50 text-red-700 border-red-200">
+                <h3 class="font-bold mb-2">错误提示：</h3>
+                <p id="generalErrorMessage"></p>
+            </div>
+
+            <div class="disclaimer mt-8">
+                <h3 class="font-bold mb-2">重要免责声明：</h3>
+                <p>
+                    本工具提供的成功率估算仅供参考，基于公开医学数据和普遍影响因素的简化模型。
+                    **它不能替代专业的医生咨询、诊断和治疗方案制定。**
+                    每个人的身体状况、基因背景和具体治疗方案都独一无二。请务必咨询您的生殖医学专家，获取最准确的个人评估和建议。
+                </p>
+            </div>
+
+            <div class="mt-10 p-6 card">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">三代试管（PGT）常见问题解答</h2>
+                <div class="space-y-4 text-gray-700">
+                    <div>
+                        <h3 class="font-semibold text-lg">1. 三代试管能保证成功吗？</h3>
+                        <p>不能。三代试管（PGT）主要通过对胚胎进行染色体或基因筛查，选择健康的胚胎进行移植，从而显著提高活产率并降低流产风险。但它不能保证每次移植都成功，最终的成功率受多种因素影响，包括女性年龄、卵巢功能、子宫环境和医生技术等。</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">2. 我的AMH值低/AFC少，是不是就没希望了？</h3>
+                        <p>AMH值低或AFC少意味着卵巢储备功能下降，可能获卵数较少，但这不代表完全没有希望。这些指标只是预测性参考，您的实际卵子质量和个体反应更为关键。医生会根据您的具体情况调整促排卵方案，并评估其他指标，提供个性化建议。</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">3. 如何提高三代试管的成功率？</h3>
+                        <p>提高成功率的关键包括：
+                            <ul class="list-disc pl-5 mt-2">
+                                <li>选择经验丰富、设备先进的生殖中心和医生。</li>
+                                <li>严格遵医嘱，按时用药，定期复诊。</li>
+                                <li>保持健康的生活方式，均衡饮食，适度运动，避免烟酒。</li>
+                                <li>减轻心理压力，保持积极心态。</li>
+                                <li>必要时进行生育力评估，处理影响怀孕的其他医学问题。</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">4. 三代试管主要适用于哪些人群？</h3>
+                        <p>三代试管主要适用于有遗传疾病风险、高龄、反复流产、反复种植失败、染色体异常（如平衡易位）的夫妇。通过胚胎植入前遗传学检测（PGT），可以筛查出染色体非整倍体、单基因遗传病或染色体结构重排等问题。</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        
-        <button onclick="window.location.href = 'http://www.adsmed.org';" class="btn-home">返回主页</button>
 
-    </div>
+            
+            <button onclick="window.location.href = 'http://www.adsmed.org';" class="btn-home">返回主页</button>
+        </section>
+    </main>
+
+
+    <footer class="bg-blue-400 text-white p-6 mt-8 rounded-t-xl">
+        <div class="container text-center text-sm">
+            <p>&copy; 2025 爱得生. 版权所有. 为爱而生  祝您圆梦</p>
+        </div>
+    </footer>
 
     <script>
         
-        function getInterpolatedScore(value, breakpoints, descriptionPrefix, unit,toFixed_val=1) {
+        function getInterpolatedScore(value, breakpoints, descriptionPrefix, unit, toFixed_val = 1) {
             let score = 0;
             let description = '';
 
@@ -327,41 +358,41 @@
             const weightKg = parseFloat(document.getElementById('weightKg').value);
             const otherMedicalHistory = document.getElementById('otherMedicalHistory').value;
 
-            let isValid = true; 
+            let isValid = true;
 
             
-            if (isNaN(age) || age < 18 || age > 50) { 
-                document.getElementById('ageError').classList.remove('hidden'); isValid = false; 
+            if (isNaN(age) || age < 18 || age > 50) {
+                document.getElementById('ageError').classList.remove('hidden'); isValid = false;
             }
-            if (!liveBirths) { 
-                document.getElementById('liveBirthsError').classList.remove('hidden'); isValid = false; 
+            if (!liveBirths) {
+                document.getElementById('liveBirthsError').classList.remove('hidden'); isValid = false;
             }
-            if (!recurrentMiscarriage) { 
-                document.getElementById('recurrentMiscarriageError').classList.remove('hidden'); isValid = false; 
+            if (!recurrentMiscarriage) {
+                document.getElementById('recurrentMiscarriageError').classList.remove('hidden'); isValid = false;
             }
-            if (isNaN(amh) || amh < 0.0) { 
-                document.getElementById('amhError').classList.remove('hidden'); isValid = false; 
+            if (isNaN(amh) || amh < 0.0) {
+                document.getElementById('amhError').classList.remove('hidden'); isValid = false;
             }
-            if (isNaN(afc) || afc < 0 || afc > 30) { 
-                document.getElementById('afcError').classList.remove('hidden'); isValid = false; 
+            if (isNaN(afc) || afc < 0 || afc > 30) {
+                document.getElementById('afcError').classList.remove('hidden'); isValid = false;
             }
-            if (uterineCondition === "") { 
-                document.getElementById('uterineConditionError').classList.remove('hidden'); isValid = false; 
+            if (uterineCondition === "") {
+                document.getElementById('uterineConditionError').classList.remove('hidden'); isValid = false;
             }
-            if (isNaN(heightCm) || heightCm < 100 || heightCm > 250) { 
-                document.getElementById('heightCmError').classList.remove('hidden'); isValid = false; 
+            if (isNaN(heightCm) || heightCm < 100 || heightCm > 250) {
+                document.getElementById('heightCmError').classList.remove('hidden'); isValid = false;
             }
-            if (isNaN(weightKg) || weightKg < 30 || weightKg > 200) { 
-                document.getElementById('weightKgError').classList.remove('hidden'); isValid = false; 
+            if (isNaN(weightKg) || weightKg < 30 || weightKg > 200) {
+                document.getElementById('weightKgError').classList.remove('hidden'); isValid = false;
             }
-            if (otherMedicalHistory === "") { 
-                document.getElementById('otherMedicalHistoryError').classList.remove('hidden'); isValid = false; 
+            if (otherMedicalHistory === "") {
+                document.getElementById('otherMedicalHistoryError').classList.remove('hidden'); isValid = false;
             }
 
             if (!isValid) {
                 document.getElementById('errorMessageContainer').classList.remove('hidden');
                 document.getElementById('generalErrorMessage').innerText = "请检查并填写所有必填项，确保输入有效。";
-                document.getElementById('results').classList.add('hidden'); 
+                document.getElementById('results').classList.add('hidden');
                 return;
             } else {
                 document.getElementById('errorMessageContainer').classList.add('hidden');
@@ -372,8 +403,8 @@
             const bmi = weightKg / (heightM * heightM);
 
             
-            let totalScore = 0; 
-            let analysisPoints = []; 
+            let totalScore = 0;
+            let analysisPoints = [];
 
             
             const ageBreakpoints = [
@@ -498,19 +529,19 @@
             let estimatedBaseRate = minOverallSuccessRate + (normalizedScore * successRateSpan);
 
             
-            let rangeSpread = 8; 
+            let rangeSpread = 8;
             let lowerBound = Math.max(minOverallSuccessRate, estimatedBaseRate - rangeSpread / 2);
             let upperBound = Math.min(maxOverallSuccessRate, estimatedBaseRate + rangeSpread / 2);
 
             
-            if (upperBound - lowerBound < 5) { 
+            if (upperBound - lowerBound < 5) {
                 if (upperBound + (5 - (upperBound - lowerBound)) / 2 <= maxOverallSuccessRate) {
                     upperBound += (5 - (upperBound - lowerBound));
                 } else if (lowerBound - (5 - (upperBound - lowerBound)) / 2 >= minOverallSuccessRate) {
                     lowerBound -= (5 - (upperBound - lowerBound));
                 }
             }
-            
+
             
             lowerBound = parseFloat(lowerBound.toFixed(1));
             upperBound = parseFloat(upperBound.toFixed(1));
@@ -518,7 +549,7 @@
             
             if (lowerBound >= upperBound) {
                 lowerBound = Math.max(minOverallSuccessRate, parseFloat((upperBound - 5).toFixed(1)));
-                if (lowerBound === upperBound) { 
+                if (lowerBound === upperBound) {
                     upperBound = Math.min(maxOverallSuccessRate, parseFloat((lowerBound + 5).toFixed(1)));
                 }
             }
