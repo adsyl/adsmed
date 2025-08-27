@@ -187,13 +187,13 @@ pluralizelisttitles = false
 
 [[menu.main]]
     name       = "三代试管婴儿全流程"
-    url        = "/pgt-process"
+    url        = "/service/pgt-process"
     weight     = 1
     parent     = "section.tool"
 
 [[menu.main]]
     name       = "三代试管成功率自测工具"
-    url        = "/pgt-calculator"
+    url        = "/service/pgt-calculator"
     weight     = 2
     parent     = "section.tool"
 

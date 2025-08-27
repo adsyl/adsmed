@@ -62,7 +62,10 @@
     <loc>http://localhost:1313/categories/%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8/</loc>
     <lastmod>2025-08-24T13:47:08+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/pgt-calculator/</loc>
+    <loc>http://localhost:1313/service/</loc>
+    <lastmod>2025-08-24T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/service/pgt-calculator/</loc>
     <lastmod>2025-08-24T10:00:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/04%E8%AF%95%E7%AE%A1%E5%BC%80%E5%A5%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-new/</loc>
@@ -104,7 +107,7 @@
     <loc>http://localhost:1313/tags/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</loc>
     <lastmod>2024-11-15T11:36:22+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/pgt-process/</loc>
+    <loc>http://localhost:1313/service/pgt-process/</loc>
     <lastmod>2024-10-27T10:00:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E5%A4%87%E5%AD%95%E9%A1%BB%E7%9F%A5/</loc>
