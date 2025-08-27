@@ -23,17 +23,17 @@
 <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- CSS animations  -->
+<!-- 引入动画效果的 CSS 文件，提供动画支持-->
 <link href="{{ "css/animate.css" | relURL }}" rel="stylesheet">
 
-<!-- Theme stylesheet, if possible do not edit this stylesheet -->
+<!-- 根据 style 参数决定加载自定义的样式表，若未设置则使用默认的 style.default.css -->
 {{ with .Site.Params.style }}
   <link href="{{ "css/style" | relURL }}.{{ . }}.css" rel="stylesheet" id="theme-stylesheet">
 {{ else }}
   <link href="{{ "css/style.default.css" | relURL }}" rel="stylesheet" id="theme-stylesheet">
 {{ end }}
 
-<!-- Custom stylesheet - for your changes -->
+<!-- 引入自定义的 CSS 文件 -->
 <link href="{{ "css/custom.css" | relURL }}?{{ now.Unix }}" rel="stylesheet">
 
 <!-- Responsivity for older IE -->
@@ -44,15 +44,15 @@
   <![endif]-->
 ` | safeHTML }}
 
-<!-- Favicon and Apple touch icons-->
+<!-- 设置浏览器和 Apple 设备上的图标，分别为网站的 favicon 和 Apple touch icon-->
 <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}" type="image/x-icon" />
 <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon.png" | relURL }}" />
 
-<!-- owl carousel CSS -->
+<!-- 引入 Owl Carousel 的 CSS 文件，用于支持轮播图组件的样式 -->
 <link href="{{ "css/owl.carousel.css" | relURL }}" rel="stylesheet">
 <link href="{{ "css/owl.theme.css" | relURL }}" rel="stylesheet">
 
-<!-- RSS feed -->
+<!-- 设置 RSS 订阅的链接，允许用户订阅网站内容更新 -->
 <link rel="alternate" href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
 
 <!-- Facebook OpenGraph tags -->
@@ -89,12 +89,3 @@
   {{ with .Lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
 {{ end }}
 
-<!-- Twitter Card meta tags -->
-<meta name="twitter:card" content="summary{{ if (and $is_blog (and $has_image $is_valid_image)) }}_large_image{{ end }}">
-{{ with .Param "twitter_site" }}<meta name="twitter:site" content="@{{ . }}">{{ end }}
-<meta name="twitter:title" content="{{ $title_plain | truncate 70 }}">
-{{ if $is_valid_image }}
-<meta name="twitter:image" content="{{ $image | absURL }}">
-{{ end }}
-<meta name="twitter:description" content="{{ $description_plain | truncate 200 }}">
-{{ with .Param "twitter_author" }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
