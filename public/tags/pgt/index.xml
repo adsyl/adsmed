@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PGT on 爱得生医疗</title>
-    <link>http://localhost:1313/tags/pgt/</link>
+    <link>https://adsmed.vercel.app/tags/pgt/</link>
     <description>Recent content in PGT on 爱得生医疗</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 08 Aug 2025 01:36:22 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/pgt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Aug 2025 13:47:08 +0200</lastBuildDate>
+    <atom:link href="https://adsmed.vercel.app/tags/pgt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PGT报告解读</title>
-      <link>http://localhost:1313/blog/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</link>
-      <pubDate>Fri, 08 Aug 2025 01:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</guid>
+      <link>https://adsmed.vercel.app/blog/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Mon, 25 Aug 2025 13:47:08 +0200</pubDate>
+      <guid>https://adsmed.vercel.app/blog/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</guid>
       <description>&lt;p&gt;本篇结合PGT报告单的实际图样来教大家怎么读懂属于你的那份报告。&lt;/p&gt;</description>
     </item>
     <item>
       <title>PGT临床检测流程</title>
-      <link>http://localhost:1313/blog/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</link>
+      <link>https://adsmed.vercel.app/blog/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Fri, 15 Dec 2023 01:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</guid>
+      <guid>https://adsmed.vercel.app/blog/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</guid>
       <description>&lt;p&gt;之前我们讲到过“第三代试管婴儿”即胚胎植入前遗传学检测（PGT）技术，可以通过检测胚胎的遗传学因素，从胚胎层面阻断单基因病、染色体异常，选择合适的胚胎移植入宫腔，从而提高妊娠率、降低出生缺陷。那么PGT的流程是什么？&lt;/p&gt;</description>
     </item>
     <item>
       <title>“三代试管”最全干货，你想知道的都在这里</title>
-      <link>http://localhost:1313/blog/022%E4%B8%89%E4%BB%A3pgt/</link>
+      <link>https://adsmed.vercel.app/blog/022%E4%B8%89%E4%BB%A3pgt/</link>
       <pubDate>Thu, 07 Dec 2023 09:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/022%E4%B8%89%E4%BB%A3pgt/</guid>
+      <guid>https://adsmed.vercel.app/blog/022%E4%B8%89%E4%BB%A3pgt/</guid>
       <description>&lt;h4 id=&#34;三代试管是什么&#34;&gt;三代试管是什么&lt;/h4&gt;&#xA;&lt;p&gt;国内俗称的“第三代试管婴儿”，是指胚胎植入前遗传学检测（PGT，preimplantation genetic testing） 。也就是在胚胎植入前对胚胎进行遗传学检测，选择&lt;strong&gt;正常&lt;/strong&gt;的胚胎移植。&lt;/p&gt;</description>
     </item>
     <item>
       <title>试管婴儿技术鉴别指南</title>
-      <link>http://localhost:1313/blog/022%E8%AF%95%E7%AE%A1%E5%A9%B4%E5%84%BF%E6%8A%80%E6%9C%AF%E9%89%B4%E5%88%AB%E6%8C%87%E5%8D%97/</link>
+      <link>https://adsmed.vercel.app/blog/022%E8%AF%95%E7%AE%A1%E5%A9%B4%E5%84%BF%E6%8A%80%E6%9C%AF%E9%89%B4%E5%88%AB%E6%8C%87%E5%8D%97/</link>
       <pubDate>Thu, 02 Nov 2023 21:44:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/022%E8%AF%95%E7%AE%A1%E5%A9%B4%E5%84%BF%E6%8A%80%E6%9C%AF%E9%89%B4%E5%88%AB%E6%8C%87%E5%8D%97/</guid>
+      <guid>https://adsmed.vercel.app/blog/022%E8%AF%95%E7%AE%A1%E5%A9%B4%E5%84%BF%E6%8A%80%E6%9C%AF%E9%89%B4%E5%88%AB%E6%8C%87%E5%8D%97/</guid>
       <description>&lt;p&gt;大多数患者朋友们对于“试管婴儿”这个名词也很熟悉，但是来生殖中心门诊就诊的很多患者，经常好奇地问医生：听说试管婴儿分“第一代、第二代和第三代”，那是不是“第三代试管婴儿”就是最先进、最完美的呢？&lt;/p&gt;</description>
     </item>
   </channel>

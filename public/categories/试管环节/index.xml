@@ -2,80 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>试管环节 on 爱得生医疗</title>
-    <link>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/</link>
+    <link>https://adsmed.vercel.app/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/</link>
     <description>Recent content in 试管环节 on 爱得生医疗</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 08 Aug 2025 01:36:22 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>PGT报告解读</title>
-      <link>http://localhost:1313/blog/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</link>
-      <pubDate>Fri, 08 Aug 2025 01:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</guid>
-      <description>&lt;p&gt;本篇结合PGT报告单的实际图样来教大家怎么读懂属于你的那份报告。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>移植前后注意事项</title>
-      <link>http://localhost:1313/blog/034%E7%A7%BB%E6%A4%8D%E5%89%8D%E5%90%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
-      <pubDate>Thu, 17 Jul 2025 13:47:08 +0200</pubDate>
-      <guid>http://localhost:1313/blog/034%E7%A7%BB%E6%A4%8D%E5%89%8D%E5%90%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
-      <description>&lt;p&gt;在试管助孕过程中，移植手术是最为关键的一步，很多试管妈妈准备了大半年，能否一次成功好孕，不仅要看运气，还有移植前后科学充分的准备也至关重要。&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Fri, 15 Nov 2024 11:36:22 +0000</lastBuildDate>
+    <atom:link href="https://adsmed.vercel.app/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>试管开奖注意事项</title>
-      <link>http://localhost:1313/blog/04%E8%AF%95%E7%AE%A1%E5%BC%80%E5%A5%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
+      <link>https://adsmed.vercel.app/blog/04%E8%AF%95%E7%AE%A1%E5%BC%80%E5%A5%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
       <pubDate>Fri, 15 Nov 2024 11:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/04%E8%AF%95%E7%AE%A1%E5%BC%80%E5%A5%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
+      <guid>https://adsmed.vercel.app/blog/04%E8%AF%95%E7%AE%A1%E5%BC%80%E5%A5%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
       <description>&lt;p&gt;开奖应该是整个试管过程中最紧张、刺激、折磨人，同时又是最愉快或悲伤的时刻。那么开奖过程我们有些什么需要特别注意的呢？&lt;/p&gt;</description>
     </item>
     <item>
       <title>PGT临床检测流程</title>
-      <link>http://localhost:1313/blog/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</link>
+      <link>https://adsmed.vercel.app/blog/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Fri, 15 Dec 2023 01:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</guid>
+      <guid>https://adsmed.vercel.app/blog/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</guid>
       <description>&lt;p&gt;之前我们讲到过“第三代试管婴儿”即胚胎植入前遗传学检测（PGT）技术，可以通过检测胚胎的遗传学因素，从胚胎层面阻断单基因病、染色体异常，选择合适的胚胎移植入宫腔，从而提高妊娠率、降低出生缺陷。那么PGT的流程是什么？&lt;/p&gt;</description>
     </item>
     <item>
       <title>促排卵阶段有哪些注意事项？</title>
-      <link>http://localhost:1313/blog/031%E4%BF%83%E6%8E%92%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
+      <link>https://adsmed.vercel.app/blog/031%E4%BF%83%E6%8E%92%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
       <pubDate>Tue, 14 Nov 2023 11:16:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/031%E4%BF%83%E6%8E%92%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
+      <guid>https://adsmed.vercel.app/blog/031%E4%BF%83%E6%8E%92%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://ooo.0x0.ooo/2023/11/16/Oefnkb.gif&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;很多第一次接触试管的姐妹，都不知道促排应该注意些什么，要么就傻傻的以为跟着医生走就万事大吉了，要么就“用力过猛”反而弄巧成拙。&lt;/p&gt;</description>
     </item>
     <item>
       <title>神秘的夜针是什么？</title>
-      <link>http://localhost:1313/blog/031%E5%A4%9C%E9%92%88/</link>
+      <link>https://adsmed.vercel.app/blog/031%E5%A4%9C%E9%92%88/</link>
       <pubDate>Mon, 13 Nov 2023 09:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/031%E5%A4%9C%E9%92%88/</guid>
+      <guid>https://adsmed.vercel.app/blog/031%E5%A4%9C%E9%92%88/</guid>
       <description>&lt;h4 id=&#34;神秘的夜针究竟是什么&#34;&gt;神秘的夜针究竟是什么？&lt;/h4&gt;&#xA;&lt;p&gt;在促排卵过程中，卵泡长到一定阶段，我们需要一个特殊药物促进卵母细胞最终成熟，这是试管婴儿促排过程中的最后和最关键的一步。&lt;/p&gt;</description>
     </item>
     <item>
       <title>你的胚胎是几级？看完这些立马懂</title>
-      <link>http://localhost:1313/blog/033%E8%83%9A%E8%83%8E%E5%8F%91%E8%82%B2%E5%92%8C%E7%AD%89%E7%BA%A7/</link>
+      <link>https://adsmed.vercel.app/blog/033%E8%83%9A%E8%83%8E%E5%8F%91%E8%82%B2%E5%92%8C%E7%AD%89%E7%BA%A7/</link>
       <pubDate>Wed, 08 Nov 2023 20:32:33 +0000</pubDate>
-      <guid>http://localhost:1313/blog/033%E8%83%9A%E8%83%8E%E5%8F%91%E8%82%B2%E5%92%8C%E7%AD%89%E7%BA%A7/</guid>
+      <guid>https://adsmed.vercel.app/blog/033%E8%83%9A%E8%83%8E%E5%8F%91%E8%82%B2%E5%92%8C%E7%AD%89%E7%BA%A7/</guid>
       <description>&lt;p&gt;在试管婴儿的过程中，胚胎质量的好坏是影响移植成功率、以及未来宝宝健康与否的重要影响因素，所以在生殖中心，经常会有患者问道——医生，我这个胚胎4CB是什么意思？医生，我的胚胎是什么等级？医生，移植低级别的胚胎能怀孕吗？&lt;/p&gt;</description>
     </item>
     <item>
       <title>关于胚胎冷冻和解冻</title>
-      <link>http://localhost:1313/blog/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</link>
+      <link>https://adsmed.vercel.app/blog/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</link>
       <pubDate>Wed, 08 Nov 2023 01:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</guid>
+      <guid>https://adsmed.vercel.app/blog/033%E8%83%9A%E8%83%8E%E5%86%B7%E5%86%BB%E5%92%8C%E8%A7%A3%E5%86%BB/</guid>
       <description>&lt;p&gt;由于促排卵药物的应用，一次试管婴儿治疗周期往往可以获得几枚、十几和甚至更多的胚胎，但一次胚胎移植，最多只能移植2枚胚胎，而剩下的优质胚胎则被建议冷冻保存。&lt;/p&gt;</description>
     </item>
     <item>
       <title>取卵手术打麻药会影响卵子质量吗，听听专家怎么说</title>
-      <link>http://localhost:1313/blog/032%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF%E6%89%93%E9%BA%BB%E8%8D%AF/</link>
+      <link>https://adsmed.vercel.app/blog/032%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF%E6%89%93%E9%BA%BB%E8%8D%AF/</link>
       <pubDate>Fri, 03 Nov 2023 11:17:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/032%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF%E6%89%93%E9%BA%BB%E8%8D%AF/</guid>
+      <guid>https://adsmed.vercel.app/blog/032%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF%E6%89%93%E9%BA%BB%E8%8D%AF/</guid>
       <description>&lt;h3 id=&#34;问题提出&#34;&gt;问题提出&lt;/h3&gt;&#xA;&lt;p&gt;部分准妈妈担心,取卵时使用麻醉,会影响取出的卵子质量。那么麻醉对卵子质量究竟有没有影响呢?&lt;/p&gt;</description>
     </item>
     <item>
       <title>取卵前后应注意什么</title>
-      <link>http://localhost:1313/blog/032%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
+      <link>https://adsmed.vercel.app/blog/032%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
       <pubDate>Wed, 01 Nov 2023 01:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/032%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
+      <guid>https://adsmed.vercel.app/blog/032%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
       <description>&lt;h4 id=&#34;取卵过程是怎么样的呢&#34;&gt;取卵过程是怎么样的呢？&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;经阴道超声引导下取卵术&lt;/strong&gt;是目前最主流的取卵方式，优点是显像清晰、操作简单、安全、无需住院。&lt;/p&gt;</description>
     </item>
   </channel>

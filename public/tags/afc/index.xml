@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AFC on 爱得生医疗</title>
-    <link>http://localhost:1313/tags/afc/</link>
+    <link>https://adsmed.vercel.app/tags/afc/</link>
     <description>Recent content in AFC on 爱得生医疗</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 11 Oct 2023 23:32:11 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/afc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://adsmed.vercel.app/tags/afc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>窦卵泡数量和阴道B超</title>
-      <link>http://localhost:1313/blog/021%E7%AA%A6%E5%8D%B5%E6%B3%A1%E6%95%B0%E7%9B%AE%E5%92%8C%E9%98%B4%E9%81%93b%E8%B6%85/</link>
+      <link>https://adsmed.vercel.app/blog/021%E7%AA%A6%E5%8D%B5%E6%B3%A1%E6%95%B0%E7%9B%AE%E5%92%8C%E9%98%B4%E9%81%93b%E8%B6%85/</link>
       <pubDate>Wed, 11 Oct 2023 23:32:11 +0000</pubDate>
-      <guid>http://localhost:1313/blog/021%E7%AA%A6%E5%8D%B5%E6%B3%A1%E6%95%B0%E7%9B%AE%E5%92%8C%E9%98%B4%E9%81%93b%E8%B6%85/</guid>
+      <guid>https://adsmed.vercel.app/blog/021%E7%AA%A6%E5%8D%B5%E6%B3%A1%E6%95%B0%E7%9B%AE%E5%92%8C%E9%98%B4%E9%81%93b%E8%B6%85/</guid>
       <description>&lt;h4 id=&#34;afc是什么&#34;&gt;AFC是什么&lt;/h4&gt;&#xA;&lt;p&gt;窦卵泡计数（AFC），是在行妇科阴道超声检查的时候，对卵巢中的窦卵泡数量进行计数。通常在月经第2天（也即试管启动时）查验AFC数量作为促排方案制定的重要参考。&lt;/p&gt;</description>
     </item>
     <item>
       <title>卵巢功能评估知多少</title>
-      <link>http://localhost:1313/blog/021%E5%8D%B5%E5%B7%A2%E5%8A%9F%E8%83%BD%E8%AF%84%E4%BC%B0/</link>
+      <link>https://adsmed.vercel.app/blog/021%E5%8D%B5%E5%B7%A2%E5%8A%9F%E8%83%BD%E8%AF%84%E4%BC%B0/</link>
       <pubDate>Wed, 11 Oct 2023 23:32:11 +0000</pubDate>
-      <guid>http://localhost:1313/blog/021%E5%8D%B5%E5%B7%A2%E5%8A%9F%E8%83%BD%E8%AF%84%E4%BC%B0/</guid>
+      <guid>https://adsmed.vercel.app/blog/021%E5%8D%B5%E5%B7%A2%E5%8A%9F%E8%83%BD%E8%AF%84%E4%BC%B0/</guid>
       <description>&lt;p&gt;在进行试管婴儿治疗前，对女性卵巢功能进行评估是非常重要的一步。这将帮助我们了解&lt;strong&gt;卵巢中可供发育成熟的卵子的数量和质量&lt;/strong&gt;，也就是我们所说的卵巢储备。以下是主要的卵巢功能评估内容。&lt;/p&gt;</description>
     </item>
   </channel>

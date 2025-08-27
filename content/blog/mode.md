@@ -3,7 +3,7 @@ title = "mode"
 date = "2025-08-24T13:47:08+02:00"
 tags = ["试管环节"]
 categories = ["programming"]
-banner = "img/banner.jpg"
+banner = "img/banner01.jpg"
 authors =  ["ADS"]
 +++
 
