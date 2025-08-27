@@ -1,28 +1,41 @@
-{{ if isset .Site.Params "see_more" }}
-{{ if .Site.Params.see_more.enable }}
+{{/* 检查 see_more 功能是否启用，并确保它在网站参数中存在 */}}
+{{ if and (isset .Site.Params "see_more") (.Site.Params.see_more.enable) }}
 <section class="bar background-image-fixed-2 no-mb color-white text-center">
     <div class="dark-mask"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="icon icon-lg"><i class="{{ .Site.Params.see_more.icon }}"></i>
+                {{/* 使用 with 语句，确保图标参数存在时才渲染 i 标签 */}}
+                {{ with .Site.Params.see_more.icon }}
+                <div class="icon icon-lg"><i class="{{ . | safeHTML }}"></i>
                 </div>
-                <h3 class="text-uppercase">{{ .Site.Params.see_more.title | markdownify }}</h3>
-                <p class="lead">{{ .Site.Params.see_more.subtitle | markdownify }}</p>
+                {{ end }}
+
+                {{/* 确保标题参数存在时才渲染 h3 标签 */}}
+                {{ with .Site.Params.see_more.title }}
+                <h3 class="text-uppercase">{{ . | markdownify }}</h3>
+                {{ end }}
+
+                {{/* 确保副标题参数存在时才渲染 p 标签 */}}
+                {{ with .Site.Params.see_more.subtitle }}
+                <p class="lead">{{ . | markdownify }}</p>
+                {{ end }}
+
+                {{/* 核心优化：合并链接和链接文本的 with 语句，避免不必要的嵌套。
+                同时使用安全函数 safeURL 和 safeHTML 来确保内容安全 */}}
+                {{ with .Site.Params.see_more }}
+                {{ if and .link_url .link_text }}
                 <p class="text-center">
-                    {{ with .Site.Params.see_more.link_url }}
-                    <a href="{{ . }}" class="btn btn-template-transparent-black btn-lg">
-                    {{ end }}
-                        {{ with .Site.Params.see_more.link_text }}
-                        {{ . | markdownify }}
-                        {{ end }}
-                    {{ with .Site.Params.see_more.link_url }}
+                    <a href="{{ .link_url | safeURL }}" class="btn btn-template-transparent-black btn-lg"
+                       {{/* 为按钮添加 title 属性，提升可访问性 */}}
+                       title="{{ .link_text | safeHTML }}">
+                        {{ .link_text | markdownify }}
                     </a>
-                    {{ end }}
                 </p>
+                {{ end }}
+                {{ end }}
             </div>
         </div>
     </div>
 </section>
-{{ end }}
 {{ end }}

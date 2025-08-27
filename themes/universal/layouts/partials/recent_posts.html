@@ -2,12 +2,10 @@
 {{ if .Site.Params.recent_posts.enable }}
 <section class="bar background-white no-mb">
     <div class="container">
-
         <div class="col-md-12">
             <div class="heading text-center">
                 <h2>{{ .Site.Params.recent_posts.title | markdownify }}</h2>
             </div>
-
             <p class="lead">
               {{ .Site.Params.recent_posts.subtitle | markdownify }}
             </p>
@@ -24,7 +22,7 @@
                                 {{ if isset .Params "banner" }}
                                 <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="" />
                                 {{ else }}
-                                <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="" />
+                                <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="Placeholder Image" loading="lazy" />
                                 {{ end }}
                             </div>
                             <div class="bg"></div>

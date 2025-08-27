@@ -7,14 +7,14 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="heading text-center">
-                    <h2>{{ .Site.Params.testimonials.title }}</h2>
+                    {{ with .Site.Params.testimonials.title }}
+                    <h2>{{ . | safeHTML }}</h2>
+                    {{ end }}
                 </div>
 
-                <p class="lead">
-                  {{ .Site.Params.testimonials.subtitle | markdownify }}
-                </p>
-
-                <!-- *** TESTIMONIALS CAROUSEL *** -->
+                {{ with .Site.Params.testimonials.subtitle }}
+                <p class="lead">{{ . | markdownify }}</p>
+                {{ end }}
 
                 <ul class="owl-carousel testimonials same-height-row"
                     data-items="{{ default 4 .Site.Params.CarouselTestimonials.items }}"
@@ -22,33 +22,48 @@
                     data-slide-speed="{{ default 2000 .Site.Params.CarouselTestimonials.slide_speed }}"
                     data-pagination-speed="{{ default 1000 .Site.Params.CarouselTestimonials.pagination_speed }}">
                     {{ range .Site.Data.testimonials }}
+                    {{/* 核心修改：将 name 字段赋给局部变量 $item_name，以在 with 语句中安全使用 */}}
+                    {{ $item_name := .name }}
                     <li class="item">
                         <div class="testimonial same-height-always">
                             <div class="text">
-                                <p>{{ .text | markdownify }}</p>
+                                {{ with .text }}
+                                <p>{{ . | markdownify }}</p>
+                                {{ end }}
                             </div>
                             <div class="bottom">
                                 <div class="icon"><i class="fas fa-quote-left"></i>
                                 </div>
                                 <div class="name-picture">
-                                    <img class="" alt="" src="{{ .avatar | absURL }}">
-                                    <h5>{{ .name }}</h5>
-                                    <p>{{ .position }}</p>
+                                    {{ with .avatar }}
+                                    {{ $image := resources.Get . }}
+                                    {{ with $image }}
+                                    {{ $resizedImage := .Fill "90x90" }}
+                                    <img class="img-responsive" src="{{ $resizedImage.RelPermalink }}"
+                                         {{/* 在 alt 属性中使用局部变量 $item_name */}}
+                                         alt="{{ with $item_name }}{{ . }}{{ else }}Testimonial Avatar{{ end }}">
+                                    {{ else }}
+                                    <img class="" src="{{ . | relURL }}"
+                                         {{/* 在 alt 属性中使用局部变量 $item_name */}}
+                                         alt="{{ with $item_name }}{{ . }}{{ else }}Testimonial Avatar{{ end }}">
+                                    {{ end }}
+                                    {{ end }}
+                                    {{ with .name }}
+                                    <h5>{{ . }}</h5>
+                                    {{ end }}
+                                    {{ with .position }}
+                                    <p>{{ . }}</p>
+                                    {{ end }}
                                 </div>
                             </div>
                         </div>
                     </li>
                     {{ end }}
                 </ul>
-                <!-- /.owl-carousel -->
-
-                <!-- *** TESTIMONIALS CAROUSEL END *** -->
-            </div>
-
+                </div>
         </div>
     </div>
 </section>
-<!-- /.bar -->
 {{ end }}
 {{ end }}
 {{ end }}

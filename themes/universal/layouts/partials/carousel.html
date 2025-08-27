@@ -10,17 +10,38 @@
                 data-slide-speed="{{ default 2000 .Site.Params.CarouselHomepage.slide_speed }}"
                 data-pagination-speed="{{ default 1000 .Site.Params.CarouselHomepage.pagination_speed }}">
                 {{ range sort .Site.Data.carousel "weight" }}
+                {{ $itemTitle := .title }}
+                {{ $itemDesc := .description }}
                 <div class="item">
                     {{ if .href }}
-                    <a href="{{ .href }}" target="_blank" title="{{ .title | safeHTML }}">
+                    <a href="{{ .href }}" target="_blank" title="{{ $itemTitle | safeHTML }}">
                     {{ end }}
                         <div class="row">
                             <div class="col-sm-5 right">
-                                <h1>{{ .title | safeHTML }}</h1>
-                                {{ .description | safeHTML }}
+                                {{ with $itemTitle }}
+                                <h1>{{ . | safeHTML }}</h1>
+                                {{ end }}
+                                {{ with $itemDesc }}
+                                {{ . | safeHTML }}
+                                {{ end }}
                             </div>
-                            <div class="col-sm-7">
-                                <img class="img-responsive" src="{{ .image }}" alt="">
+                            <div class="col-sm-7 hidden-xs">
+                                {{ with .image }}
+                                    {{/* 使用 Hugo 的图像处理管道，优化图片大小和格式 */}}
+                                    {{/* resources.Get . 用于获取图片资源
+                                        .Resize "770x" 将图片宽度调整为 770px，高度按比例缩放
+                                        .RelPermalink 生成处理后图片的相对链接
+                                    */}}
+                                    {{ $image := resources.Get . }}
+                                    {{ with $image }}
+                                        {{ $resizedImage := .Resize "770x" }}
+                                        <img class="img-responsive" src="{{ $resizedImage.RelPermalink }}"
+                                             alt="{{ with $itemTitle }}{{ . }}{{ else }}Carousel image{{ end }}">
+                                    {{ else }}
+                                        <img class="img-responsive" src="{{ . | relURL }}"
+                                             alt="{{ with $itemTitle }}{{ . }}{{ else }}Carousel image{{ end }}">
+                                    {{ end }}
+                                {{ end }}
                             </div>
                         </div>
                     {{ if .href }}
@@ -29,8 +50,7 @@
                 </div>
                 {{ end }}
             </div>
-            <!-- /.project owl-slider -->
-        </div>
+            </div>
     </div>
 </section>
 {{ end }}
