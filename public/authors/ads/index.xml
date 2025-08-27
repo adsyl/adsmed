@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ADS on 爱得生医疗</title>
-    <link>https://adsmed.vercel.app/authors/ads/</link>
+    <link>http://localhost:1313/authors/ads/</link>
     <description>Recent content in ADS on 爱得生医疗</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 25 Aug 2025 13:47:08 +0200</lastBuildDate>
-    <atom:link href="https://adsmed.vercel.app/authors/ads/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/authors/ads/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PGT报告解读</title>
-      <link>https://adsmed.vercel.app/blog/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</link>
+      <link>http://localhost:1313/blog/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</link>
       <pubDate>Mon, 25 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/blog/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</guid>
+      <guid>http://localhost:1313/blog/033pgt%E6%8A%A5%E5%91%8A%E8%A7%A3%E8%AF%BB/</guid>
       <description>&lt;p&gt;本篇结合PGT报告单的实际图样来教大家怎么读懂属于你的那份报告。&lt;/p&gt;</description>
     </item>
     <item>
       <title>mode</title>
-      <link>https://adsmed.vercel.app/blog/mode/</link>
+      <link>http://localhost:1313/blog/mode/</link>
       <pubDate>Sun, 24 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/blog/mode/</guid>
+      <guid>http://localhost:1313/blog/mode/</guid>
       <description>&lt;p&gt;Hugo uses the excellent [go][] [html/template][gohtmltemplate] library for&#xA;its template engine. It is an extremely lightweight engine that provides a very&#xA;small amount of logic. In our experience that it is just the right amount of&#xA;logic to be able to create a good static website. If you have used other&#xA;template systems from different languages or frameworks you will find a lot of&#xA;similarities in go templates.&lt;/p&gt;&#xA;&lt;p&gt;This document is a brief primer on using go templates. The [go docs][gohtmltemplate]&#xA;provide more details.&lt;/p&gt;</description>
     </item>
     <item>
       <title>本月优惠</title>
-      <link>https://adsmed.vercel.app/blog/special_offers/</link>
+      <link>http://localhost:1313/blog/special_offers/</link>
       <pubDate>Sun, 24 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/blog/special_offers/</guid>
+      <guid>http://localhost:1313/blog/special_offers/</guid>
       <description>&lt;p&gt;优惠活动进行中&lt;/p&gt;</description>
     </item>
     <item>
       <title>单周期基础套餐A</title>
-      <link>https://adsmed.vercel.app/product/basic/</link>
+      <link>http://localhost:1313/product/basic/</link>
       <pubDate>Sun, 24 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/product/basic/</guid>
+      <guid>http://localhost:1313/product/basic/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://ooo.0x0.ooo/2023/11/17/OelTxC.jpg&#34; alt=&#34;OelTxC.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;在本套餐的基础上，可以额外加购补充移植计划、补充PGT计划及进口药物升级计划。&lt;/p&gt;&#xA;&lt;p&gt;本套餐在面向符合**年龄≤32岁，Amh≥3，AFC≥10，子宫情况良好等**条件的女性时，因其单周期可能获卵数较理想，且子宫情况良好，**一般预期经过2-3次移植就能实现成功受孕**。因其**单次ivf周期的成功率可以超过75%**，故更具性价比。&lt;/p&gt;</description>
     </item>
     <item>
       <title>多周期安心套餐A</title>
-      <link>https://adsmed.vercel.app/product/pro/</link>
+      <link>http://localhost:1313/product/pro/</link>
       <pubDate>Sun, 24 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/product/pro/</guid>
+      <guid>http://localhost:1313/product/pro/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://ooo.0x0.ooo/2023/11/17/OelUJL.jpg&#34; alt=&#34;OelUJL.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;在本套餐的基础上，可以额外加购补充促排计划、补充PGT计划及进口药物升级计划。&lt;/p&gt;&#xA;&lt;p&gt;本套餐在面向符合&lt;strong&gt;年龄＞35岁，AFC＜5等&lt;/strong&gt;条件的女性时，其&lt;strong&gt;单周期成功率可能只有50%左右&lt;/strong&gt;，需要通过多次的促排和移植，以实现&lt;strong&gt;累计成功率&lt;/strong&gt;的提升。因此，多次促排和移植是必要的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>升级服务计划</title>
-      <link>https://adsmed.vercel.app/product/value-added/</link>
+      <link>http://localhost:1313/product/value-added/</link>
       <pubDate>Sun, 24 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/product/value-added/</guid>
+      <guid>http://localhost:1313/product/value-added/</guid>
       <description>&lt;p&gt;针对不同的客户需求，我们在主套餐的基础上，提供不同的升级服务建议！&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ooo.0x0.ooo/2025/07/27/OY9z26.jpg&#34; alt=&#34;OY9z26.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>移植前后注意事项</title>
-      <link>https://adsmed.vercel.app/blog/034%E7%A7%BB%E6%A4%8D%E5%89%8D%E5%90%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
+      <link>http://localhost:1313/blog/034%E7%A7%BB%E6%A4%8D%E5%89%8D%E5%90%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
       <pubDate>Sun, 24 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/blog/034%E7%A7%BB%E6%A4%8D%E5%89%8D%E5%90%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
+      <guid>http://localhost:1313/blog/034%E7%A7%BB%E6%A4%8D%E5%89%8D%E5%90%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
       <description>&lt;p&gt;在试管助孕过程中，移植手术是最为关键的一步，很多试管妈妈准备了大半年，能否一次成功好孕，不仅要看运气，还有移植前后科学充分的准备也至关重要。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Categories Post</title>
-      <link>https://adsmed.vercel.app/blog/education/</link>
+      <link>http://localhost:1313/blog/education/</link>
       <pubDate>Fri, 01 Aug 2025 21:29:20 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/blog/education/</guid>
+      <guid>http://localhost:1313/blog/education/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m a post with multiple categories in the frontmatter:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;categories = [&amp;quot;programming&amp;quot;,&amp;quot;lorem&amp;quot;,&amp;quot;pseudo&amp;quot;]&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mauris nulla, vestibulum vel auctor sed, posuere eu lorem. Aliquam consequat augue ut accumsan mollis. Suspendisse malesuada sodales tincidunt. Vivamus sed erat ac augue bibendum porta sed id ipsum. Ut mollis mauris eget ligula sagittis cursus. Aliquam id pharetra tellus. Pellentesque sed tempus risus. Proin id hendrerit ante. Vestibulum vitae urna ut mauris ultricies dignissim. Ut ante turpis, tristique vitae sagittis quis, sagittis nec diam. Fusce pulvinar cursus porta. Vivamus maximus leo dolor, ut pellentesque lorem fringilla nec. Mauris faucibus turpis posuere sapien euismod, a ullamcorper mi maximus.&lt;/p&gt;</description>
     </item>
   </channel>

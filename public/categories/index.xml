@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 爱得生医疗</title>
-    <link>https://adsmed.vercel.app/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on 爱得生医疗</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 25 Aug 2025 13:47:08 +0200</lastBuildDate>
-    <atom:link href="https://adsmed.vercel.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PGT报告</title>
-      <link>https://adsmed.vercel.app/categories/pgt%E6%8A%A5%E5%91%8A/</link>
+      <link>http://localhost:1313/categories/pgt%E6%8A%A5%E5%91%8A/</link>
       <pubDate>Mon, 25 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/categories/pgt%E6%8A%A5%E5%91%8A/</guid>
+      <guid>http://localhost:1313/categories/pgt%E6%8A%A5%E5%91%8A/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>https://adsmed.vercel.app/categories/programming/</link>
+      <link>http://localhost:1313/categories/programming/</link>
       <pubDate>Sun, 24 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/categories/programming/</guid>
+      <guid>http://localhost:1313/categories/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>优惠活动</title>
-      <link>https://adsmed.vercel.app/categories/%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8/</link>
+      <link>http://localhost:1313/categories/%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8/</link>
       <pubDate>Sun, 24 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/categories/%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8/</guid>
+      <guid>http://localhost:1313/categories/%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8/</guid>
       <description></description>
     </item>
     <item>
       <title>Lorem</title>
-      <link>https://adsmed.vercel.app/categories/lorem/</link>
+      <link>http://localhost:1313/categories/lorem/</link>
       <pubDate>Fri, 01 Aug 2025 21:29:20 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/categories/lorem/</guid>
+      <guid>http://localhost:1313/categories/lorem/</guid>
       <description></description>
     </item>
     <item>
       <title>Pseudo</title>
-      <link>https://adsmed.vercel.app/categories/pseudo/</link>
+      <link>http://localhost:1313/categories/pseudo/</link>
       <pubDate>Fri, 01 Aug 2025 21:29:20 +0200</pubDate>
-      <guid>https://adsmed.vercel.app/categories/pseudo/</guid>
+      <guid>http://localhost:1313/categories/pseudo/</guid>
       <description></description>
     </item>
     <item>
       <title>试管环节</title>
-      <link>https://adsmed.vercel.app/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/</link>
+      <link>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/</link>
       <pubDate>Fri, 15 Nov 2024 11:36:22 +0000</pubDate>
-      <guid>https://adsmed.vercel.app/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/</guid>
+      <guid>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/</guid>
       <description></description>
     </item>
     <item>
       <title>移植手术</title>
-      <link>https://adsmed.vercel.app/categories/%E7%A7%BB%E6%A4%8D%E6%89%8B%E6%9C%AF/</link>
+      <link>http://localhost:1313/categories/%E7%A7%BB%E6%A4%8D%E6%89%8B%E6%9C%AF/</link>
       <pubDate>Fri, 15 Nov 2024 11:36:22 +0000</pubDate>
-      <guid>https://adsmed.vercel.app/categories/%E7%A7%BB%E6%A4%8D%E6%89%8B%E6%9C%AF/</guid>
+      <guid>http://localhost:1313/categories/%E7%A7%BB%E6%A4%8D%E6%89%8B%E6%9C%AF/</guid>
       <description></description>
     </item>
     <item>
       <title>备孕须知</title>
-      <link>https://adsmed.vercel.app/categories/%E5%A4%87%E5%AD%95%E9%A1%BB%E7%9F%A5/</link>
+      <link>http://localhost:1313/categories/%E5%A4%87%E5%AD%95%E9%A1%BB%E7%9F%A5/</link>
       <pubDate>Thu, 04 Jan 2024 11:36:22 +0000</pubDate>
-      <guid>https://adsmed.vercel.app/categories/%E5%A4%87%E5%AD%95%E9%A1%BB%E7%9F%A5/</guid>
+      <guid>http://localhost:1313/categories/%E5%A4%87%E5%AD%95%E9%A1%BB%E7%9F%A5/</guid>
       <description></description>
     </item>
     <item>
       <title>胚胎培养</title>
-      <link>https://adsmed.vercel.app/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</link>
+      <link>http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</link>
       <pubDate>Fri, 15 Dec 2023 01:36:22 +0000</pubDate>
-      <guid>https://adsmed.vercel.app/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</guid>
+      <guid>http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</guid>
       <description></description>
     </item>
     <item>
       <title>试管准备</title>
-      <link>https://adsmed.vercel.app/categories/%E8%AF%95%E7%AE%A1%E5%87%86%E5%A4%87/</link>
+      <link>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E5%87%86%E5%A4%87/</link>
       <pubDate>Thu, 07 Dec 2023 09:36:22 +0000</pubDate>
-      <guid>https://adsmed.vercel.app/categories/%E8%AF%95%E7%AE%A1%E5%87%86%E5%A4%87/</guid>
+      <guid>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E5%87%86%E5%A4%87/</guid>
       <description></description>
     </item>
     <item>
       <title>促排卵</title>
-      <link>https://adsmed.vercel.app/categories/%E4%BF%83%E6%8E%92%E5%8D%B5/</link>
+      <link>http://localhost:1313/categories/%E4%BF%83%E6%8E%92%E5%8D%B5/</link>
       <pubDate>Tue, 14 Nov 2023 11:16:22 +0000</pubDate>
-      <guid>https://adsmed.vercel.app/categories/%E4%BF%83%E6%8E%92%E5%8D%B5/</guid>
+      <guid>http://localhost:1313/categories/%E4%BF%83%E6%8E%92%E5%8D%B5/</guid>
       <description></description>
     </item>
     <item>
       <title>检查项目</title>
-      <link>https://adsmed.vercel.app/categories/%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE/</link>
+      <link>http://localhost:1313/categories/%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Sun, 12 Nov 2023 13:32:11 +0000</pubDate>
-      <guid>https://adsmed.vercel.app/categories/%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>http://localhost:1313/categories/%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE/</guid>
       <description></description>
     </item>
     <item>
       <title>取卵手术</title>
-      <link>https://adsmed.vercel.app/categories/%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF/</link>
+      <link>http://localhost:1313/categories/%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF/</link>
       <pubDate>Fri, 03 Nov 2023 11:17:22 +0000</pubDate>
-      <guid>https://adsmed.vercel.app/categories/%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF/</guid>
+      <guid>http://localhost:1313/categories/%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF/</guid>
       <description></description>
     </item>
   </channel>

@@ -11,3 +11,12 @@
 .box-simple {
   min-height: 230px;
 }
+
+/* 强制修复安卓移动端图片超出页面框的问题 */
+@media (max-width: 767px) {
+    .blog-entries .image img {
+        max-width: 100% !important;
+        height: auto !important;
+        box-sizing: border-box !important;
+    }
+}
