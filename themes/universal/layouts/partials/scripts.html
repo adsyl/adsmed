@@ -10,6 +10,7 @@
 <script src="//maps.googleapis.com/maps/api/js?key={{.Site.Params.googleMapsApiKey}}&v=3.exp"></script>
 <script src="{{ "js/hpneo.gmaps.js" | relURL }}"></script>
 <script src="{{ "js/gmaps.init.js" | relURL }}"></script>
+<script src="{{ "js/custom-menu.js" | relURL }}"></script>
 {{ end }}
 {{ if and .Site.Params.enableRecaptchaInContactForm .Site.Params.googleRecaptchaKey }}
 <script src="//www.google.com/recaptcha/api.js" async defer></script>
