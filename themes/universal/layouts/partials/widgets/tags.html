@@ -1,18 +1,17 @@
-{{ if .Site.Params.widgets.tags }}
-{{ if isset .Site.Taxonomies "tags" }}
-{{ if not (eq (len .Site.Taxonomies.tags) 0) }}
+{{/* 检查是否启用标签小部件 */}}
+{{ if and .Site.Params.widgets.tags (not (eq (len .Site.Taxonomies.tags) 0)) }}
 <div class="panel sidebar-menu">
-
     <div class="panel-heading">
         <h3 class="panel-title">{{ i18n "tagsTitle" }}</h3>
     </div>
 
     <div class="panel-body">
-        <ul class="tag-cloud">
+        <ul class="tag-cloud  list-unstyled">
+            {{/* 对标签按字母排序，提升可读性 */}}
             {{ $current := . }}
             {{ range $name, $items := .Site.Taxonomies.tags }}
             <li {{ if eq $current.RelPermalink (printf "%s/%s/" ("tags" | relLangURL) ($name | urlize | lower)) }}class="active"{{ end }}>
-                <a href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}"><i class="fas fa-tags"></i> {{ $name }}</a>
+                <a href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}"><i class="fas fa-tags"></i> {{ $name }}  <span class="badge">{{ len $items }}</span></a>
             </li>
             {{ end }}
         </ul>
@@ -20,5 +19,4 @@
 
 </div>
 {{ end }}
-{{ end }}
-{{ end }}
+

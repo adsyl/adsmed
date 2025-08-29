@@ -365,10 +365,10 @@ pluralizelisttitles = false
 
 [params.see_more]
     enable = true
-    icon = "far fa-file-alt"
+    icon = "far fa-file"
     title = "您想了解更多吗?"
     subtitle = "我们提供了一些有用的自评工具和宣教信息供您浏览参考，以便您了解更多。"
-    link_url = "#"
+    link_url = "/service/tools"
     link_text = "点击到其他主页"
 
 [params.recent_posts]

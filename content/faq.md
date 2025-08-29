@@ -1,88 +1,82 @@
 +++
 
 title = "FAQ"
-
 description = "Frequently asked questions"
-
 type = "page"
-
 keywords = ["FAQ","How do I","questions","what if"]
-
 +++
 
+> **1. 什么是试管婴儿（IVF）？**
 
+试管婴儿（In Vitro Fertilization, IVF）是一种辅助生殖技术。它通过将卵子和精子在体外结合形成胚胎，然后将健康的胚胎移植回女性子宫内，以达到受孕的目的。
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+> **2. 试管婴儿适用于哪些人群？**
 
+试管婴儿主要适用于以下情况：
 
+\* 女性不孕： 输卵管阻塞、子宫内膜异位症、排卵障碍、多囊卵巢综合征等。
 
-\## 1 WHAT TO DO IF I HAVE STILL NOT RECEIVED THE ORDER?
+\* 男性不育： 严重少精、弱精、畸精症，或无精症（需通过睾丸取精）。
 
+\* 不明原因不孕： 经过常规检查仍找不到不孕原因的夫妇。
 
+\* 遗传性疾病： 夫妇中一方或双方携带遗传性疾病，希望通过胚胎植入前遗传学筛查（PGT）来生育健康宝宝。
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+> **3. 三代试管一般需要多长时间？**
 
+一个完整的三代试管周期通常需要3个月。具体时间因人而异，主要包括：
 
+\* 前期检查与评估： 约1-2个月。
 
-\* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+\* 促排卵与卵泡监测： 第1天-第12天
 
-\* Aliquam tincidunt mauris eu risus.
+\* 取卵和取精： 约第14天
 
-\* Vestibulum auctor dapibus neque.
+\* 体外受精与囊胚培养：约第14天-第20天
 
+\* 胚胎送检筛查（PGT）： 约第35天
 
+\* 宫腔调理：约第60天-第74天
 
-\## 2 WHAT ARE THE POSTAL RATES?
+\* 胚胎移植：约第75天
 
+\* 黄体支持与妊娠确认： 约第90天（移植后14天左右验血确认是否怀孕）。
 
+> **4. 试管婴儿的成功率如何？**
 
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+试管婴儿的成功率受到多种因素影响，包括但不限于：
 
+\* 年龄： 女性年龄是影响成功率的最主要因素，通常年龄越小，成功率越高。
 
+\* 胚胎质量： 胚胎的形态和发育潜能是关键。
 
-\## 3 DO YOU SEND OVERSEAS?
+\* 子宫内膜容受性： 良好的子宫内膜环境有助于胚胎着床。
 
+\* 技术水平： 实验室设备和医生的经验至关重要。
 
+\* 不孕原因： 不同病因的成功率有所差异。
 
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+建议您与我们进行专业的线下咨询，以便根据您的具体情况进行准确评估。
 
+> **5. 试管婴儿的费用是多少？**
 
+试管婴儿的费用因个人情况、期望和方案而异，主要包括：
 
-\## 4 WHY ARE YOU MORE EXPENSIVE THAN OTHERS?
+\* 启动前的检查费用
 
+\* 促排卵药物费用
 
+\* 手术及实验室操作费用（如取卵、胚胎培养、胚胎移植等）
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+\* 技术费用（如ICSI、PGT、胚胎冷冻等）
 
+我们的费用公开透明，在治疗开始前，我么为您制定符合您需求和预期且没有任何隐形收费的专属定制方案。
 
+> **6. 试管婴儿可以报销吗？**
 
-\* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-\* Aliquam tincidunt mauris eu risus.
-
-\* Vestibulum auctor dapibus neque.
-
-
-
-\## 5 ANOTHER IMPORTANT QUESTION
-
-
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-
-
-
-\* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-\* Aliquam tincidunt mauris eu risus.
-
-\* Vestibulum auctor dapibus neque.
-
-
+目前，部分地区已开始将部分辅助生殖项目纳入医保。但因为您的特殊需求，在我们机构无法按照医保标准收费，故无法报销。
 
 ---
 
-
-
-> In case you haven't found the answer for your question please feel free to contact us, our customer support will be happy to help you.
+> 期待为您提供专业的服务，助您实现生育梦想。
 

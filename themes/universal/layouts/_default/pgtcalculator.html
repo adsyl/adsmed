@@ -60,14 +60,14 @@
         }
         /* Primary button style */
         .btn-primary {
-            background-color: #3b82f6; /* Blue background */
-            color: #ffffff;
+            background-color: #F08080; /* Blue background */
+            color:white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded button */
-            transition: background-color 0.2s;
+            transition: background-color 0.3s;
         }
         .btn-primary:hover {
-            background-color: #2563eb; /* Darker blue on hover */
+            background-color: #E9967A; /* Darker blue on hover */
         }
         /* Disclaimer style - Adjusted to pink theme */
         .disclaimer {
@@ -95,7 +95,7 @@
         }
         /* Home button style */
         .btn-home {
-            background-color: #6b7280; /* Gray background */
+            background-color: #F08080; /* Gray background */
             color: #ffffff;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem;
@@ -107,18 +107,18 @@
             margin-right: auto;
         }
         .btn-home:hover {
-            background-color: #4b5563; /* Darker gray on hover */
+            background-color: #FA8072; /* Darker gray on hover */
         }
     </style>
 </head>
 <body class="antialiased">
     <!-- Header - Consistent with ivfprocess.html -->
-    <header class="bg-gradient-to-r from-blue-700 to-blue-500 text-white p-6 shadow-md rounded-b-xl">
-        <div class="container flex flex-col items-center">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-2 text-center">三代试管成功率自测工具</h1>
-            <p class="text-xl md:text-2xl text-center font-light leading-relaxed">精准评估，助您了解成功希望</p>
-        </div>
-    </header>
+<header class="bg-pink-300 text-white p-6 shadow-md rounded-b-xl">
+    <div class="container flex flex-col items-center">
+        <h1 class="text-4xl md:text-4xl font-extrabold mb-2 text-center">三代试管成功率自测工具</h1>
+        <p class="text-xl md:text-2xl text-center font-light leading-relaxed">精准评估，助您了解成功希望</p>
+    </div>
+</header>
 
     <!-- Main Content Area - Uses page-content-wrapper for consistent width and centering -->
     <main class="page-content-wrapper">
@@ -175,18 +175,18 @@
                     <input type="number" id="amh" name="amh" step="0.1" min="0.0" required
                             class="input-field focus:ring-2 focus:ring-blue-500">
                     <p class="text-sm text-gray-500 mt-1">
-                        AMH（抗缪勒氏管激素）是评估卵巢储备的重要指标。例如：1.5, 2.8, 0.7。
+                        AMH（抗缪勒氏管激素）是评估卵巢储备的重要指标。
                     </p>
                     <p id="amhError" class="error-message hidden">请输入一个有效的AMH值（大于等于0）。</p>
                 </div>
 
                 <!-- 4. 窦卵泡数量 (AFC) -->
                 <div>
-                    <label for="afc" class="block text-gray-700 font-medium mb-2">4. 您的基础窦卵泡数 (AFC) (双侧卵巢):</label>
+                    <label for="afc" class="block text-gray-700 font-medium mb-2">4. 您的基础窦卵泡计数 (AFC) :</label>
                     <input type="number" id="afc" name="afc" min="0" max="30" required
                             class="input-field focus:ring-2 focus:ring-blue-500">
                     <p class="text-sm text-gray-500 mt-1">
-                        AFC是超声检查下可观察到的卵泡数量，反映卵巢对促排卵的反应。
+                        AFC是阴道超声检查下可观察到的卵泡数量，用于直观评估获卵数量。
                     </p>
                     <p id="afcError" class="error-message hidden">请输入一个介于0到30之间的窦卵泡数。</p>
                 </div>
@@ -203,7 +203,7 @@
                         <option value="congenital_anomalies">子宫畸形 (如纵膈子宫等，已纠正或评估不影响)</option>
                         <option value="other_unmanaged">其他未处理或严重子宫问题</option>
                     </select>
-                    <p id="uterineConditionError" class="error-message hidden">请选择您的子宫情况。</p>
+                    <p id="uterineConditionError" class="error-message hidden">请选择您的子宫宫腔情况。</p>
                 </div>
 
                 <!-- 6. 其他相关病史 -->
@@ -239,6 +239,9 @@
                     </div>
                 </div>
 
+
+
+
                 <button type="submit" class="btn-primary w-full text-lg font-semibold mt-6">
                     评估我的成功率
                 </button>
@@ -264,9 +267,10 @@
             <div class="disclaimer mt-8">
                 <h3 class="font-bold mb-2">重要免责声明：</h3>
                 <p>
-                    本工具提供的成功率估算仅供参考，基于公开医学数据和普遍影响因素的简化模型。
-                    **它不能替代专业的医生咨询、诊断和治疗方案制定。**
-                    每个人的身体状况、基因背景和具体治疗方案都独一无二。请务必咨询您的生殖医学专家，获取最准确的个人评估和建议。
+                    本工具提供的成功率估算仅供参考，基于公开医学数据和普遍影响因素的简化模型。<br>
+                    它不能替代专业的医生咨询、诊断和治疗方案制定。<br>
+                    每个人的身体状况、基因背景和具体方案都独一无二。<br>
+                    请务必咨询您的顾问，获取最准确的个人评估和建议。
                 </p>
             </div>
 
@@ -274,8 +278,8 @@
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">三代试管（PGT）常见问题解答</h2>
                 <div class="space-y-4 text-gray-700">
                     <div>
-                        <h3 class="font-semibold text-lg">1. 三代试管能保证成功吗？</h3>
-                        <p>不能。三代试管（PGT）主要通过对胚胎进行染色体或基因筛查，选择健康的胚胎进行移植，从而显著提高活产率并降低流产风险。但它不能保证每次移植都成功，最终的成功率受多种因素影响，包括女性年龄、卵巢功能、子宫环境和医生技术等。</p>
+                        <h3 class="font-semibold text-lg">1. 三代试管能保证100%成功吗？</h3>
+                        <p>不能。三代试管（PGT）主要通过对胚胎进行染色体筛查，选择健康的胚胎进行移植，从而显著降低流产风险并大幅提高活产率。但它不能保证每次移植都成功，最终的成功率受多种因素影响，包括女性年龄、卵巢功能、子宫环境和医生技术等。</p>
                     </div>
                     <div>
                         <h3 class="font-semibold text-lg">2. 我的AMH值低/AFC少，是不是就没希望了？</h3>
@@ -285,11 +289,11 @@
                         <h3 class="font-semibold text-lg">3. 如何提高三代试管的成功率？</h3>
                         <p>提高成功率的关键包括：
                             <ul class="list-disc pl-5 mt-2">
-                                <li>选择经验丰富、设备先进的生殖中心和医生。</li>
+                                <li>选择经验丰富的生殖中心和医生。</li>
                                 <li>严格遵医嘱，按时用药，定期复诊。</li>
                                 <li>保持健康的生活方式，均衡饮食，适度运动，避免烟酒。</li>
                                 <li>减轻心理压力，保持积极心态。</li>
-                                <li>必要时进行生育力评估，处理影响怀孕的其他医学问题。</li>
+                                <li>进行全面的生育评估，处理影响怀孕的其他医学问题。</li>
                             </ul>
                         </p>
                     </div>
@@ -306,9 +310,10 @@
     </main>
 
 
-    <footer class="bg-blue-400 text-white p-6 mt-8 rounded-t-xl">
-        <div class="container text-center text-sm">
-            <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.organizationName | default "爱得生" }}. 版权所有. 为爱而生  祝您圆梦</p>
+    <footer class="bg-pink-200 text-gray-800 p-4 mt-8 rounded-t-xl">
+        <div class="container text-center text-base">
+             
+            <p>为爱而生❤祝您圆梦<br> &copy; {{ now.Format "2006" }} {{ .Site.Params.organizationName | default "爱得生" }} 版权所有.</p>
         </div>
     </footer>
 

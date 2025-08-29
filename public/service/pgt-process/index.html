@@ -6,16 +6,25 @@
     <title>三代试管婴儿全流程 - 三代试管婴儿全疗程介绍</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+         
         body {
             font-family: 'Inter', sans-serif;
             background-color: #FFF0F5;  
             color: #333;
+            min-height: 100vh;  
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;  
         }
         .container {
-            max-width: 1200px;
+            max-width: 1200px;  
             margin: 0 auto;
             padding: 1rem;
+            width: 100%;
         }
         .section-title {
             color: #1e3a8a;  
@@ -40,13 +49,13 @@
         .step-number {
             font-size: 2.5rem;  
             font-weight: bold;
-            color: #3b82f6;  
+            color: #F08080;  
             margin-bottom: 0.5rem;
         }
         .step-name {
             font-size: 1.75rem;  
             font-weight: bold;
-            color: #1e3a8a;  
+            color: #E9967A;  
             margin-bottom: 1rem;
         }
         .text-content {
@@ -73,10 +82,10 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 antialiased">
-    <header class="bg-gradient-to-r from-blue-700 to-blue-500 text-white p-6 shadow-md rounded-b-xl">
-        <div class="container flex flex-col items-center">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-2 text-center">三代试管婴儿全疗程</h1>
+<body class="antialiased">
+<header class="bg-pink-300 text-white p-6 shadow-md rounded-b-xl">
+    <div class="container flex flex-col items-center">
+            <h1 class="text-4xl md:text-4xl font-extrabold mb-2 text-center">三代试管婴儿全疗程</h1>
             <p class="text-xl md:text-2xl text-center font-light leading-relaxed">精准筛选，为您的宝宝带来更健康的开始</p>
         </div>
     </header>
@@ -84,20 +93,22 @@
     <main class="container my-8">
         <section class="mb-12 p-6 bg-white rounded-2xl shadow-lg">
             <h2 class="text-3xl font-bold section-title mb-4 text-center">什么是三代试管婴儿（PGT）？</h2>
-            <p class="text-lg leading-relaxed text-gray-700 text-center md:text-left">
-                三代试管婴儿，医学上称为**胚胎植入前遗传学检测 (PGT)**，是结合了常规试管婴儿技术和先进的遗传学诊断技术。它允许我们在胚胎移植回母体子宫之前，对其进行遗传物质的检测，以筛选出染色体异常或携带特定遗传疾病基因的胚胎。这大大降低了流产率、提高了妊娠成功率，并能有效避免遗传疾病的传递，为高风险家庭带来健康的宝宝。
-            </p>
-            <p class="text-lg leading-relaxed text-gray-700 text-center md:text-left mt-4">
-                整个疗程在常规试管婴儿的基础上增加了关键的筛选步骤，让您的助孕之旅更加安心。以下是三代试管婴儿的主要步骤：
-            </p>
-            <div class="mt-8 flex justify-center">
-                <img src="https://placehold.co/600x350/a7e0f8/1e3a8a?text=PGT+IVF+Overview" alt="[三代试管婴儿流程概览图]" class="rounded-xl shadow-md w-full md:w-3/4 lg:w-1/2">
+            <div class="flex flex-col md:flex-row md:space-x-8 items-start">
+            <div class="md:w-2/3 flex-shrink-0">
+                <p class="text-lg leading-relaxed text-gray-700 text-center md:text-left">
+                    三代试管婴儿，医学上称为**胚胎植入前遗传学检测 (PGT)**，是结合了常规试管婴儿技术和先进的遗传学诊断技术。它允许我们在胚胎移植回母体子宫之前，对其进行遗传物质的检测，以筛选排除染色体异常或携带特定遗传疾病基因的胚胎。这大大降低了流产率、提高了妊娠成功率，并能有效避免遗传疾病的传递，尽最大可能确保出生健康的宝宝。
+                </p>
+                <p class="text-lg leading-relaxed text-gray-700 text-center md:text-left mt-4">
+                    整个疗程在常规试管婴儿的基础上增加了关键的胚胎筛选步骤，让您的助孕之旅更加安心。下面是三代试管婴儿的主要步骤：
+                </p>
             </div>
+            <div class="md:w-1/3 mt-8 md:mt-0 flex justify-center">
+                <img src="/img/liucheng/lc.jpg" alt="[三代试管婴儿流程概览图]" class="rounded-xl shadow-md w-full">        
         </section>
 
         
         <div class="step-card">
-            <img src="https://placehold.co/400x250/dbeafe/1e3a8a?text=Step+1+Consultation" alt="[医生与夫妇进行咨询的图片]" class="w-full md:w-2/5">
+            <img src="/img/liucheng/zx.jpg" alt="[医生与夫妇进行咨询]" class="w-full md:w-2/5" loading="lazy">
             <div class="text-content">
                 <p class="step-number">01</p>
                 <h3 class="step-name">初步咨询与评估</h3>
@@ -109,7 +120,7 @@
 
         
         <div class="step-card">
-            <img src="https://placehold.co/400x250/e0e7ff/1e3a8a?text=Step+2+Ovarian+Stimulation" alt="[卵巢刺激与监测的示意图]" class="w-full md:w-2/5">
+            <img src="/img/liucheng/cp.jpg" alt="[促排]" class="w-full md:w-2/5" loading="lazy">
             <div class="text-content">
                 <p class="step-number">02</p>
                 <h3 class="step-name">卵巢刺激与监测</h3>
@@ -121,7 +132,7 @@
 
         
         <div class="step-card">
-            <img src="https://placehold.co/400x250/c7d2fe/1e3a8a?text=Step+3+Egg+Retrieval" alt="[取卵手术的示意图]" class="w-full md:w-2/5">
+            <img src="/img/liucheng/ql.jpg" alt="[取卵手术]" class="w-full md:w-2/5" loading="lazy">
             <div class="text-content">
                 <p class="step-number">03</p>
                 <h3 class="step-name">取卵</h3>
@@ -133,7 +144,7 @@
 
         
         <div class="step-card">
-            <img src="https://placehold.co/400x250/a5b4fc/1e3a8a?text=Step+4+Sperm+Collection" alt="[精子收集的图片]" class="w-full md:w-2/5">
+            <img src="/img/liucheng/jy.jpg" alt="[精子处理]" class="w-full md:w-2/5" loading="lazy">
             <div class="text-content">
                 <p class="step-number">04</p>
                 <h3 class="step-name">取精与精子处理</h3>
@@ -145,7 +156,7 @@
 
         
         <div class="step-card">
-            <img src="https://placehold.co/400x250/818cf8/1e3a8a?text=Step+5+Fertilization" alt="[实验室中体外受精过程的图片]" class="w-full md:w-2/5">
+            <img src="/img/liucheng/py.jpg" alt="[体外受精和胚胎培养]" class="w-full md:w-2/5" loading="lazy">
             <div class="text-content">
                 <p class="step-number">05</p>
                 <h3 class="step-name">体外受精与胚胎培养</h3>
@@ -157,18 +168,12 @@
 
         
         <div class="step-card">
-            <img src="https://placehold.co/400x250/6d28d9/1e3a8a?text=Step+6+PGT+Testing" alt="[胚胎活检和遗传学检测的示意图]" class="w-full md:w-2/5">
+            <img src="/img/liucheng/jc.jpg" alt="[胚胎活检和PGT]" class="w-full md:w-2/5" loading="lazy">
             <div class="text-content">
                 <p class="step-number">06</p>
                 <h3 class="step-name">胚胎植入前遗传学检测 (PGT)</h3>
                 <p class="text-lg leading-relaxed text-gray-700">
-                    这是三代试管婴儿的核心步骤。在胚胎发育到囊胚阶段后，经验丰富的胚胎师会利用微创技术，从囊胚滋养层细胞中取出几个细胞进行活检，而不损伤胚胎主体。这些活检样本将被送往遗传学实验室进行专业的基因分析。
-                    PGT主要分为三种类型：
-                    <ul class="list-disc list-inside mt-2 space-y-1">
-                        <li>**PGT-A (非整倍体筛查):** 检测胚胎染色体数目是否正常，排除唐氏综合症等染色体疾病。</li>
-                        <li>**PGT-M (单基因疾病检测):** 针对已知家族遗传病（如地中海贫血、囊性纤维化等）进行基因检测。</li>
-                        <li>**PGT-SR (染色体结构重排检测):** 适用于染色体结构异常的夫妇。</li>
-                    </ul>
+                    这是三代试管婴儿的核心步骤。在胚胎发育到囊胚阶段后，经验丰富的胚胎师会利用微创技术，从囊胚滋养层细胞中取出几个细胞进行活检，而不损伤胚胎主体。这些活检样本将被送往遗传学实验室进行专业的染色体筛查。
                     通过PGT，我们可以精确筛选出健康的胚胎，大幅提高移植成功率和活产率。
                 </p>
             </div>
@@ -176,7 +181,7 @@
 
         
         <div class="step-card">
-            <img src="https://placehold.co/400x250/4f46e5/1e3a8a?text=Step+7+Embryo+Transfer" alt="[胚胎移植手术的示意图]" class="w-full md:w-2/5">
+            <img src="/img/liucheng/yz.jpg" alt="[胚胎移植手术]" class="w-full md:w-2/5" loading="lazy">
             <div class="text-content">
                 <p class="step-number">07</p>
                 <h3 class="step-name">胚胎移植</h3>
@@ -188,7 +193,7 @@
 
         
         <div class="step-card">
-            <img src="https://placehold.co/400x250/3730a3/1e3a8a?text=Step+8+Pregnancy+Test" alt="[妊娠检测结果的图片]" class="w-full md:w-2/5">
+            <img src="/img/liucheng/yy.jpg" alt="" class="w-full md:w-2/5" loading="lazy">
             <div class="text-content">
                 <p class="step-number">08</p>
                 <h3 class="step-name">黄体支持与妊娠检测</h3>
@@ -198,7 +203,7 @@
             </div>
         </div>
 
-        <section class="mt-12 p-6 bg-pink-50 rounded-2xl shadow-lg border border-pink-200">
+        <section class="mt-12 p-6 bg-white rounded-2xl shadow-lg border border-pink-200">
             <h2 class="text-3xl font-bold section-title mb-4 text-center">三代试管婴儿的优势</h2>
             <ul class="list-disc list-inside text-lg leading-relaxed text-gray-700 space-y-2 mb-6">
                 <li>**提高妊娠成功率：** 通过筛选健康胚胎，减少因胚胎自身问题导致的着床失败和流产。</li>
@@ -213,14 +218,14 @@
                 如果您对三代试管婴儿有任何疑问，或想进一步了解如何开始您的助孕之旅，欢迎随时联系我们进行详细咨询。
             </p>
             <div class="mt-8 flex justify-center">
-                <a href="#" class="px-8 py-4 bg-blue-600 text-white text-xl font-semibold rounded-full shadow-lg hover:bg-blue-700 transition duration-300">立即预约咨询</a>
+                <a href="#" class="px-8 py-4 bg-pink-400 text-white text-xl font-semibold rounded-full shadow-lg hover:bg-blue-700 transition duration-300">立即预约咨询</a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-blue-400 text-white p-6 mt-8 rounded-t-xl">
-        <div class="container text-center text-sm">
-            <p>&copy; 2025 爱得生. 版权所有.      为爱而生  祝您圆梦</p>
+    <footer class="bg-pink-200 text-gray-800 p-4 mt-8 rounded-t-xl">
+        <div class="container text-center text-base">
+            <p>为爱而生❤祝您圆梦<br> &copy; 2025 爱得生 版权所有.</p>
         </div>
     </footer>
 </body>
