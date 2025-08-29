@@ -7,4 +7,8 @@ banner = "img/banner_gift.jpg"
 authors =  ["ADS"]
 +++
 
-优惠活动进行中
+# 暑期优惠活动进行中
+
+于2025年8月1日-2025年8月31日期间签约，直降10000元
+
+## Display PDF

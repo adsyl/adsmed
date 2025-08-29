@@ -1,8 +1,8 @@
 +++
 title = "mode"
 date = "2025-08-24T13:47:08+02:00"
-tags = ["试管环节"]
-categories = ["programming"]
+tags = ["PGT"]
+categories = ["试管环节"]
 banner = "img/banner01.jpg"
 authors =  ["ADS"]
 +++

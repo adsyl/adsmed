@@ -6,8 +6,15 @@
     <description>Recent content in Categories on 爱得生医疗</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 25 Aug 2025 13:47:08 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 26 Aug 2025 13:47:08 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>试管环节</title>
+      <link>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/</link>
+      <pubDate>Tue, 26 Aug 2025 13:47:08 +0200</pubDate>
+      <guid>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/</guid>
+      <description></description>
+    </item>
     <item>
       <title>PGT报告</title>
       <link>http://localhost:1313/categories/pgt%E6%8A%A5%E5%91%8A/</link>
@@ -16,10 +23,24 @@
       <description></description>
     </item>
     <item>
-      <title>Programming</title>
-      <link>http://localhost:1313/categories/programming/</link>
+      <title>胚胎</title>
+      <link>http://localhost:1313/categories/%E8%83%9A%E8%83%8E/</link>
+      <pubDate>Mon, 25 Aug 2025 13:47:08 +0200</pubDate>
+      <guid>http://localhost:1313/categories/%E8%83%9A%E8%83%8E/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>试管准备</title>
+      <link>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E5%87%86%E5%A4%87/</link>
+      <pubDate>Mon, 25 Aug 2025 13:47:08 +0200</pubDate>
+      <guid>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E5%87%86%E5%A4%87/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>胚胎培养</title>
+      <link>http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</link>
       <pubDate>Sun, 24 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>http://localhost:1313/categories/programming/</guid>
+      <guid>http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</guid>
       <description></description>
     </item>
     <item>
@@ -30,52 +51,10 @@
       <description></description>
     </item>
     <item>
-      <title>Lorem</title>
-      <link>http://localhost:1313/categories/lorem/</link>
-      <pubDate>Fri, 01 Aug 2025 21:29:20 +0200</pubDate>
-      <guid>http://localhost:1313/categories/lorem/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pseudo</title>
-      <link>http://localhost:1313/categories/pseudo/</link>
-      <pubDate>Fri, 01 Aug 2025 21:29:20 +0200</pubDate>
-      <guid>http://localhost:1313/categories/pseudo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>试管环节</title>
-      <link>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/</link>
-      <pubDate>Fri, 15 Nov 2024 11:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>移植手术</title>
-      <link>http://localhost:1313/categories/%E7%A7%BB%E6%A4%8D%E6%89%8B%E6%9C%AF/</link>
-      <pubDate>Fri, 15 Nov 2024 11:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E7%A7%BB%E6%A4%8D%E6%89%8B%E6%9C%AF/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>备孕须知</title>
       <link>http://localhost:1313/categories/%E5%A4%87%E5%AD%95%E9%A1%BB%E7%9F%A5/</link>
       <pubDate>Thu, 04 Jan 2024 11:36:22 +0000</pubDate>
       <guid>http://localhost:1313/categories/%E5%A4%87%E5%AD%95%E9%A1%BB%E7%9F%A5/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>胚胎培养</title>
-      <link>http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</link>
-      <pubDate>Fri, 15 Dec 2023 01:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>试管准备</title>
-      <link>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E5%87%86%E5%A4%87/</link>
-      <pubDate>Thu, 07 Dec 2023 09:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E5%87%86%E5%A4%87/</guid>
       <description></description>
     </item>
     <item>
@@ -90,13 +69,6 @@
       <link>http://localhost:1313/categories/%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Sun, 12 Nov 2023 13:32:11 +0000</pubDate>
       <guid>http://localhost:1313/categories/%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>取卵手术</title>
-      <link>http://localhost:1313/categories/%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF/</link>
-      <pubDate>Fri, 03 Nov 2023 11:17:22 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E5%8F%96%E5%8D%B5%E6%89%8B%E6%9C%AF/</guid>
       <description></description>
     </item>
   </channel>
