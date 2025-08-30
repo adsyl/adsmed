@@ -1,201 +1,175 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE html>  
+  <html lang="zh-CN">  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} - 三代试管成功率自测</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Base styles - Consistent with ivfprocess.html */
+        /* 全局样式重置和统一 */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #FFF0F5; /* 柔和的薰衣草粉色背景，与ivfprocess.html统一 */
+            background-color: #FFF0F5; /* 柔和的薰衣草粉色背景 */
             color: #333;
-            min-height: 100vh; /* 确保背景覆盖整个视口 */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0; /* 移除默认body padding，由page-content-wrapper提供 */
+            margin: 0; /* 移除默认的 body margin */
+            padding: 0; /* 移除默认的 body padding */
         }
         .container {
-            max-width: 1200px; /* 用于头部和页脚的宽度限制 */
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 1rem;
             width: 100%;
         }
         .section-title {
-            color: #1e3a8a; /* 深蓝色标题保持不变 */
+            color: #1e3a8a;
         }
-
-        /* Content Wrapper for main content - Consistent with ivfprocess.html */
         .page-content-wrapper {
-            max-width: 960px; /* Max width for main content */
+            max-width: 960px;
             width: 100%;
-            margin: 2.5rem auto; /* Vertical spacing and centering */
-            padding: 0 1rem; /* Horizontal padding for responsiveness */
-            box-sizing: border-box; /* Include padding in width */
+            margin: 2.5rem auto;
+            padding: 0 1rem;
+            flex-grow: 1; /* 确保内容区域填充剩余空间 */
         }
-        /* Card style - Consistent with ivfprocess.html */
         .card {
             background-color: #ffffff;
-            border-radius: 1rem; /* Rounded corners */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            padding: 1.5rem; /* Consistent padding */
-            margin-bottom: 2rem; /* Consistent spacing */
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
         }
-        /* Input field style */
         .input-field {
             padding: 0.75rem 1rem;
-            border: 1px solid #d1d5db; /* Light gray border */
-            border-radius: 0.5rem; /* Slightly rounded */
+            border: 1px solid #d1d5db;
+            border-radius: 0.75rem;
             width: 100%;
-            transition: border-color 0.2s;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
         .input-field:focus {
             outline: none;
-            border-color: #3b82f6; /* Blue border on focus */
+            border-color: #F08080;
+            box-shadow: 0 0 0 3px rgba(240, 128, 128, 0.3);
         }
-        /* Primary button style */
         .btn-primary {
-            background-color: #F08080; /* Blue background */
-            color:white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.75rem; /* More rounded button */
+            background-color: #F08080;
+            color: white;
+            padding: 0.85rem 1.75rem;
+            border-radius: 1rem;
             transition: background-color 0.3s;
         }
         .btn-primary:hover {
-            background-color: #E9967A; /* Darker blue on hover */
+            background-color: #E9967A;
         }
-        /* Disclaimer style - Adjusted to pink theme */
         .disclaimer {
-            font-size: 0.875rem; /* Smaller text */
-            color: #6b7280; /* Gray text */
-            margin-top: 1rem;
-            padding: 1rem;
-            background-color: #ffe4e6; /* Light pink background for disclaimer */
-            border-radius: 0.75rem;
-            border: 1px solid #ffc0cb; /* Pink border */
-        }
-        /* Result box style */
-        .result-box {
-            background-color: #ecfdf5; /* Light green background */
-            border-left: 5px solid #10b981; /* Green left border */
+            font-size: 0.875rem;
+            color: #6b7280;
             padding: 1.5rem;
-            border-radius: 0.75rem;
-            margin-top: 1.5rem;
+            background-color: #ffe4e6;
+            border-radius: 1rem;
+            border: 1px solid #ffc0cb;
         }
-        /* Error message style */
+        .result-box {
+            background-color: #f0fdf5;
+            border-left: 6px solid #10b981;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-top: 2rem;
+        }
         .error-message {
-            color: #ef4444; /* Red for errors */
+            color: #ef4444;
             font-size: 0.875rem;
             margin-top: 0.5rem;
         }
-        /* Home button style */
         .btn-home {
-            background-color: #F08080; /* Gray background */
+            background-color: #FA8072;
             color: #ffffff;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem;
             transition: background-color 0.2s;
-            margin-top: 2.5rem; /* Space above button */
-            display: block; /* Make it block to center with mx-auto */
-            width: fit-content; /* Adjust width to content */
+            display: block;
+            width: fit-content;
             margin-left: auto;
             margin-right: auto;
         }
         .btn-home:hover {
-            background-color: #FA8072; /* Darker gray on hover */
+            background-color: #E9967A;
         }
     </style>
 </head>
-<body class="antialiased">
-    <!-- Header - Consistent with ivfprocess.html -->
-<header class="bg-pink-300 text-white p-3 shadow-md rounded-b-xl w-full">
-    <div class="container mx-auto flex flex-col items-center">
-        <h1 class="text-3xl md:text-3xl font-extrabold mb-2 text-center">三代试管成功率自测工具</h1>
-        <p class="text-xl md:text-2xl text-center font-light leading-relaxed">精准评估，助您触碰成功的曙光</p>
-    </div>
-</header>
+<body class="antialiased min-h-screen flex flex-col">
+    <header class="bg-pink-300 text-white p-3 shadow-md rounded-b-3xl w-full">
+        <div class="container mx-auto flex flex-col items-center">
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-2 text-center">三代试管成功率自测工具</h1>
+            <p class="text-lg md:text-xl text-center font-light leading-relaxed opacity-90">精准评估，助您触碰成功的曙光</p>
+        </div>
+    </header>
 
-    <!-- Main Content Area - Uses page-content-wrapper for consistent width and centering -->
-    <main class="page-content-wrapper">
+    <main class="page-content-wrapper flex-grow">
         <section class="card">
             <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-                请填写以下信息以获取您初步的**三代试管（PGT）活产率估算区间**和**影响因素分析**。
+                请填写以下信息以获取您的**三代试管（PGT）活产率估算**和**影响因素分析**。
                 本工具旨在提供科学参考，**不能替代专业医生诊断和个性化评估**。
             </p>
 
-            <form id="pgtForm" class="space-y-6">
-                <!-- 1. 年龄 -->
+            <form id="pgtForm" class="space-y-8">
                 <div>
                     <label for="age" class="block text-gray-700 font-medium mb-2">1. 您的年龄 (岁):</label>
-                    <input type="number" id="age" name="age" min="18" max="50" required
-                            class="input-field focus:ring-2 focus:ring-blue-500">
+                    <input type="number" id="age" name="age" min="18" max="50" required class="input-field">
+                    <p class="text-sm text-gray-500 mt-1">
+                        年龄是最重要的影响因素，超过35岁的高龄产妇生育力加速下滑。
+                    </p>
                     <p id="ageError" class="error-message hidden">请输入一个介于18到50岁之间的有效年龄。</p>
                 </div>
 
-                <!-- 2. 生育史 -->
                 <div>
-                    <label class="block text-gray-700 font-medium mb-2">2. 您的生育史:</label>
-                    <div class="space-y-3">
-                        <p class="font-medium text-gray-600 mb-1">2.1 是否有过活产史 (包括自然怀孕和辅助生殖):</p>
-                        <div class="flex items-center space-x-4">
-                            <label class="inline-flex items-center">
-                                <input type="radio" name="liveBirths" value="yes" class="form-radio text-blue-600" required>
-                                <span class="ml-2">有</span>
-                            </label>
-                            <label class="inline-flex items-center">
-                                <input type="radio" name="liveBirths" value="no" class="form-radio text-blue-600" required>
-                                <span class="ml-2">无</span>
-                            </label>
-                        </div>
-                        <p id="liveBirthsError" class="error-message hidden">请选择是否有过活产史。</p>
-
-                        <p class="font-medium text-gray-600 mb-1 pt-3">2.2 是否有过反复流产史 (≥2次):</p>
-                        <div class="flex items-center space-x-4">
-                            <label class="inline-flex items-center">
-                                <input type="radio" name="recurrentMiscarriage" value="yes" class="form-radio text-blue-600" required>
-                                <span class="ml-2">有</span>
-                            </label>
-                            <label class="inline-flex items-center">
-                                <input type="radio" name="recurrentMiscarriage" value="no" class="form-radio text-blue-600" required>
-                                <span class="ml-2">无</span>
-                            </label>
-                        </div>
-                        <p id="recurrentMiscarriageError" class="error-message hidden">请选择是否有过反复流产史。</p>
-                    </div>
-                </div>
-
-                <!-- 3. 性激素和AMH -->
-                <div>
-                    <label for="amh" class="block text-gray-700 font-medium mb-2">3. 您的AMH值 (ng/mL):</label>
-                    <input type="number" id="amh" name="amh" step="0.1" min="0.0" required
-                            class="input-field focus:ring-2 focus:ring-blue-500">
+                    <label for="amh" class="block text-gray-700 font-medium mb-2">2. 您的AMH值 (ng/mL):</label>
+                    <input type="number" id="amh" name="amh" step="0.1" min="0.0" required class="input-field">
                     <p class="text-sm text-gray-500 mt-1">
                         AMH（抗缪勒氏管激素）是评估卵巢储备的重要指标。
                     </p>
                     <p id="amhError" class="error-message hidden">请输入一个有效的AMH值（大于等于0）。</p>
                 </div>
 
-                <!-- 4. 窦卵泡数量 (AFC) -->
                 <div>
-                    <label for="afc" class="block text-gray-700 font-medium mb-2">4. 您的基础窦卵泡计数 (AFC) :</label>
-                    <input type="number" id="afc" name="afc" min="0" max="30" required
-                            class="input-field focus:ring-2 focus:ring-blue-500">
+                    <label for="afc" class="block text-gray-700 font-medium mb-2">3. 您的基础窦卵泡计数 (AFC) :</label>
+                    <input type="number" id="afc" name="afc" min="0" max="30" required class="input-field">
                     <p class="text-sm text-gray-500 mt-1">
                         AFC是阴道超声检查下可观察到的卵泡数量，用于直观评估获卵数量。
                     </p>
                     <p id="afcError" class="error-message hidden">请输入一个介于0到30之间的窦卵泡数。</p>
                 </div>
 
-                <!-- 5. 子宫情况 -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">4. 您的性激素四项:</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="fsh" class="block text-gray-600 text-sm mb-1">FSH (mIU/mL):</label>
+                            <input type="number" id="fsh" name="fsh" step="0.1" min="0" required class="input-field">
+                            <p id="fshError" class="error-message hidden">请输入有效的FSH值。</p>
+                        </div>
+                        <div>
+                            <label for="lh" class="block text-gray-600 text-sm mb-1">LH (mIU/mL):</label>
+                            <input type="number" id="lh" name="lh" step="0.1" min="0" required class="input-field">
+                            <p id="lhError" class="error-message hidden">请输入有效的LH值。</p>
+                        </div>
+                        <div>
+                            <label for="prl" class="block text-gray-600 text-sm mb-1">PRL (ng/mL):</label>
+                            <input type="number" id="prl" name="prl" step="0.1" min="0" required class="input-field">
+                            <p id="prlError" class="error-message hidden">请输入有效的PRL值。</p>
+                        </div>
+                        <div>
+                            <label for="e2" class="block text-gray-600 text-sm mb-1">E2 (pg/mL):</label>
+                            <input type="number" id="e2" name="e2" step="0.1" min="0" required class="input-field">
+                            <p id="e2Error" class="error-message hidden">请输入有效的E2值。</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div>
                     <label for="uterineCondition" class="block text-gray-700 font-medium mb-2">5. 您的子宫情况:</label>
-                    <select id="uterineCondition" name="uterineCondition" required
-                             class="input-field focus:ring-2 focus:ring-blue-500">
+                    <select id="uterineCondition" name="uterineCondition" required class="input-field">
                         <option value="">请选择</option>
                         <option value="normal">正常 (无明显异常)</option>
                         <option value="fibroids_polyps_managed">子宫肌瘤/息肉 (已处理或不影响着床)</option>
@@ -206,56 +180,75 @@
                     <p id="uterineConditionError" class="error-message hidden">请选择您的子宫宫腔情况。</p>
                 </div>
 
-                <!-- 6. 其他相关病史 -->
                 <div>
-                    <label class="block text-gray-700 font-medium mb-2">6. 其他相关病史:</label>
-                    <div class="space-y-3">
-                        <p class="font-medium text-gray-600 mb-1">6.1 您的身高和体重 (用于计算BMI):</p>
-                        <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                            <div class="w-full sm:w-1/2">
-                                <label for="heightCm" class="block text-gray-600 text-sm mb-1">身高 (cm):</label>
-                                <input type="number" id="heightCm" name="heightCm" min="100" max="250" required
-                                        class="input-field focus:ring-2 focus:ring-blue-500">
-                                <p id="heightCmError" class="error-message hidden">请输入有效身高 (100-250 cm)。</p>
-                            </div>
-                            <div class="w-full sm:w-1/2">
-                                <label for="weightKg" class="block text-gray-600 text-sm mb-1">体重 (kg):</label>
-                                <input type="number" id="weightKg" name="weightKg" min="30" max="200" step="0.1" required
-                                        class="input-field focus:ring-2 focus:ring-blue-500">
-                                <p id="weightKgError" class="error-message hidden">请输入有效体重 (30-200 kg)。</p>
-                            </div>
-                        </div>
-
-                        <p class="font-medium text-gray-600 mb-1 pt-3">6.2 您的其他慢性疾病或自身免疫情况:</p>
-                        <select id="otherMedicalHistory" name="otherMedicalHistory" required
-                                 class="input-field focus:ring-2 focus:ring-blue-500">
+                    <label class="block text-gray-700 font-medium mb-2">6. 您的生育史:</label>
+                    <div class="space-y-4">
+                        <p class="font-medium text-gray-600 mb-1">6.1 您有多少次足月分娩活产史?</p>
+                        <select id="liveBirthsCount" name="liveBirthsCount" required class="input-field">
                             <option value="">请选择</option>
-                            <option value="none">无主要慢性疾病或自身免疫疾病</option>
-                            <option value="mild_managed">有轻度慢性病 (如甲状腺功能减退等)，已良好管理</option>
-                            <option value="immune_severe_managed">有自身免疫疾病或严重慢性病，但已在管理中</option>
-                            <option value="unmanaged_severe">有未控制的严重慢性疾病或复杂自身免疫问题</option>
+                            <option value="0">0次</option>
+                            <option value="1">1次</option>
+                            <option value="2">2次</option>
+                            <option value="3">＞2次</option>
                         </select>
-                        <p id="otherMedicalHistoryError" class="error-message hidden">请选择其他相关病史。</p>
+                        <p id="liveBirthsCountError" class="error-message hidden">请选择足月分娩活产史。</p>
+                        <p class="font-medium text-gray-600 mb-1 pt-3">6.2 您有多少次流产史?</p>
+                        <select id="miscarriageCount" name="miscarriageCount" required class="input-field">
+                            <option value="">请选择</option>
+                            <option value="0">0次</option>
+                            <option value="1">1次</option>
+                            <option value="2">2次</option>
+                            <option value="3">＞2次</option>
+                        </select>
+                        <p id="miscarriageCountError" class="error-message hidden">请选择流产史次数。</p>
                     </div>
                 </div>
 
+                <div>
+                    <label for="otherMedicalHistory" class="block text-gray-700 font-medium mb-2">7. 您的其他慢性疾病、癌症或自身免疫情况:</label>
+                    <select id="otherMedicalHistory" name="otherMedicalHistory" required class="input-field">
+                        <option value="">请选择</option>
+                        <option value="none">无主要慢性疾病或自身免疫疾病</option>
+                        <option value="mild_managed">有轻度慢性病 (如甲状腺功能减退等)，已良好管理</option>
+                        <option value="immune_severe_managed">有自身免疫疾病或严重慢性病，但已在管理中</option>
+                        <option value="unmanaged_severe">有未控制的严重慢性疾病或复杂自身免疫问题</option>
+                    </select>
+                    <p id="otherMedicalHistoryError" class="error-message hidden">请选择其他相关病史。</p>
+                </div>
 
-
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">8. 您的身高和体重 (用于计算BMI):</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="heightCm" class="block text-gray-600 text-sm mb-1">身高 (cm):</label>
+                            <input type="number" id="heightCm" name="heightCm" min="100" max="250" required class="input-field">
+                            <p id="heightCmError" class="error-message hidden">请输入有效身高 (100-250 cm)。</p>
+                        </div>
+                        <div>
+                            <label for="weightKg" class="block text-gray-600 text-sm mb-1">体重 (kg):</label>
+                            <input type="number" id="weightKg" name="weightKg" min="30" max="200" step="0.1" required class="input-field">
+                            <p id="weightKgError" class="error-message hidden">请输入有效体重 (30-200 kg)。</p>
+                        </div>
+                    </div>
+                </div>
 
                 <button type="submit" class="btn-primary w-full text-lg font-semibold mt-6">
-                    评估我的成功率
+                    查看我的成功率
                 </button>
             </form>
 
             <div id="results" class="result-box hidden">
                 <h2 class="text-2xl font-semibold text-gray-800 mb-4">评估结果</h2>
                 <p class="text-lg text-gray-700 mb-3">
-                    基于您提供的信息，您的三代试管活产率估算区间约为：
+                    基于您提供的信息，您的**三代试管一促一移活产率**估算区间约为：
                     <span class="font-bold text-green-700 text-xl" id="successRateRange"></span>
+                </p>
+                <p class="text-lg text-gray-700 mb-3">
+                    为达到**≥85%**的总体活产率，您可能需要进行：
+                    <span class="font-bold text-red-600 text-xl" id="cyclesNeeded"></span>
                 </p>
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">影响因素分析:</h3>
                 <ul id="factorAnalysis" class="list-disc pl-5 text-gray-700 space-y-2">
-                    <!-- 动态生成分析结果 -->
                 </ul>
             </div>
 
@@ -263,324 +256,339 @@
                 <h3 class="font-bold mb-2">错误提示：</h3>
                 <p id="generalErrorMessage"></p>
             </div>
+        </section>
 
-            <div class="disclaimer mt-8">
-                <h3 class="font-bold mb-2">重要免责声明：</h3>
-                <p>
-                    本工具提供的成功率估算仅供参考，基于公开医学数据和普遍影响因素的简化模型。<br>
+        <section class="card mt-8">
+            <div class="disclaimer">
+                <h3 class="font-bold mb-2 text-gray-800">重要免责声明：</h3>
+                <p class="text-sm">
+                    您输入的信息不会被存储，仅用于评估您的是试管成功率。<br>
+                    本工具基于公开医学数据和普遍影响因素的简化模型，仅供一般指导。<br>
                     它不能替代专业的医生咨询、诊断和治疗方案制定。<br>
-                    每个人的身体状况、基因背景和具体方案都独一无二。<br>
-                    请务必咨询您的顾问，获取最准确的个人评估和建议。
+                    请务必咨询您的顾问以获得个性化的治疗计划。
                 </p>
             </div>
+        </section>
 
-            <div class="mt-10 p-6 card">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">三代试管（PGT）常见问题解答</h2>
-                <div class="space-y-4 text-gray-700">
-                    <div>
-                        <h3 class="font-semibold text-lg">1. 三代试管能保证100%成功吗？</h3>
-                        <p>不能。三代试管（PGT）主要通过对胚胎进行染色体筛查，选择健康的胚胎进行移植，从而显著降低流产风险并大幅提高活产率。但它不能保证每次移植都成功，最终的成功率受多种因素影响，包括女性年龄、卵巢功能、子宫环境和医生技术等。</p>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-lg">2. 我的AMH值低/AFC少，是不是就没希望了？</h3>
-                        <p>AMH值低或AFC少意味着卵巢储备功能下降，可能获卵数较少，但这不代表完全没有希望。这些指标只是预测性参考，您的实际卵子质量和个体反应更为关键。医生会根据您的具体情况调整促排卵方案，并评估其他指标，提供个性化建议。</p>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-lg">3. 如何提高三代试管的成功率？</h3>
-                        <p>提高成功率的关键包括：
-                            <ul class="list-disc pl-5 mt-2">
-                                <li>选择经验丰富的生殖中心和医生。</li>
-                                <li>严格遵医嘱，按时用药，定期复诊。</li>
-                                <li>保持健康的生活方式，均衡饮食，适度运动，避免烟酒。</li>
-                                <li>减轻心理压力，保持积极心态。</li>
-                                <li>进行全面的生育评估，处理影响怀孕的其他医学问题。</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-lg">4. 三代试管主要适用于哪些人群？</h3>
-                        <p>三代试管主要适用于有遗传疾病风险、高龄、反复流产、反复种植失败、染色体异常（如平衡易位）的夫妇。通过胚胎植入前遗传学检测（PGT），可以筛查出染色体非整倍体、单基因遗传病或染色体结构重排等问题。</p>
-                    </div>
+        <section class="card mt-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">三代试管（PGT）常见问题解答</h2>
+            <div class="space-y-6 text-gray-700">
+                <div>
+                    <h3 class="font-semibold text-lg">1. 三代试管能保证100%成功吗？</h3>
+                    <p>不能。三代试管（PGT）主要通过对胚胎进行染色体筛查，选择健康的胚胎进行移植，从而显著降低流产风险并大幅提高活产率。但它不能保证每次移植都成功，最终的成功率受多种因素影响，包括女性年龄、卵巢功能、子宫环境和医生技术等。</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg">2. 我的AMH值低/AFC少，是不是就没希望了？</h3>
+                    <p>AMH值低或AFC少意味着卵巢储备功能下降，可能获卵数较少，但这不代表完全没有希望。这些指标只是预测性参考，您的实际卵子质量和个体反应更为关键。医生会根据您的具体情况调整促排卵方案，并评估其他指标，提供个性化建议。</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg">3. 如何提高三代试管的成功率？</h3>
+                    <p>提高成功率的关键包括：
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>选择经验丰富的生殖中心和医生。</li>
+                            <li>严格遵医嘱，按时用药，定期复诊。</li>
+                            <li>保持健康的生活方式，均衡饮食，适度运动，避免烟酒。</li>
+                            <li>减轻心理压力，保持积极心态。</li>
+                            <li>进行全面的生育评估，处理影响怀孕的其他医学问题。</li>
+                        </ul>
+                    </p>
                 </div>
             </div>
-
-            <!-- 返回主页按钮 -->
-            <button onclick="window.location.href = 'http://www.adsmed.org';" class="btn-home">返回主页</button>
         </section>
+
     </main>
 
-<footer class="bg-pink-200 text-gray-800 p-1 mt-3 rounded-t-xl w-full">
-    <div class="container mx-auto text-center text-base">       
-            <p>为爱而生❤祝您圆梦<br> &copy; {{ now.Format "2006" }} {{ .Site.Params.organizationName | default "爱得生" }} 版权所有.</p>
+            <div class="mt-2 flex justify-center">
+                <a href="#" class="px-8 py-4 bg-pink-400 text-white text-xl font-semibold rounded-full shadow-lg hover:bg-blue-700 transition duration-300">立即预约咨询</a>
+            </div>
+
+    <footer class="bg-pink-200 text-gray-800 p-4 mt-8 rounded-t-3xl w-full">
+        <div class="container mx-auto text-center text-sm">
+            <p>为爱而生❤祝您圆梦<a href="http://www.adsmed.org" class="text-blue-600 hover:text-blue-800 font-medium">[返回主页]</a><br>&copy; {{ now.Format "2006" }} {{ .Site.Params.organizationName | default "爱得生" }} 版权所有.</p>
         </div>
     </footer>
 
-    <script>
-        // Helper function for piecewise linear interpolation
-        function getInterpolatedScore(value, breakpoints, descriptionPrefix, unit, toFixed_val = 1) {
-            let score = 0;
-            let description = '';
+      <script>  
+          // Helper function for piecewise linear interpolation  
+        // 这是一个通用的辅助函数，用于根据输入值和一系列断点，计算得分和描述。
+          function getInterpolatedScore(value, breakpoints, descriptionPrefix, unit, toFixed_val = 1) {  
+              let score = 0;  
+              let description = ''; 
+ 
+              // 确保断点是按值升序排列的
+              breakpoints.sort((a, b) => a.point - b.point);  
 
-            // Sort breakpoints by value to ensure correct interpolation
-            breakpoints.sort((a, b) => a.point - b.point);
+              // 如果值小于等于第一个断点，则直接使用第一个断点的值
+              if (value <= breakpoints[0].point) {  
+                  score = breakpoints[0].score;  
+                  description = `${descriptionPrefix}为 ${value.toFixed(toFixed_val)} ${unit}（${breakpoints[0].desc}）。`;  
+              } else if (value >= breakpoints[breakpoints.length - 1].point) {  
+                  score = breakpoints[breakpoints.length - 1].score;  
+                  description = `${descriptionPrefix}为 ${value.toFixed(toFixed_val)} ${unit}（${breakpoints[breakpoints.length - 1].desc}）。`;  
+              } else {  
+                  for (let i = 0; i < breakpoints.length - 1; i++) {  
+                      const p1 = breakpoints[i];  
+                      const p2 = breakpoints[i + 1];  
 
-            if (value <= breakpoints[0].point) {
-                score = breakpoints[0].score;
-                description = `${descriptionPrefix}为 ${value.toFixed(toFixed_val)} ${unit}（${breakpoints[0].desc}）。`;
-            } else if (value >= breakpoints[breakpoints.length - 1].point) {
-                score = breakpoints[breakpoints.length - 1].score;
-                description = `${descriptionPrefix}为 ${value.toFixed(toFixed_val)} ${unit}（${breakpoints[breakpoints.length - 1].desc}）。`;
-            } else {
-                for (let i = 0; i < breakpoints.length - 1; i++) {
-                    const p1 = breakpoints[i];
-                    const p2 = breakpoints[i + 1];
+                      if (value >= p1.point && value < p2.point) {  
+                          score = p1.score + (value - p1.point) * (p2.score - p1.score) / (p2.point - p1.point);  
+                          description = `${descriptionPrefix}为 ${value.toFixed(toFixed_val)} ${unit}（${p1.desc}到${p2.desc}之间）。`;  
+                          break;  
+                      }  
+                  }  
+              }  
+              return { score: score, description: description };  
+          }  
 
-                    if (value >= p1.point && value < p2.point) {
-                        score = p1.score + (value - p1.point) * (p2.score - p1.score) / (p2.point - p1.point);
-                        description = `${descriptionPrefix}为 ${value.toFixed(toFixed_val)} ${unit}（${p1.desc}到${p2.desc}之间）。`;
-                        break;
-                    }
-                }
-            }
-            return { score: score, description: description };
-        }
+          document.getElementById('pgtForm').addEventListener('submit', function(event) {  
+              event.preventDefault(); // Prevent default form submission  
+              resetErrorMessages(); // Reset error messages  
 
+              // Get input values  
+              const age = parseInt(document.getElementById('age').value);  
+              const amh = parseFloat(document.getElementById('amh').value);  
+              const afc = parseInt(document.getElementById('afc').value);  
+              const fsh = parseFloat(document.getElementById('fsh').value);  
+              const lh = parseFloat(document.getElementById('lh').value);  
+              const prl = parseFloat(document.getElementById('prl').value);  
+              const e2 = parseFloat(document.getElementById('e2').value);  
+              const uterineCondition = document.getElementById('uterineCondition').value;  
+              const liveBirthsCount = document.getElementById('liveBirthsCount').value;  
+              const miscarriageCount = document.getElementById('miscarriageCount').value;  
+              const heightCm = parseFloat(document.getElementById('heightCm').value);  
+              const weightKg = parseFloat(document.getElementById('weightKg').value);  
+              const otherMedicalHistory = document.getElementById('otherMedicalHistory').value;  
 
-        document.getElementById('pgtForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-            resetErrorMessages(); // Reset error messages
+              let isValid = true;  
 
-            // Get input values
-            const age = parseInt(document.getElementById('age').value);
-            const liveBirths = document.querySelector('input[name="liveBirths"]:checked');
-            const recurrentMiscarriage = document.querySelector('input[name="recurrentMiscarriage"]:checked');
-            const amh = parseFloat(document.getElementById('amh').value);
-            const afc = parseInt(document.getElementById('afc').value);
-            const uterineCondition = document.getElementById('uterineCondition').value;
-            const heightCm = parseFloat(document.getElementById('heightCm').value);
-            const weightKg = parseFloat(document.getElementById('weightKg').value);
-            const otherMedicalHistory = document.getElementById('otherMedicalHistory').value;
+              // Validate all fields  
+              if (isNaN(age) || age < 18 || age > 50) { document.getElementById('ageError').classList.remove('hidden'); isValid = false; }  
+              if (isNaN(amh) || amh < 0.0) { document.getElementById('amhError').classList.remove('hidden'); isValid = false; }  
+              if (isNaN(afc) || afc < 0 || afc > 30) { document.getElementById('afcError').classList.remove('hidden'); isValid = false; }  
+              if (isNaN(fsh) || fsh < 0) { document.getElementById('fshError').classList.remove('hidden'); isValid = false; }  
+              if (isNaN(lh) || lh < 0) { document.getElementById('lhError').classList.remove('hidden'); isValid = false; }  
+              if (isNaN(prl) || prl < 0) { document.getElementById('prlError').classList.remove('hidden'); isValid = false; }  
+              if (isNaN(e2) || e2 < 0) { document.getElementById('e2Error').classList.remove('hidden'); isValid = false; }  
+              if (uterineCondition === "") { document.getElementById('uterineConditionError').classList.remove('hidden'); isValid = false; }  
+              if (liveBirthsCount === "") { document.getElementById('liveBirthsCountError').classList.remove('hidden'); isValid = false; }  
+              if (miscarriageCount === "") { document.getElementById('miscarriageCountError').classList.remove('hidden'); isValid = false; }  
+              if (isNaN(heightCm) || heightCm < 100 || heightCm > 250) { document.getElementById('heightCmError').classList.remove('hidden'); isValid = false; }  
+              if (isNaN(weightKg) || weightKg < 30 || weightKg > 200) { document.getElementById('weightKgError').classList.remove('hidden'); isValid = false; }  
+              if (otherMedicalHistory === "") { document.getElementById('otherMedicalHistoryError').classList.remove('hidden'); isValid = false; }  
 
-            let isValid = true;
+              if (!isValid) {  
+                  document.getElementById('errorMessageContainer').classList.remove('hidden');  
+                  document.getElementById('generalErrorMessage').innerText = "请检查并填写所有必填项，确保输入有效。";  
+                  document.getElementById('results').classList.add('hidden');  
+                  return;  
+              } else {  
+                  document.getElementById('errorMessageContainer').classList.add('hidden');  
+              }  
 
-            // Validate all fields
-            if (isNaN(age) || age < 18 || age > 50) {
-                document.getElementById('ageError').classList.remove('hidden'); isValid = false;
-            }
-            if (!liveBirths) {
-                document.getElementById('liveBirthsError').classList.remove('hidden'); isValid = false;
-            }
-            if (!recurrentMiscarriage) {
-                document.getElementById('recurrentMiscarriageError').classList.remove('hidden'); isValid = false;
-            }
-            if (isNaN(amh) || amh < 0.0) {
-                document.getElementById('amhError').classList.remove('hidden'); isValid = false;
-            }
-            if (isNaN(afc) || afc < 0 || afc > 30) {
-                document.getElementById('afcError').classList.remove('hidden'); isValid = false;
-            }
-            if (uterineCondition === "") {
-                document.getElementById('uterineConditionError').classList.remove('hidden'); isValid = false;
-            }
-            if (isNaN(heightCm) || heightCm < 100 || heightCm > 250) {
-                document.getElementById('heightCmError').classList.remove('hidden'); isValid = false;
-            }
-            if (isNaN(weightKg) || weightKg < 30 || weightKg > 200) {
-                document.getElementById('weightKgError').classList.remove('hidden'); isValid = false;
-            }
-            if (otherMedicalHistory === "") {
-                document.getElementById('otherMedicalHistoryError').classList.remove('hidden'); isValid = false;
-            }
+              // Calculate BMI  
+              const heightM = heightCm / 100; // Height from cm to meters  
+              const bmi = weightKg / (heightM * heightM);  
 
-            if (!isValid) {
-                document.getElementById('errorMessageContainer').classList.remove('hidden');
-                document.getElementById('generalErrorMessage').innerText = "请检查并填写所有必填项，确保输入有效。";
-                document.getElementById('results').classList.add('hidden');
-                return;
-            } else {
-                document.getElementById('errorMessageContainer').classList.add('hidden');
-            }
+              // --- Core Evaluation Logic (Score Accumulation with Interpolation) ---  
+              let totalScore = 0;  
+              let analysisPoints = [];  
 
-            // Calculate BMI
-            const heightM = heightCm / 100; // Height from cm to meters
-            const bmi = weightKg / (heightM * heightM);
+              // 1. Age Scoring Breakpoints  
+              const ageBreakpoints = [  
+                  { point: 25, score: 30, desc: '最佳' },  
+                  { point: 30, score: 28, desc: '非常好' },  
+                  { point: 35, score: 20, desc: '良好' },  
+                  { point: 38, score: 10, desc: '中等' },  
+                  { point: 40, score: 0, desc: '开始下降' },  
+                  { point: 42, score: -15, desc: '显著下降' },  
+                  { point: 45, score: -30, desc: '严重下降' },  
+                  { point: 50, score: -40, desc: '极低' }  
+              ];  
+              const ageResult = getInterpolatedScore(age, ageBreakpoints, '您的年龄', '岁', 0);  
+              totalScore += ageResult.score;  
+              analysisPoints.push(`年龄：${ageResult.description} ${age < 35 ? '卵子数量和质量相对较好。' : '卵子数量和质量有所下降，染色体异常风险升高，这在三代试管中至关重要。'}`);  
+  
+              // 2. AMH值 (卵巢储备)  
+              const amhBreakpoints = [  
+                  { point: 0.0, score: -15, desc: '非常低' },  
+                  { point: 1.0, score: 0, desc: '偏低' },  
+                  { point: 2.5, score: 15, desc: '良好' },  
+                  { point: 5.0, score: 20, desc: '非常好' },  
+                  { point: 7.0, score: 10, desc: '存在多囊风险' }  
+              ];  
+              const amhResult = getInterpolatedScore(amh, amhBreakpoints, '您的AMH值', 'ng/mL');  
+              totalScore += amhResult.score;  
+              analysisPoints.push(`AMH值：${amhResult.description} 卵巢储备状况直接影响获卵数和胚胎数量。`);  
 
-            // --- Core Evaluation Logic (Score Accumulation with Interpolation) ---
-            let totalScore = 0;
-            let analysisPoints = [];
+              // 3. AFC (窦卵泡数量)  
+              const afcBreakpoints = [  
+                  { point: 0, score: -15, desc: '非常少' },  
+                  { point: 5, score: 0, desc: '偏少' },  
+                  { point: 10, score: 10, desc: '中等' },  
+                  { point: 15, score: 15, desc: '良好' },  
+                  { point: 20, score: 20, desc: '非常好' },  
+                  { point: 30, score: 25, desc: '优秀' }  
+              ];  
+              const afcResult = getInterpolatedScore(afc, afcBreakpoints, '您的基础窦卵泡数', '个', 0);  
+              totalScore += afcResult.score;  
+              analysisPoints.push(`基础窦卵泡数（AFC）：${afcResult.description} 预示着促排卵反应和获卵潜力。`);  
 
-            // 1. Age Scoring Breakpoints (more granular interpolation)
-            const ageBreakpoints = [
-                { point: 18, score: 30, desc: '最佳' },
-                { point: 25, score: 30, desc: '最佳' },
-                { point: 29, score: 28, desc: '非常好' },
-                { point: 32, score: 20, desc: '良好' },
-                { point: 34, score: 15, desc: '良好' },
-                { point: 36, score: 8, desc: '中等' },
-                { point: 38, score: 0, desc: '开始下降' },
-                { point: 40, score: -10, desc: '显著下降' },
-                { point: 42, score: -20, desc: '严重下降' },
-                { point: 45, score: -30, desc: '极低' },
-                { point: 50, score: -40, desc: '极低' }
-            ];
-            const ageResult = getInterpolatedScore(age, ageBreakpoints, '您的年龄', '岁', 0);
-            totalScore += ageResult.score;
-            analysisPoints.push(`${ageResult.description} ${age < 35 ? '卵子数量和质量相对较好。' : '卵子数量和质量有所下降，染色体异常风险升高。'}`);
+              // 4. 性激素四项 - 综合评估  
+              let hormoneScore = 0;  
+              let hormoneDesc = '性激素四项：';  
+              if (fsh >= 3 && fsh <= 10 && lh > 0 && lh <= 10 && prl >= 5 && prl <= 25 && e2 >= 20 && e2 <= 80) {  
+                  hormoneScore = 15;  
+                  hormoneDesc += '各项指标均在理想范围内，内分泌环境良好。';  
+              } else if (fsh > 10 || lh > 10 || prl > 25 || e2 < 20) {  
+                  hormoneScore = -10;  
+                  hormoneDesc += '存在一项或多项指标异常，可能影响卵巢功能或内分泌平衡，需要医生进一步评估和调理。';  
+              } else {  
+                  hormoneScore = 5;  
+                  hormoneDesc += '指标基本正常，但不在最佳范围，可能需要关注。';  
+              }  
+              totalScore += hormoneScore;  
+              analysisPoints.push(hormoneDesc);  
+  
+              // 5. 子宫情况  
+              if (uterineCondition === "normal") {  
+                  totalScore += 10; analysisPoints.push('子宫情况：正常。子宫内膜容受性良好，为胚胎着床提供了有利条件。');  
+              } else if (uterineCondition === "fibroids_polyps_managed") {  
+                  totalScore += 5; analysisPoints.push('子宫情况：子宫肌瘤/息肉已处理或不影响着床，子宫环境相对稳定。');  
+              } else if (uterineCondition === "adenomyosis_endo") {  
+                  totalScore -= 10; analysisPoints.push('子宫情况：子宫腺肌症/重度子宫内膜异位症。这些情况可能影响内膜容受性，增加着床难度，需要医生评估和处理。');  
+              } else if (uterineCondition === "congenital_anomalies") {  
+                  totalScore += 0; analysisPoints.push('子宫情况：子宫畸形。已纠正或评估不影响着床。若未纠正且影响着床，成功率会受影响，请咨询医生。');  
+              } else { // unmanaged_severe  
+                  totalScore -= 15; analysisPoints.push('子宫情况：有其他未处理或严重的子宫问题。这可能对胚胎着床造成较大影响，强烈建议在试管前进行评估和干预。');  
+              }  
 
+              // 6. 生育史 - 活产次数  
+              let liveBirthsScore = 0;  
+              let liveBirthsDesc = '活产史：';  
+              if (liveBirthsCount === "3") {  
+                  liveBirthsScore = 15;  
+                  liveBirthsDesc += '您有多次足月分娩活产史，这表明您的身体具备非常好的生育能力和子宫内膜容受性，非常有利。';  
+              } else if (liveBirthsCount === "1" || liveBirthsCount === "2") {  
+                  liveBirthsScore = 10;  
+                  liveBirthsDesc += `您有${liveBirthsCount}次足月分娩活产史，表明身体具备良好的生育能力，为胚胎着床提供了有利条件。`;  
+              } else {  
+                  liveBirthsScore = 0;  
+                  liveBirthsDesc += '您没有足月分娩活产史，但这本身不会直接降低成功率，如果曾有反复流产，三代试管可帮助解决胚胎染色体问题。';  
+              }  
+              totalScore += liveBirthsScore;  
+              analysisPoints.push(liveBirthsDesc);  
 
-            // 2. 生育史
-            if (liveBirths.value === "yes") {
-                totalScore += 8; analysisPoints.push('您有过活产史，这通常表明您的子宫环境相对适合妊娠，对后续胚胎移植有利。');
-            } else {
-                analysisPoints.push('您没有活产史，这本身不会直接降低成功率，但如果曾有反复流产，三代试管可帮助解决胚胎染色体问题。');
-            }
-            if (recurrentMiscarriage.value === "yes") {
-                totalScore += 7; analysisPoints.push('您有过反复流产史，三代试管（PGT-A）能够有效筛查胚胎染色体异常，显著降低再次流产的风险，提高活产率。');
-            } else {
-                analysisPoints.push('您没有反复流产史，这表明胚胎染色体异常可能不是主要问题，但PGT仍能进一步优化胚胎选择。');
-            }
+              // 6.2 流产史  
+              let miscarriageScore = 0;  
+              let miscarriageDesc = '流产史：';  
+              if (miscarriageCount === "2" || miscarriageCount === "3") {  
+                  miscarriageScore = 10;  
+                  miscarriageDesc += '您有反复流产史，三代试管（PGT-A）能够有效筛查胚胎染色体异常，显著降低再次流产的风险，从而提高活产率。';  
+              } else {  
+                  miscarriageScore = 0;  
+                  miscarriageDesc += '您无反复流产史，这表明胚胎染色体异常可能不是主要问题，但PGT仍能进一步优化胚胎选择。';  
+              }  
+              totalScore += miscarriageScore;  
+              analysisPoints.push(miscarriageDesc);  
 
-            // 3. AMH值 (性激素，卵巢储备) - More granular interpolation
-            const amhBreakpoints = [
-                { point: 0.0, score: -20, desc: '非常低' },
-                { point: 0.5, score: -10, desc: '很低' },
-                { point: 1.0, score: 0, desc: '偏低' },
-                { point: 1.5, score: 8, desc: '中等' },
-                { point: 2.0, score: 12, desc: '良好' },
-                { point: 3.0, score: 18, desc: '非常好' },
-                { point: 4.0, score: 22, desc: '优秀' },
-                { point: 5.0, score: 25, desc: '极佳' },
-                { point: 6.0, score: 28, desc: '极佳' },
-                { point: 7.0, score: 30, desc: '极佳' }
-            ];
-            const amhResult = getInterpolatedScore(amh, amhBreakpoints, '您的AMH值', 'ng/mL');
-            totalScore += amhResult.score;
-            analysisPoints.push(`${amhResult.description} 卵巢储备状况直接影响获卵数和胚胎数量。`);
+              // 7. BMI  
+              const bmiBreakpoints = [  
+                  { point: 18.5, score: -10, desc: '偏瘦' },  
+                  { point: 20.0, score: 10, desc: '理想正常' },  
+                  { point: 24.0, score: 10, desc: '理想正常' },  
+                  { point: 25.0, score: 5, desc: '正常偏高' },  
+                  { point: 28.0, score: -5, desc: '超重' },  
+                  { point: 30.0, score: -10, desc: '肥胖' },  
+                  { point: 35.0, score: -15, desc: '严重肥胖' }  
+              ];  
+              const bmiResult = getInterpolatedScore(bmi, bmiBreakpoints, '您的BMI', '');  
+              totalScore += bmiResult.score;  
+              analysisPoints.push(`BMI：${bmiResult.description} 健康的BMI范围对内分泌和胚胎着床至关重要。`);  
 
-            // 4. 窦卵泡数量 (AFC) - More granular interpolation
-            const afcBreakpoints = [
-                { point: 0, score: -18, desc: '非常少' },
-                { point: 3, score: -8, desc: '很少' },
-                { point: 6, score: 5, desc: '偏少' },
-                { point: 10, score: 12, desc: '中等' },
-                { point: 15, score: 18, desc: '良好' },
-                { point: 20, score: 24, desc: '非常好' },
-                { point: 25, score: 28, desc: '优秀' },
-                { point: 30, score: 30, desc: '极佳' }
-            ];
-            const afcResult = getInterpolatedScore(afc, afcBreakpoints, '您的基础窦卵泡数', '个', 0);
-            totalScore += afcResult.score;
-            analysisPoints.push(`${afcResult.description} 预示着促排卵反应和获卵潜力。`);
+              // 8. 其他相关病史 - 慢性疾病  
+              let medHistoryScore = 0;  
+              let medHistoryDesc = '其他病史：';  
+              if (otherMedicalHistory === "none") {  
+                  medHistoryScore = 5; medHistoryDesc += '无主要慢性疾病或自身免疫疾病，身体整体健康状况良好，有利于试管婴儿的成功。';  
+              } else if (otherMedicalHistory === "mild_managed") {  
+                  medHistoryScore = 0; medHistoryDesc += '有轻度慢性病，但已良好管理。其对试管成功率的影响可控，请继续遵医嘱。';  
+              } else if (otherMedicalHistory === "immune_severe_managed") {  
+                  medHistoryScore = -8; medHistoryDesc += '有自身免疫疾病或严重慢性病，但已在管理中。这些情况可能需要额外关注和治疗方案调整，以优化试管结果，并警惕妊娠并发症风险。';  
+              } else { // unmanaged_severe  
+                  medHistoryScore = -12; medHistoryDesc += '有未控制的严重慢性疾病或复杂自身免疫问题，这些可能显著影响试管成功率和妊娠结局。务必在试管前得到专业治疗和稳定病情。';  
+              }  
+              totalScore += medHistoryScore;  
+              analysisPoints.push(medHistoryDesc);  
 
-            // 5. 子宫情况
-            if (uterineCondition === "normal") {
-                totalScore += 10; analysisPoints.push('您的子宫情况正常，子宫内膜容受性良好，为胚胎着床提供了有利条件。');
-            } else if (uterineCondition === "fibroids_polyps_managed") {
-                totalScore += 5; analysisPoints.push('您有子宫肌瘤/息肉，但已处理或评估不影响着床，子宫环境相对稳定。');
-            } else if (uterineCondition === "adenomyosis_endo") {
-                totalScore -= 10; analysisPoints.push('您有子宫腺肌症或重度子宫内膜异位症，这些情况可能影响子宫内膜容受性，增加着床难度，需要医生评估和处理。');
-            } else if (uterineCondition === "congenital_anomalies") {
-                totalScore += 0; analysisPoints.push('您有子宫畸形（如纵膈子宫），但已纠正或评估不影响着床。若未纠正且影响着床，成功率会受影响，请咨询医生。');
-            } else { // unmanaged_severe
-                totalScore -= 15; analysisPoints.push('您有其他未处理或严重的子宫问题，这可能对胚胎着床造成较大影响，强烈建议在试管前进行评估和干预。');
-            }
+              // --- 新的计算逻辑 ---  
+              // 1. 计算单个胚胎PGT活产率  
+              // 参考SART Clinic Live Birth Rate by Age，以及PGT-A对成功率的加成  
+              // PGT-A活产率 = (患者年龄基础活产率 + PGT-A加成) * 其他因素调整系数  
+              // 简化模型：活产率 = C + f(Age) + f(AMH, AFC) + f(Hormones) + f(Uterus) + f(History) + f(BMI)  
+              // 基础成功率（SART PGT-A活产率中位数，约55%）  
+              const baseRate = 55;  
+              // 评分系统调整因子  
+              const totalScoreRange = 100 - (-100); // 假设一个宽泛的得分范围  
+              const scoreFactor = totalScore / totalScoreRange;  
+              let liveBirthRate = baseRate + (scoreFactor * 20); // 调整成功率，最高可达75%左右，最低可低于40%  
+              
+              // 年龄修正：年龄对成功率的影响非线性，需要单独修正  
+              let ageEffect = 0;  
+              if (age <= 35) {  
+                  ageEffect = 10; // 35岁以下有加成  
+              } else if (age > 35 && age <= 40) {  
+                  ageEffect = -5; // 35-40岁有减成  
+              } else if (age > 40) {  
+                  ageEffect = -15; // 40岁以上显著减成  
+              }  
+              liveBirthRate += ageEffect;  
 
-            // 6. BMI (计算并评分) - More granular interpolation
-            const bmiBreakpoints = [
-                { point: 15.0, score: -20, desc: '严重偏瘦' },
-                { point: 18.5, score: 0, desc: '偏瘦' },
-                { point: 20.0, score: 10, desc: '理想正常' },
-                { point: 22.0, score: 10, desc: '理想正常' },
-                { point: 24.0, score: 5, desc: '正常偏高' },
-                { point: 26.0, score: 0, desc: '超重' },
-                { point: 28.0, score: -8, desc: '肥胖I度' },
-                { point: 30.0, score: -15, desc: '肥胖II度' },
-                { point: 35.0, score: -25, desc: '肥胖III度' },
-                { point: 40.0, score: -35, desc: '极度肥胖' }
-            ];
-            const bmiResult = getInterpolatedScore(bmi, bmiBreakpoints, '您的BMI', '');
-            totalScore += bmiResult.score;
-            analysisPoints.push(`${bmiResult.description} 健康的BMI范围对内分泌和胚胎着床至关重要。`);
+              // 确保活产率在合理范围内  
+              const minLiveBirthRate = 20;  
+              const maxLiveBirthRate = 75;  
+              liveBirthRate = Math.max(minLiveBirthRate, Math.min(maxLiveBirthRate, liveBirthRate));  
+              
+              // 生成区间，例如 +/- 5%  
+              let lowerBound = Math.max(minLiveBirthRate, liveBirthRate - 5);  
+              let upperBound = Math.min(maxLiveBirthRate, liveBirthRate + 5);  
 
-            // 6.2 其他相关病史 - 慢性疾病 (参考自身免疫病对生育和妊娠的影响)
-            if (otherMedicalHistory === "none") {
-                totalScore += 5; analysisPoints.push('您无主要慢性疾病或自身免疫疾病，身体整体健康状况良好，有利于试管婴儿的成功。');
-            } else if (otherMedicalHistory === "mild_managed") {
-                totalScore += 0; analysisPoints.push('您有轻度慢性病（如甲状腺功能减退等），已良好管理。其对试管成功率的影响可控，请继续遵医嘱。');
-            } else if (otherMedicalHistory === "immune_severe_managed") {
-                totalScore -= 8; analysisPoints.push('您有自身免疫疾病或严重慢性病，但已在管理中。这些情况可能需要额外关注和治疗方案调整，以优化试管结果，并警惕妊娠并发症风险。');
-            } else { // unmanaged_severe
-                totalScore -= 12; analysisPoints.push('您有未控制的严重慢性疾病或复杂自身免疫问题，这些可能显著影响试管成功率和妊娠结局。务必在试管前得到专业治疗和稳定病情。');
-            }
+              // 2. 计算达到85%总体成功率所需的周期数  
+              // 采用累积成功率公式：P(n) = 1 - (1 - P_single)^n  
+              // 目标活产率 P(n) = 0.85  
+              // 单次活产率 P_single = liveBirthRate / 100  
+              // n = log(1-P(n)) / log(1-P_single)  
+              const targetRate = 0.85;  
+              const singleRate = liveBirthRate / 100;  
+              let cyclesNeeded = 0;  
+              if (singleRate >= targetRate) {  
+                  cyclesNeeded = 1;  
+              } else if (singleRate > 0) {  
+                  cyclesNeeded = Math.ceil(Math.log(1 - targetRate) / Math.log(1 - singleRate));  
+              } else {  
+                  cyclesNeeded = '∞'; // 无限次  
+              }  
+  
+              // 3. 结果展示  
+              document.getElementById('successRateRange').innerText = `${lowerBound.toFixed(1)}% - ${upperBound.toFixed(1)}%`;  
+              document.getElementById('cyclesNeeded').innerText = `${cyclesNeeded}促${cyclesNeeded}移`;  
 
-            // --- 将分数映射到百分比区间 ---
-            // 总分范围 (根据新的精细化评分调整)
-            const minScore = -130; // 考虑所有负面因素后的估算最低分
-            const maxScore = 120;  // 考虑所有正面因素后的估算最高分 (Age 30 + AMH 7.0 + AFC 30 + LiveBirths Yes + RPL Yes + Uterine Normal + BMI Optimal + MedHistory None)
-            const overallScoreRange = maxScore - minScore; // 250
+              const factorAnalysisUl = document.getElementById('factorAnalysis');  
+              factorAnalysisUl.innerHTML = ''; // Clear previous analysis  
+              analysisPoints.forEach(point => {  
+                  const li = document.createElement('li');  
+                  li.innerHTML = point;  
+                  factorAnalysisUl.appendChild(li);  
+              });  
 
-            // 估算活产率的实际区间
-            const minOverallSuccessRate = 8; // 估算最低活产成功率
-            const maxOverallSuccessRate = 65; // 最高成功率上限，符合单次PGT-A移植的临床数据
-            const successRateSpan = maxOverallSuccessRate - minOverallSuccessRate; // 57
+              document.getElementById('results').classList.remove('hidden');  
+          });  
 
-            // 将当前分数标准化到 0-1 之间
-            let normalizedScore = (totalScore - minScore) / overallScoreRange;
-            normalizedScore = Math.max(0, Math.min(1, normalizedScore)); // 确保在0-1之间
-
-            // 根据标准化分数计算估算基础成功率
-            let estimatedBaseRate = minOverallSuccessRate + (normalizedScore * successRateSpan);
-
-            // 生成一个 +/- 4% 的区间（总宽度8%），并确保不超出总范围
-            let rangeSpread = 8;
-            let lowerBound = Math.max(minOverallSuccessRate, estimatedBaseRate - rangeSpread / 2);
-            let upperBound = Math.min(maxOverallSuccessRate, estimatedBaseRate + rangeSpread / 2);
-
-            // 调整以确保区间宽度至少为5%，同时不超出总范围
-            if (upperBound - lowerBound < 5) {
-                if (upperBound + (5 - (upperBound - lowerBound)) / 2 <= maxOverallSuccessRate) {
-                    upperBound += (5 - (upperBound - lowerBound));
-                } else if (lowerBound - (5 - (upperBound - lowerBound)) / 2 >= minOverallSuccessRate) {
-                    lowerBound -= (5 - (upperBound - lowerBound));
-                }
-            }
-
-            // --- 最终取一位小数 ---
-            lowerBound = parseFloat(lowerBound.toFixed(1));
-            upperBound = parseFloat(upperBound.toFixed(1));
-
-            // 确保下限不高于上限，并保持至少5%的差距，防止出现比如"25.0%-25.0%"
-            if (lowerBound >= upperBound) {
-                lowerBound = Math.max(minOverallSuccessRate, parseFloat((upperBound - 5).toFixed(1)));
-                if (lowerBound === upperBound) {
-                    upperBound = Math.min(maxOverallSuccessRate, parseFloat((lowerBound + 5).toFixed(1)));
-                }
-            }
-            // 再次确保下限不小于minOverallSuccessRate, 上限不大于maxOverallSuccessRate
-            lowerBound = Math.max(minOverallSuccessRate, lowerBound);
-            upperBound = Math.min(maxOverallSuccessRate, upperBound);
-
-
-            // --- 显示结果 ---
-            document.getElementById('successRateRange').innerText = `${lowerBound.toFixed(1)}% - ${upperBound.toFixed(1)}%`;
-
-            const factorAnalysisUl = document.getElementById('factorAnalysis');
-            factorAnalysisUl.innerHTML = ''; // Clear previous analysis
-            analysisPoints.forEach(point => {
-                const li = document.createElement('li');
-                li.textContent = point;
-                factorAnalysisUl.appendChild(li);
-            });
-
-            document.getElementById('results').classList.remove('hidden');
-        });
-
-        // Function to reset error messages
-        function resetErrorMessages() {
-            const errorMessages = document.querySelectorAll('.error-message');
-            errorMessages.forEach(msg => msg.classList.add('hidden'));
-            document.getElementById('errorMessageContainer').classList.add('hidden');
-        }
-    </script>
-</body>
-</html>
+          // Function to reset error messages  
+          function resetErrorMessages() {  
+              const errorMessages = document.querySelectorAll('.error-message');  
+              errorMessages.forEach(msg => msg.classList.add('hidden'));  
+              document.getElementById('errorMessageContainer').classList.add('hidden');  
+          }  
+      </script>  
+  </body>  
+  </html>

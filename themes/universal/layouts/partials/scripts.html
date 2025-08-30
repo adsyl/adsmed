@@ -19,3 +19,16 @@
 <!-- owl carousel -->
 <script src="{{ "js/owl.carousel.min.js" | relURL }}"></script>
 
+<script>
+    // 你的其他 JavaScript 代码...
+    
+    function toggleSidebar() {
+        const sidebarContent = document.querySelector('.sidebar-content-box');
+        if (sidebarContent) {
+            sidebarContent.classList.toggle('active');
+        } else {
+            console.error('Sidebar content box not found!');
+        }
+    }
+</script>
+

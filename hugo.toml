@@ -36,13 +36,13 @@ pluralizelisttitles = false
 
 [[menu.main]]
     name       = " 关于我们"
-    url        = "/"
+    url        = "/about/"
     weight     = 1
     parent     = "menu.home"
 
 [[menu.main]]
-    name       = " Application"
-    url        = "/"
+    name       = " 服务优势"
+    url        = "/fwys/"
     weight     = 2
     parent     = "menu.home"
 
@@ -172,13 +172,13 @@ pluralizelisttitles = false
     parent     = "section.about"
 
 [[menu.main]]
-    name       = "我们的团队"
-    url        = ""
+    name       = "工具集合"
+    url        = "/service/tools/"
     weight     = 2
     parent     = "section.about"
 
 [[menu.main]]
-    name       = "相关工具"
+    name       = "主要工具"
     identifier = "section.tool"
     url        = ""
     weight     = 3
@@ -314,10 +314,9 @@ pluralizelisttitles = false
 # Enable or disable top bar with social icons
 [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Contact us on +420 777 555 333 or adsmedical@proton.me</p>
-      <p class="hidden-md hidden-lg"><a href="tel:+420 777 555 333" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
-      <a href="mailto:adsmedical@proton.me" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
-      </p>
+    text = """<p class="hidden-sm hidden-xs">Contact us on +86 156-2931-5964 </p>
+      <p class="hidden-md hidden-lg"><a href="tel:+86 156-2931-5964" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+          </p>
       """
 
 # Enable and disable widgets for the right sidebar
