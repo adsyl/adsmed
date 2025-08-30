@@ -1,6 +1,6 @@
 baseurl = "https://adsmed.org/" 
 # Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
-title = "爱得生医疗"
+title = "爱得生试管婴儿"
 theme = 'universal'
 #themesDir = "../.."
 resourceDir = "../resources"
@@ -105,18 +105,18 @@ pluralizelisttitles = false
     url        = ""
     weight     = 3
     parent     = "menu.product"
-    post       = 2
+    post       = 3
 
 [[menu.main]]
-    name       = "升级服务计划"
+    name       = "100计划"
     url        = "/product/value-added"
-    weight     = 3
+    weight     = 1
     parent     = "section.product3"
 
 [[menu.main]]
-    name       = "Light Header"
+    name       = "100%计划"
     url        = ""
-    weight     = 3
+    weight     = 2
     parent     = "section.product3"
 
 [[menu.main]]
@@ -135,66 +135,79 @@ pluralizelisttitles = false
 
 [[menu.main]]
     name       = "咨询及评估"
-    url        = ""
+    url        = "/service/step1"
     weight     = 1
     parent     = "section.sop"
 
 [[menu.main]]
     name       = "检查及签约"
-    url        = ""
+    url        = "/service/step2"
     weight     = 2
     parent     = "section.sop"
 
 [[menu.main]]
-    name       = "服务交付"
-    url        = ""
+    name       = "启动试管"
+    url        = "/service/step3"
     weight     = 3
     parent     = "section.sop"
 
 [[menu.main]]
     name       = "后期随访"
-    url        = ""
+    url        = "/service/step4"
     weight     = 4
     parent     = "section.sop"
 
 [[menu.main]]
-    name       = "服务标准"
-    identifier = "section.about"
+    name       = "核心目标"
+    identifier = "section.target"
     url        = ""
     weight     = 2
     parent     = "menu.service"
     post       = 2
 
 [[menu.main]]
-    name       = "关于我们"
+    name       = "追求成功"
     url        = ""
     weight     = 1
-    parent     = "section.about"
+    parent     = "section.target"
+
+[[menu.main]]
+    name       = "把控风险"
+    url        = ""
+    weight     = 2
+    parent     = "section.target"
+
+[[menu.main]]
+    name       = "关怀客户"
+    url        = ""
+    weight     = 3
+    parent     = "section.target"
+
 
 [[menu.main]]
     name       = "工具集合"
-    url        = "/service/tools/"
-    weight     = 2
-    parent     = "section.about"
-
-[[menu.main]]
-    name       = "主要工具"
     identifier = "section.tool"
     url        = ""
     weight     = 3
     parent     = "menu.service"
-    post       = 2
+    post       = 3
+
+[[menu.main]]
+    name       = "工具集合"
+    url        = "/service/tools/"
+    weight     = 1
+    parent     = "section.tool"
 
 [[menu.main]]
     name       = "三代试管婴儿全流程"
     url        = "/service/pgt-process"
-    weight     = 1
+    weight     = 2
     parent     = "section.tool"
 
 [[menu.main]]
     name       = "三代试管成功率自测工具"
     url        = "/service/pgt-calculator"
-    weight     = 2
+    weight     = 3
     parent     = "section.tool"
 
 [[menu.main]]
@@ -314,8 +327,8 @@ pluralizelisttitles = false
 # Enable or disable top bar with social icons
 [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Contact us on +86 156-2931-5964 </p>
-      <p class="hidden-md hidden-lg"><a href="tel:+86 156-2931-5964" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+    text = """<p style="font-size: 1.2em;"  class="hidden-sm hidden-xs ">Tel +86 156-2931-5964 </p>
+      <p class="hidden-md hidden-lg"><a href="tel:+86 156-2931-5964" data-animate-hover="pulse"><i class="fas fa-phone  fa-2x"></i></a>
           </p>
       """
 
