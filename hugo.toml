@@ -309,7 +309,7 @@ pluralizelisttitles = false
     date_format = "2006/01/02"
    
 
-    dropdown_mouse_over = false  #false网站下拉菜单通过点击来展开，true通过鼠标悬停。
+    #dropdown_mouse_over = false  #false网站下拉菜单通过点击来展开，true通过鼠标悬停。
 
     disabled_logo = false
     logo_text = "爱得生医疗"
