@@ -3610,8 +3610,8 @@ a.list-group-item.active > .badge,
 
 /* 侧边栏中的每个功能项（电话、微信、回到顶部） */
 .sidebar-item {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
