@@ -1,6 +1,6 @@
 baseurl = "https://adsmed.org/" 
 # Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
-title = "爱得生试管婴儿"
+title = "爱得生三代试管中心"
 theme = 'universal'
 #themesDir = "../.."
 resourceDir = "../resources"
