@@ -327,7 +327,7 @@ pluralizelisttitles = false
 # Enable or disable top bar with social icons
 [params.topbar]
     enable = true
-    text = """<p style="font-size: 1.2em;"  class="hidden-sm hidden-xs ">Tel +86 156-2931-5964 </p>
+    text = """<p style="font-size: 1.2em;"  class="hidden-sm hidden-xs ">Tel (86)156-2931-5964 </p>
       <p class="hidden-md hidden-lg"><a href="tel:+86 156-2931-5964" data-animate-hover="pulse"><i class="fas fa-phone  fa-2x"></i></a>
           </p>
       """
@@ -380,7 +380,7 @@ pluralizelisttitles = false
     icon = "far fa-file"
     title = "您想了解更多吗?"
     subtitle = "我们提供了一些有用的自评工具和宣教信息供您浏览参考，以便您了解更多。"
-    link_url = "/service/tools"
+    link_url = "/service/tools/"
     link_text = "点击到其他主页"
 
 [params.recent_posts]
