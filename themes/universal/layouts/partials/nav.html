@@ -6,15 +6,20 @@
                     {{ if default false .Site.Params.disabled_logo }}
                       <h4>{{ .Site.Params.logo_text }}</h4>
                     {{ else }}
-                      <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Title }} logo" class="hidden-xs hidden-sm" />
-                      <img src="{{ .Site.Params.logo_small | relURL }}" alt="{{ .Title }} logo" class="visible-xs visible-sm" />
+                      <!-- 大 Logo（只在中等屏及以上显示） -->
+                      <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Title }} logo" class="hidden-xs" />
+                      <!-- 小 Logo（只在小屏显示） -->
+                      <img src="{{ .Site.Params.logo_small | relURL }}" alt="{{ .Title }} logo" class="visible-xs" />
                     {{ end }}
                     <span class="sr-only">{{ .Title }} - {{ i18n "navHome" }}</span>
                 </a>
                 <div class="navbar-buttons">
-                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only">{{ i18n "navToggle" }}</span>
-                        <i class="fas fa-align-justify"></i>
+                    <!-- 汉堡菜单按钮（Bootstrap 3 规范） -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
                     </button>
                 </div>
             </div>
@@ -45,7 +50,7 @@
                   {{ end }}
 
                   {{ if .HasChildren }}
-                    <!-- Check if the first child marks a menu section identifier -->
+                    <!-- 检查是否为菜单部分标识 -->
                     {{ $hasSections := (hasPrefix (index .Children 0).Identifier "section.") }}
                     <li class="dropdown{{ if $hasSections }} use-yamm yamm-fw{{end}} {{ $active }}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
@@ -141,11 +146,8 @@
                   {{ end }}
                 </ul>
             </div>
-
-
             <!--/.nav-collapse -->
         </div>
     </div>
 </header>
-
 <!-- *** NAVBAR END ***-->
