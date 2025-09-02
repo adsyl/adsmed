@@ -16,11 +16,8 @@
 
 {{ hugo.Generator }}
 
-<!-- Font -->
-<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
-
 <!-- Bootstrap and Font Awesome CSS -->
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <!-- 引入动画效果的 CSS 文件，提供动画支持-->
 <link href="{{ "css/animate.css" | relURL }}" rel="stylesheet">
@@ -35,13 +32,6 @@
 <!-- 引入自定义的 CSS 文件 -->
 <link href="{{ "css/custom.css" | relURL }}?{{ now.Unix }}" rel="stylesheet">
 
-<!-- Responsivity for older IE -->
-{{ `
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-` | safeHTML }}
 
 <!-- 设置浏览器和 Apple 设备上的图标，分别为网站的 favicon 和 Apple touch icon-->
 <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}" type="image/x-icon" />
