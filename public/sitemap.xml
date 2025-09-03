@@ -3,27 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2025-08-26T13:47:08+02:00</lastmod>
+    <lastmod>2025-08-29T13:47:08+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/ads/</loc>
-    <lastmod>2025-08-26T13:47:08+02:00</lastmod>
+    <lastmod>2025-08-29T13:47:08+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/</loc>
-    <lastmod>2025-08-26T13:47:08+02:00</lastmod>
+    <lastmod>2025-08-29T13:47:08+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-08-26T13:47:08+02:00</lastmod>
+    <lastmod>2025-08-29T13:47:08+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-08-29T13:47:08+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-08-29T13:47:08+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/033%E8%83%9A%E8%83%8E%E5%8F%91%E8%82%B2%E5%92%8C%E7%AD%89%E7%BA%A7/</loc>
+    <lastmod>2025-08-29T13:47:08+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%83%9A%E8%83%8E/</loc>
+    <lastmod>2025-08-29T13:47:08+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</loc>
+    <lastmod>2025-08-29T13:47:08+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/pgt/</loc>
     <lastmod>2025-08-26T13:47:08+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/033pgt%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B/</loc>
-    <lastmod>2025-08-26T13:47:08+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-08-26T13:47:08+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2025-08-26T13:47:08+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E7%8E%AF%E8%8A%82/</loc>
@@ -96,15 +105,6 @@
     <lastmod>2025-08-24T13:47:08+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%87%8F%E5%85%8D/</loc>
-    <lastmod>2025-08-24T13:47:08+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/033%E8%83%9A%E8%83%8E%E5%8F%91%E8%82%B2%E5%92%8C%E7%AD%89%E7%BA%A7/</loc>
-    <lastmod>2025-08-24T13:47:08+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E8%83%9A%E8%83%8E/</loc>
-    <lastmod>2025-08-24T13:47:08+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</loc>
     <lastmod>2025-08-24T13:47:08+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/product/value-added/</loc>
