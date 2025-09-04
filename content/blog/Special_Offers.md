@@ -1,7 +1,7 @@
 +++
 title = "本月优惠"
 date = "2025-08-24T13:47:08+02:00"
-tags = ["减免"]
+tags = ["活动"]
 categories = ["优惠活动"]
 banner = "img/banner_gift.jpg"
 authors =  ["ADS"]

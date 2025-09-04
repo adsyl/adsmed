@@ -16,10 +16,10 @@
       <description></description>
     </item>
     <item>
-      <title>胚胎培养</title>
-      <link>http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</link>
+      <title>胚胎</title>
+      <link>http://localhost:1313/categories/%E8%83%9A%E8%83%8E/</link>
       <pubDate>Fri, 29 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>http://localhost:1313/categories/%E8%83%9A%E8%83%8E%E5%9F%B9%E5%85%BB/</guid>
+      <guid>http://localhost:1313/categories/%E8%83%9A%E8%83%8E/</guid>
       <description></description>
     </item>
     <item>
@@ -37,13 +37,6 @@
       <description></description>
     </item>
     <item>
-      <title>胚胎</title>
-      <link>http://localhost:1313/categories/%E8%83%9A%E8%83%8E/</link>
-      <pubDate>Mon, 25 Aug 2025 13:47:08 +0200</pubDate>
-      <guid>http://localhost:1313/categories/%E8%83%9A%E8%83%8E/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>试管准备</title>
       <link>http://localhost:1313/categories/%E8%AF%95%E7%AE%A1%E5%87%86%E5%A4%87/</link>
       <pubDate>Mon, 25 Aug 2025 13:47:08 +0200</pubDate>
@@ -58,24 +51,10 @@
       <description></description>
     </item>
     <item>
-      <title>促排卵</title>
-      <link>http://localhost:1313/categories/%E4%BF%83%E6%8E%92%E5%8D%B5/</link>
-      <pubDate>Mon, 13 Nov 2023 09:36:22 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E4%BF%83%E6%8E%92%E5%8D%B5/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>备孕须知</title>
       <link>http://localhost:1313/categories/%E5%A4%87%E5%AD%95%E9%A1%BB%E7%9F%A5/</link>
-      <pubDate>Sun, 12 Nov 2023 13:32:11 +0000</pubDate>
+      <pubDate>Sun, 12 Nov 2023 01:36:22 +0000</pubDate>
       <guid>http://localhost:1313/categories/%E5%A4%87%E5%AD%95%E9%A1%BB%E7%9F%A5/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>检查项目</title>
-      <link>http://localhost:1313/categories/%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE/</link>
-      <pubDate>Sun, 12 Nov 2023 13:32:11 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE/</guid>
       <description></description>
     </item>
   </channel>

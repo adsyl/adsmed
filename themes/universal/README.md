@@ -7,61 +7,99 @@ Universal is a clean and stylish website template built with [Bootstrap](https:/
 Demo site: [https://devcows.github.io/hugo-universal-theme](https://devcows.github.io/hugo-universal-theme/)
 
 Sponsor this project:
+
 - [https://paypal.me/ryanfox1985](https://paypal.me/ryanfox1985)
 - [https://www.patreon.com/ryanfox1985](https://www.patreon.com/ryanfox1985)
 - BTC wallet
-```
-1My6zRZA4YKdX78aiZKZhWUWfFmCSDafZ6
-```
-
+  
+  ```
+  1My6zRZA4YKdX78aiZKZhWUWfFmCSDafZ6
+  ```
 
 ## Table of Contents
-## 目录
-- [Hugo 通用主题](#universal-theme-for-hugo)
-- [目录](#table-of-contents)
-- [功能](#features)
-- [安装](#installation)
-- [配置](#configuration)
-- [语言](#language)
-- [样式](#style)
-- [评论](#comments)
-- [Google Analytics](#google-analytics)
-- [Logo](#logo)
-- [联系表单](#contact-form)
-- [菜单](#menu)
-- [侧边栏小部件](#sidebar-widgets)
-- [顶部栏](#top-bar)
-- [博客文章缩略图](#blog-post-thumbnails)
-- [着陆页](#landing-page)
-- [轮播](#carousel)
-- [功能](#features-1)
-- [用户评价](#testimonials)
-- [查看更多](#see-more)
-- [客户](#clients)
-- [最新帖子](#recent-posts)
-- [页脚](#footer)
-- [关于我们](#about-us)
-- [最新帖子](#recent-posts-1)
-- [联系方式](#contact)
-- [元标签](#meta-tags)
-- [使用方法](#usage)
-- [贡献](#contributing)
-- [许可协议](#license)
-- [致谢](#thanks)
-## Features
 
+## 目录
+
+- [Hugo 通用主题](#universal-theme-for-hugo)
+
+- [目录](#table-of-contents)
+
+- [功能](#features)
+
+- [安装](#installation)
+
+- [配置](#configuration)
+
+- [语言](#language)
+
+- [样式](#style)
+
+- [评论](#comments)
+
+- [Google Analytics](#google-analytics)
+
+- [Logo](#logo)
+
+- [联系表单](#contact-form)
+
+- [菜单](#menu)
+
+- [侧边栏小部件](#sidebar-widgets)
+
+- [顶部栏](#top-bar)
+
+- [博客文章缩略图](#blog-post-thumbnails)
+
+- [着陆页](#landing-page)
+
+- [轮播](#carousel)
+
+- [功能](#features-1)
+
+- [用户评价](#testimonials)
+
+- [查看更多](#see-more)
+
+- [客户](#clients)
+
+- [最新帖子](#recent-posts)
+
+- [页脚](#footer)
+
+- [关于我们](#about-us)
+
+- [最新帖子](#recent-posts-1)
+
+- [联系方式](#contact)
+
+- [元标签](#meta-tags)
+
+- [使用方法](#usage)
+
+- [贡献](#contributing)
+
+- [许可协议](#license)
+
+- [致谢](#thanks)
+  
+  ## Features
 * Responsive design 
+
 * Customizable landing page
+  
   * Carousel
   * Testimonials
   * Features
   * Customers
   * Recent posts
-* Contact form by Formspree
-* Google search
-* Disqus comments
-* Google Analytics
 
+* Contact form by Formspree
+
+* Google search
+
+* Disqus comments
+
+* Google Analytics
 
 ## Installation
 
@@ -74,7 +112,6 @@ $ git clone https://github.com/devcows/hugo-universal-theme
 ```
 
 For more information read the official [setup guide](https://gohugo.io/installation/) of Hugo.
-
 
 ## Configuration
 
@@ -116,7 +153,6 @@ Shortname = "devcows"
 ```
 
 You can disable the comments system by leaving the `Shortname` empty. 您可以将 `Shortname` 留空以禁用评论系统。
-
 
 ### Google Analytics
 
@@ -214,13 +250,14 @@ Now create additional menu items and use the above unique identifier as the valu
 ```
 
 It is also possible to display a dropdown menu with 4 columns. This theme supports 2 variations:
+
 * 4 columns of menu items with sections
 * 2 column wide image + 2 columns of menu items with sections
-To display 4 columns of menu items, start using sections. Sections are menu items treated special by this theme:
-也可以显示 4 列的下拉菜单。此主题支持两种变体：
+  To display 4 columns of menu items, start using sections. Sections are menu items treated special by this theme:
+  也可以显示 4 列的下拉菜单。此主题支持两种变体：
 * 4 列菜单项，包含多个分区
 * 2 列宽图片 + 2 列菜单项，包含多个分区
-要显示 4 列菜单项，请使用分区。版块是此主题特殊处理的菜单项：
+  要显示 4 列菜单项，请使用分区。版块是此主题特殊处理的菜单项：
 
 ```
 [[menu.main]]
@@ -266,7 +303,6 @@ To display 4 columns of menu items, start using sections. Sections are menu item
     url        = "/blog/"
     weight     = 1
     parent     = "section.ap-blog"
-
 ```
 
 The above example shows a reduced version of the *All Pages* menu item from the example site. As you can see,
@@ -296,7 +332,6 @@ When a `url` is filled in, only column 1 and 2 (the `post` value in the section 
 When using an image, don't configure section menu items in column 3 or 4. **These will not be rendered.**
 
 **Important:** Do not change the `identifier` key of existing menu entries!
-
 
 ### Sidebar widgets 侧边栏
 
@@ -358,19 +393,19 @@ The dropdown menu is displayed by default when the user clicks on the menu item.
 
 After creating a new post you can define a banner by entering the relative path to the image.
 创建新文章后，您可以通过输入图片的相对路径来定义横幅。
+
 ```toml
 banner = "img/banners/banner-4.jpg"
 ```
 
 It must contain a relative path to the banner inside the `static` directory.
 
-
 ### Landing page  落地页
 
 The landing page consists in many sections that can be activated and configured individually. Let's go through all sections from top to bottom.
 
 #### Carousel  轮播
-  
+
 The carousel content is configured in the data directory.轮播内容在数据目录中配置。
 
 ```
@@ -402,6 +437,7 @@ The `weight` field determines the position of the entry. `title` is a text-only 
 
 Once the carousel is configured, some options can be defined like: auto play, speed, etc. in the `config.toml` file.
 配置轮播后，可以在 `config.toml` 文件中定义一些选项，例如：自动播放、速度等。
+
 ```toml
 [params.carouselHomepage]
     enable = true
@@ -437,10 +473,10 @@ description: "Fifth abundantly made Give sixth hath. Cattle creature i be don't 
 
 The meaning of the individual YAML keys is as follows:  各个 YAML 键的含义如下：
 
-| Key | Description |
-| --- | ----------- |
+| Key      | Description                                                                                                                      |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | `weight` | A means to set the order of multiple features; features with a lower `weight` are displayed first (left to right, top to bottom) |
-| `weight` | 用于设置多个功能顺序的方法；`weight` 较低的功能优先显示（从左到右，从上到下）|
+| `weight` | 用于设置多个功能顺序的方法；`weight` 较低的功能优先显示（从左到右，从上到下）                                                                                      |
 
 | `name` | The title text below the feature icon; Markdown is supported |
 | `name` | 功能图标下方的标题文本；支持 Markdown 格式 |
@@ -496,9 +532,8 @@ Then, enable it in the configuration file and add a title and subtitle.
     subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
 ```
 
-
 #### See more  查看更多
- 
+
 This section is used to provide a link to another place. It can be an external site, or a page or post within your Hugo site.
 此部分用于提供指向其他位置的链接。它可以是外部网站，也可以是 Hugo 网站内的页面或帖子。
 You can enable it in the configuration file.
@@ -513,7 +548,6 @@ You can enable it in the configuration file.
     link_url = "http://your-site.com/more"
     link_text = "Check other homepages"
 ```
-
 
 #### Recent posts
 
@@ -583,7 +617,7 @@ In contact section there is a button to redirect to contact page, there is the p
 The following [HTML metadata](https://www.w3schools.com/tags/tag_meta.asp) can be set for every page. While the default value for some of them can be defined in `config.toml`, all of these properties can also be set through the respective [Hugo front matter variables](https://gohugo.io/content-management/front-matter/#front-matter-variables):
 
 | HTML meta `name`/`property`                              | Hugo front matter variable | Default variable in `config.toml` |
-| :------------------------------------------------------- | :------------------------- | :-------------------------------- |
+|:-------------------------------------------------------- |:-------------------------- |:--------------------------------- |
 | `article:author`                                         | `facebook_author`          | -                                 |
 | `article:publisher`                                      | `facebook_site`            | `facebook_site`                   |
 | `author`                                                 | `author`                   | -                                 |
@@ -664,16 +698,13 @@ Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your b
 
 For more information check out the official [Hugo documentation](http://gohugo.io/overview/usage/).
 
-
 ## Contributing
 
 Did you find a bug or do you have an idea for a new feature? Feel free to use the [issue tracker](https://github.com/devcows/hugo-universal-theme/issues) to let us know. Or make a [pull request](https://github.com/devcows/hugo-universal-theme/pulls) directly.
 
-
 ## License
 
 This port is released under the MIT License. Check the [original theme license](http://bootstrapious.com/p/universal-business-e-commerce-template) for additional licensing information.
-
 
 ## Thanks
 
