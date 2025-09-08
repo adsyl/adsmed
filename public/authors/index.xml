@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on 爱得生三代试管中心</title>
-    <link>https://adsmed.org/authors/</link>
+    <link>http://localhost:1313/authors/</link>
     <description>Recent content in Authors on 爱得生三代试管中心</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 07 Sep 2025 13:47:08 +0200</lastBuildDate>
-    <atom:link href="https://adsmed.org/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ADS</title>
-      <link>https://adsmed.org/authors/ads/</link>
+      <link>http://localhost:1313/authors/ads/</link>
       <pubDate>Sun, 07 Sep 2025 13:47:08 +0200</pubDate>
-      <guid>https://adsmed.org/authors/ads/</guid>
+      <guid>http://localhost:1313/authors/ads/</guid>
       <description></description>
     </item>
   </channel>
