@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱得生(ADSMed)·三代试管成功率评估工具</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+<script src="/js/11.min.45693e89dc68dd570295b1a43805fef6d7c52cac027a76fb1e85b3832d50a35e.js" integrity="sha256-RWk&#43;idxo3VcClbGkOAX&#43;9tfFLKwCenb7HoWzgy1Qo14="></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans SC', sans-serif; background-color: #fff9fb; color: #314057; }
+        .glass-card { background: #ffffff; border: 1px solid #f3f4f6; box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04); }
+        .input-field { 
+            width: 100%; display: block; padding: 0.75rem 1rem; border-radius: 0.75rem; 
+            background-color: #f9fafb; border: 2px solid #d1d5db; outline: none;
+            transition: all 0.2s ease-in-out; font-size: 0.875rem; box-sizing: border-box; 
+        }
+        .input-field:focus { background-color: #ffffff; border-color: #fb7185; box-shadow: 0 0 0 4px #ffe4e6; }
+        #results.show { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <header class="bg-pink-200 border-b border-gray-100 py-10 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl md:text-4xl text-white font-black tracking-tight mb-3">三代试管成功率专业评估</h1>
+            <p class="text-gray-500 font-light italic">基于既往真实数据 · ADSMed试管评估模型V3.12</p>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-10 max-w-3xl">
+        <section class="glass-card rounded-[2.5rem] p-8 md:p-12 mb-10">  
+            <form id="pgtForm" class="space-y-8">  
+                <div>
+                    <label class="block text-gray-700 font-bold mb-1 text-sm">1. 基础信息:</label>
+                    <div class="grid grid-cols-3 gap-4">   
+                        <div class="space-y-1"><label class="text-[12px] text-gray-400 font-black uppercase">年龄 (岁)</label>
+                            <input type="number" id="age" required class="input-field" placeholder="30">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[12px] text-gray-400 font-black uppercase">身高 (CM)</label>
+                            <input type="number" id="heightCm" required class="input-field" placeholder="160">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[12px] text-gray-400 font-black uppercase">体重 (KG)</label>
+                            <input type="number" id="weightKg" step="0.1" required class="input-field" placeholder="55">
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-1">
+                        年龄是最重要的影响因素，超过35岁的高龄产妇生育力会加速下滑。
+                    </p>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-bold mb-1 text-sm">2. 卵巢储备情况(例假第2-3天检查):</label>   
+                    <div class="grid grid-cols-2 md:grid-cols-2 gap-4">
+                        <div class="space-y-1"><label class="text-[12px] text-gray-400 font-black">AMH数值（缪勒管氏激素）</label>
+                            <input type="number" id="amh" step="0.1" required class="input-field" placeholder="3.5">
+                        </div>
+                        <div class="space-y-1"><label class="text-[12px] text-gray-400 font-black">AFC数值（窦卵泡数量）</label>
+                            <input type="number" id="afc" step="0.1" required class="input-field" placeholder="12">
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-1">
+                        AMH和AFC是评估卵巢储备的关键指标，数值越高通常预示着更好的生育潜力和更高的成功率。
+                    </p>
+                     <p class="text-sm text-gray-400 mt-1">
+                        AFC是阴道超声下可直接观察到的卵泡数量，用于直观评估获卵数量。
+                    </p>     
+                     <p class="text-sm text-gray-400 mt-1">
+                        AMH则是通过激素来反映卵巢储备，一般情况下amh*3≈afc，但也有个体差异，会随着年龄和生理状态的变化而变化。
+                    </p>       
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-bold mb-1 text-sm">3. 性激素数值(例假第2-3天检查):</label>   
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="space-y-1"><label class="text-[12px] text-gray-400 font-black">FSH(促卵泡激素)</label>
+                            <input type="number" id="fsh" step="0.1" required class="input-field" placeholder="5.0">
+                        </div>
+                        <div class="space-y-1"><label class="text-[12px] text-gray-400 font-black">LH(黄体生成素)</label>
+                            <input type="number" id="lh" step="0.1" required class="input-field" placeholder="5.0">
+                        </div>
+                        <div class="space-y-1"><label class="text-[12px] text-gray-400 font-black">E2(雌二醇)</label>
+                            <input type="number" id="e2" step="0.1" required class="input-field" placeholder="50.0">
+                        </div>
+                        <div class="space-y-1"><label class="text-[12px] text-gray-400 font-black">P(孕酮)</label>
+                            <input type="number" id="prl" step="0.1" required class="input-field" placeholder="20.0">
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-1">
+                        促卵泡激素（FSH）、黄体生成素（LH）、雌二醇（E2）、孕酮（Prog）。
+                    </p>                
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-1 text-sm">4. 子宫环境:</label>
+                        <select id="uterineCondition" required class="input-field bg-white">
+                            <option value="normal">正常 (无明显异常)</option>
+                            <option value="fibroids_polyps_managed">子宫肌瘤/息肉 (已处理)</option>
+                            <option value="adenomyosis_endo">子宫腺肌症/重度内异症</option>
+                            <option value="congenital_anomalies">子宫畸形 (已纠正)</option>
+                            <option value="other_unmanaged">其他未处理问题</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-1 text-sm">5. 既往生育史:</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <select id="liveBirthsCount" class="input-field bg-white"><option value="0">0次活产</option><option value="1">1次活产</option><option value="2">2次+</option></select>
+                            <select id="miscarriageCount" class="input-field bg-white"><option value="0">0次流产</option><option value="1">1次流产</option><option value="2">2次流产</option><option value="3">3次+</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-bold mb-1 text-sm">6. 全身健康状况:</label>
+                    <select id="otherMedicalHistory" required class="input-field bg-white">
+                        <option value="none">无主要慢性病/自身免疫问题</option>
+                        <option value="mild_managed">轻度慢性病 (已控制)</option>
+                        <option value="immune_severe_managed">免疫问题/严重慢性病 (管理中)</option>
+                        <option value="unmanaged_severe">未控制的风险因素</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full bg-rose-400 text-white py-5 rounded-2xl text-xl font-bold shadow-xl hover:bg-rose-500 transition-all active:scale-95">
+                    生成 ADSMed 试管评估报告
+                </button>
+            </form>
+        </section>
+
+        <div id="results" class="hidden space-y-10">   
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1 bg-white p-10 rounded-[2.5rem] shadow-sm text-center border-t-8 border-rose-500"> 
+                    <h4 class="text-gray-400 text-[14px] font-bold uppercase tracking-widest mb-4">综合预期活产率</h4>
+                    <div class="text-5xl font-black text-rose-500 mb-6 tracking-tighter" id="lbrDisplay">--%</div>
+                    <h4 class="text-gray-400 text-[14px] font-bold uppercase tracking-widest mb-4">建议周期规划</h4>
+                    <div class="py-2 px-6 bg-rose-50 text-rose-600 rounded-full text-lg font-black inline-block" id="cycleDisplay">--</div>
+                </div>
+                <div class="lg:col-span-2 bg-white p-8 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col">  
+                    <h4 class="text-gray-800 font-bold mb-6 text-sm flex items-center">
+                        <span class="w-2 h-2 bg-rose-500 rounded-full mr-2"></span> 单次促排胚胎损耗预估 (Medical Funnel)
+                    </h4>
+                    <div class="flex-grow min-h-[220px]">
+                        <canvas id="funnelChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="dimensionCards"></div>
+
+            <div class="bg-gray-800 rounded-[3rem] p-10 md:p-14 text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-10 opacity-5 font-black text-6xl italic select-none">ADSMed</div>
+                <div id="expertReportContent" class="relative z-10 space-y-12 w-full">
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 text-center text-gray-400 text-[12px] tracking-widest uppercase">
+        Born for Love · Hope Fulfilled<br>
+        &copy; 2026 ADSMed REPRODUCTIVE ASSISTANCE · 试管评估模型 V3.12
+    </footer>
+
+</body>
+</html>

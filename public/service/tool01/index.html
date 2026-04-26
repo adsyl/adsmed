@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>试管生育力评估系统 - ADSMed</title>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <style>
+        :root { --med-blue: #2c3e50; --med-pink: #d63384; --ok: #27ae60; --warn: #f39c12; --crit: #e74c3c; --soft-bg: #f4f7f6; }
+        * { box-sizing: border-box; }
+        body { background: var(--soft-bg); font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; display: flex; min-height: 100vh; flex-direction: column; }
+
+        .app-container { display: flex; width: 100%; min-height: 100vh; }
+
+         
+        .sidebar { width: 440px; background: white; border-right: 1px solid #e2e8f0; flex-shrink: 0; display: flex; flex-direction: column; }
+        .sidebar-header { padding: 25px; background: var(--med-blue); color: white; }
+        .sidebar-body { padding: 20px; overflow-y: auto; }
+
+         
+        .main-display { flex: 1; padding: 40px; display: flex; flex-direction: column; align-items: center; }
+
+         
+        @media (max-width: 900px) {
+            .app-container { flex-direction: column; }
+            .sidebar { width: 100%; border-right: none; }
+            .main-display { padding: 15px; width: 100%; }
+            .report-paper { padding: 20px 10px !important; }
+        }
+
+         
+        .group-card { background: #fff; border: 1px solid #eef2f7; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+        .group-title { font-weight: bold; color: var(--med-blue); margin-bottom: 15px; border-left: 5px solid var(--med-pink); padding-left: 10px; font-size: 16px; }
+        .input-row { margin-bottom: 15px; }
+        .input-row label { display: block; font-size: 13px; color: #64748b; margin-bottom: 6px; }
+        .input-row input, .input-row select { width: 100%; padding: 12px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 16px; }
+
+         
+        .report-paper { width: 100%; max-width: 900px; background: white; padding: 50px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-radius: 4px; display: none; margin-bottom: 40px; }
+        .report-header { text-align: center; border-bottom: 3px solid var(--med-blue); padding-bottom: 10px; margin-bottom: 15px; }
+
+
+        .section-box { margin-bottom: 40px; }
+        .section-title { font-size: 18px; color: var(--med-blue); border-bottom: 2px solid #edf2f7; padding-bottom: 10px; margin-bottom: 20px; font-weight: bold; }
+        
+         
+        .analysis-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; table-layout: fixed; }
+        .analysis-table th { background: #f8fafc; text-align: left; padding: 12px; font-size: 13px; color: #64748b; }
+        .analysis-table td { padding: 15px 10px; border-bottom: 1px solid #f1f5f9; font-size: 14px; line-height: 1.2; vertical-align: middle; }
+    
+         
+        .analysis-table td:last-child { text-align: left; line-height: 1.6;}   
+        
+
+        .val-hl { font-weight: bold; color: var(--med-pink); font-family: "Monaco", monospace; }
+        .badge { padding: 2px 6px; border-radius: 4px; font-size: 10px; color: white; font-weight: bold; }
+        .bg-ok { background: var(--ok); } .bg-warn { background: var(--warn); } .bg-crit { background: var(--crit); }
+
+        .advice-card { background: #f0f7ff; border-left: 6px solid #3182ce; padding: 30px; border-radius: 8px; color: #2a4365; margin-top: 20px; }
+        .advice-card h4 { margin-top: 0; color: #2b6cb0; border-bottom: 1px solid #bee3f8; padding-bottom: 10px; font-size: 18px; }
+
+        .btn-run { background: var(--med-pink); color: white; border: none; width: 100%; padding: 20px; border-radius: 12px; font-size: 20px; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 8px 20px rgba(214, 51, 132, 0.2); }
+        .btn-run:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(214, 51, 132, 0.3); }
+
+         
+        .report-footer-watermark { margin-top: 10px; padding-top: 20px;text-align: center;border-top: 1px solid #edf2f7;  }
+
+        .footer-content {  display: flex; flex-direction: column; align-items: center; 
+             opacity: 0.3;  
+             filter: grayscale(100%);  
+         }
+
+        .footer-content img { height: 45px; width: auto; margin-bottom: 8px;}
+
+        .footer-content span { font-size: 12px; color: var(--med-blue); letter-spacing: 2px; text-transform: uppercase;}
+
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="margin:0;">ADSMed试管生育力评估系统</h2>
+            <small>ADSMed Clinical Fertility Assessment System v10.0</small>
+        </div>
+
+        <div class="sidebar-body">
+            <div class="group-card">
+                <div class="group-title">1. 基础信息</div>
+                <div class="input-row"><label>姓名 (缩写)</label><input type="text" id="v_name" value="ZMM"></div>
+                <div class="input-row"><label>年龄 (岁)</label><input type="number" id="v_age" value="32"></div>
+                <div class="input-row"><label>身高 (cm)</label><input type="number" id="v_height" step="1" value="160"></div>
+                <div class="input-row"><label>体重 (kg)</label><input type="number" id="v_weight" step="0.5" value="55"></div>
+                <div class="input-row"><label>血型</label>
+                    <select id="s_blood">
+                        <option value="A">A型</option>
+                        <option value="B">B型</option>
+                        <option value="AB">AB型</option>
+                        <option value="O">O型</option>
+                    </select>         
+                </div>
+                <div class="input-row"><label>既往生育史</label>
+                    <select id="s_history">
+                        <option value="0">未生育</option>
+                        <option value="1">1孩</option>
+                        <option value="2">2孩及以上</option>
+                        <option value="3">原发不孕</option>                       
+                    </select></div>             
+                <div class="input-row"><label>既往流产史</label>
+                    <select id="s_flow">
+                        <option value="0">无流产史</option>
+                        <option value="1">1次</option>
+                        <option value="2">2次</option>
+                        <option value="3">3次及以上</option>
+                    </select></div>  
+             </div>
+
+            <div class="group-card">
+                <div class="group-title">2. 卵巢储备与宫腔环境</div>
+                <div class="input-row"><label>AFC (双侧窦卵泡数)</label><input type="number" id="v_afc" value="10"></div>
+                <div class="input-row"><label>AMH (ng/mL)</label><input type="number" id="v_amh" step="0.01" value="2.5"></div>
+                <div class="input-row"><label>促卵泡生成素 FSH (mIU/mL)</label><input type="number" id="v_fsh" step="0.1" value="7.5"></div>
+                <div class="input-row"><label>黄体生成素 LH (mIU/mL)</label><input type="number" id="v_lh" value="4.0"></div>
+                <div class="input-row"><label>雌二醇 E2 (pg/mL)</label><input type="number" id="v_e2" value="40"></div>
+                <div class="input-row"><label>泌乳素 PRL (ng/mL)</label><input type="number" id="v_prl" value="15"></div> 
+                <div class="input-row"><label>阴道B超 (内膜/占位)</label>
+                    <select id="v_ultra">
+                        <option value="0">正常(三线征明显)</option>
+                        <option value="1">内膜息肉/粘连/不均</option>
+                        <option value="2">子宫肌瘤/腺肌症</option>
+                    </select></div>
+             </div>
+           
+            <div class="group-card">
+                <div class="group-title">3. 全身健康状态</div>
+                <div class="input-row"><label>TSH (促甲状腺激素)</label><input type="number" id="v_tsh" step="0.01" value="2.1"></div>              
+                <div class="input-row"><label>血糖</label>
+                      <select id="v_blood_sugar">
+                        <option value="0">正常</option>
+                        <option value="1">异常</option>                      
+                    </select></div>  
+                <div class="input-row"><label>凝血</label> 
+                      <select id="v_blood_coagulation">
+                        <option value="0">正常</option>
+                        <option value="1">异常</option>                      
+                    </select></div>                                                
+                <div class="input-row"><label>血脂</label>
+                      <select id="v_lipid">
+                        <option value="0">正常</option>
+                        <option value="1">异常</option>                      
+                    </select></div>            
+                <div class="input-row"><label>肝肾功能</label>
+                      <select id="v_liver_kidney">
+                        <option value="0">正常</option>
+                        <option value="1">异常</option>                      
+                    </select></div>
+                <div class="input-row"><label>TORCH优生五项</label> 
+                     <select id="v_torch">
+                        <option value="0">正常</option>
+                        <option value="1">异常</option>                      
+                    </select></div>                   
+                <div class="input-row"><label>地中海贫血</label> 
+                    <select id="v_thalassemia">
+                        <option value="0">否</option>
+                        <option value="1">是</option>                      
+                    </select></div>                                           
+                <div class="input-row"><label>生殖道感染 (白带/衣/支)</label>
+                    <select id="v_vaginal">
+                        <option value="0">全阴性</option>
+                        <option value="1">阴道炎症</option>
+                        <option value="2">衣原体阳性</option>
+                        <option value="3">支原体阳性</option>
+                        <option value="4">多重感染</option>                          
+                    </select></div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">4. 遗传与感染史</div>
+                <div class="input-row"><label>染色体</label>
+                    <select id="v_chromosome">
+                        <option value="0">正常</option>
+                        <option value="1">异常</option>                      
+                    </select></div>    
+                <div class="input-row"><label>家族遗传风险</label>
+                    <select id="v_genetic_diseases">
+                        <option value="0">无遗传病史</option>
+                        <option value="1">显性遗传病史</option>
+                        <option value="2">隐性遗传风险</option>                        
+                    </select></div>       
+                <div class="input-row"><label>传染项 (HIV/肝炎/梅毒)</label>
+                    <select id="v_infect">
+                        <option value="0">全阴性</option>
+                        <option value="1">HIV阳性(已控制)</option>
+                        <option value="2">HIV阳性(未处理)</option>   
+                        <option value="3">梅毒阳性(已控制)</option>
+                        <option value="4">梅毒阳性(未控制)</option>                       
+                        <option value="5">肝炎阳性(大三阳已控制)</option>
+                        <option value="6">肝炎阳性(小三阳已控制)</option>
+                        <option value="7">肝炎阳性(未控制)</option>
+                    </select></div>
+            </div>
+  
+            <div class="group-card">
+                <div class="group-title">5. 个体特征</div>
+                <div class="input-row"><label>PTG-A三代试管接受度</label>
+                    <select id="v_pgt">
+                        <option value="0">无偏好</option>
+                        <option value="1">高度接受</option>
+                        <option value="2">不接受</option>
+                    </select>
+                </div>
+                <div class="input-row"><label>运动</label>
+                    <select id="v_exercise">
+                        <option value="0">经常运动</option>
+                        <option value="1">适量运动</option>
+                        <option value="2">不运动</option>
+                    </select></div>
+                <div class="input-row"><label>饮食</label>
+                    <select id="v_diet">
+                        <option value="0">规律</option>
+                        <option value="1">不规律</option>
+                    </select></div>
+                <div class="input-row"><label>作息</label>
+                    <select id="v_sleep">
+                        <option value="0">规律</option>
+                        <option value="1">不规律</option>
+                    </select></div>
+                <div class="input-row"><label>情绪</label>
+                    <select id="v_mood">
+                        <option value="0">稳定</option>
+                        <option value="1">波动</option>
+                    </select></div>
+            </div>           
+
+            <button class="btn-run" onclick="ClinicEngine.render()">生成深度临床评估报告</button>
+        </div>
+    </aside>
+
+<main class="main-display">
+    <div id="placeholder" style="margin-top:180px; color:#cbd5e1; text-align:center;">
+        <p style="font-size:80px;">🩺</p>
+        <p>基于临床准则提供 20+ 指标深度解读</p>
+    </div>
+
+    <div class="report-paper" id="report-paper" style="display: none;">
+        <div class="report-header">
+            <h1>ADSMed试管检查深度分析报告</h1>
+            <p> 为  爱  而  生 ·  助  您  好  孕 </a></p>
+        </div>
+
+        <div id="report-dynamic-content"></div>
+
+        <div id="report-footer-logo" class="report-footer-watermark">
+             <div style="display: flex; flex-direction: column; align-items: center; opacity: 0.4; filter: grayscale(100%); margin-top: 10px; padding-top: 20px; ">
+               <img src="https://adsmed.org/img/logo.png" alt="ADSMed Logo" style="height: 40px; width: auto; margin-bottom: 8px;">
+               <span style="font-size: 12px; color: #64748b; letter-spacing: 2px;">ADSMed 生殖医学中心 · 专业支持</span>
+             </div>
+        </div>
+
+        <div class="no-print" style="text-align: center; margin-top: 20px; padding-bottom: 20px;">
+            <button onclick="ClinicEngine.save()" style="background:var(--med-blue); color:white; border:none; padding:15px 40px; border-radius:8px; cursor:pointer; font-weight:bold; font-size: 16px; transition: 0.3s; box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);">
+                保存并下载ADSMed评估报告
+            </button>
+        </div>
+    </div>
+</main>
+</div>
+
+<script>
+
+    (function() {
+        const AUTH_CODE_ENCODED = "d2Flc3puaHk="; 
+        const STORAGE_KEY = "adsmed_authorized";
+        if (sessionStorage.getItem(STORAGE_KEY) !== "true") {
+            let input = prompt("该工具仅供内部使用，请输入授权码：");
+            if (input && btoa(input) === AUTH_CODE_ENCODED) {
+                sessionStorage.setItem(STORAGE_KEY, "true");
+            } else {
+                alert("授权码错误，无法访问。");
+                document.body.innerHTML = "<h1>403 未授权访问</h1>";
+                window.location.href = "/";
+            }
+        }
+    })();
+
+
+const ClinicEngine = (function() {
+    
+    const _get = (id) => document.getElementById(id).value;
+    const _text = (id) => {
+        const el = document.getElementById(id);
+        return el.options ? el.options[el.selectedIndex].text : el.value;
+    };
+    const _num = (id) => parseFloat(_get(id)) || 0;
+
+    
+
+    const createRow = (name, val, detail, status) => `
+        <tr>
+            <td style="font-weight:bold; color:var(--med-blue); font-size:13.5px;">${name}</td>
+            <td style="text-align:center; font-family: 'Monaco', monospace; color:#2d3748; font-weight:600;">${val}</td>
+            <td style="text-align:center;">
+                <span class="badge bg-${status}">${status.toUpperCase()}</span>
+            </td>
+            <td style="color:#4a5568; font-size:12.5px; line-height:1.6; padding-left:15px;">${detail}</td>
+        </tr>`;
+
+    
+    const createSection = (title, rows) => `
+        <div class="section-box">
+            <div class="section-title">${title}</div>
+            <table class="analysis-table">
+                <thead>
+                    <tr>
+                        <th width="120">项目</th>
+                        <th width="100" style="text-align:center;">数值</th>
+                        <th width="80" style="text-align:center;">状态</th>
+                        <th>临床深度评估与对策</th>
+                    </tr>
+                </thead>
+                <tbody>${rows}</tbody>
+            </table>
+        </div>`;
+
+    return {
+        render: function() {
+            
+            document.getElementById('placeholder').style.display = 'none';
+            const paper = document.getElementById('report-paper');
+            const dynamicContent = document.getElementById('report-dynamic-content'); 
+            paper.style.display = 'block';
+            
+            
+            
+            dynamicContent.innerHTML = "";
+
+            
+            
+            
+            const age = _num('v_age');
+            const weight = _num('v_weight');
+            const height = _num('v_height');
+            const bmi = (weight / Math.pow(height / 100, 2)).toFixed(1);
+            const history = _get('s_history');
+            const flow = _num('s_flow');
+
+            let d1 = "";
+
+            
+            d1 += createRow("姓名", _get('v_name'), "身份唯一识别码。", 'ok');
+
+            
+            let ageDetail = "";
+            let ageStatus = 'ok';
+            if (age < 35) {
+                ageDetail = "【适孕年龄】预期囊胚形成率及单次移植着床率较高。";
+                ageStatus = 'ok';
+            } else if (age >= 35 && age < 40) {
+                ageDetail = "【高龄警戒】35岁后卵巢储备开始加速衰退。";
+                ageStatus = 'warn';
+            } else {
+                ageDetail = "【高龄风险】卵子质量及数量双重下降，胚胎染色体异常率通常>60%。医学建议采用高效促排方案，并在遗传咨询指导下进行周期。";
+                ageStatus = 'crit';
+            }
+            d1 += createRow("年龄", age + "岁", ageDetail, ageStatus);
+
+            
+            let bmiDetail = "";
+            let bmiStatus = 'ok';
+            if (bmi < 18.5) {
+                bmiDetail = "【体重过低】可能存在下丘脑性排卵障碍风险，且移植后胎儿发育受限风险略升，建议适当补充营养。";
+                bmiStatus = 'warn';
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                bmiDetail = "【理想状态】体内激素反馈机制稳定，有利于促排药物的吸收与卵泡均匀发育。";
+                bmiStatus = 'ok';
+            } else if (bmi >= 25 && bmi < 30) {
+                bmiDetail = "【超重提醒】可能存在胰岛素抵抗风险。促排中 Gn 剂量需求往往增加，且胚胎种植率随 BMI 升高而呈下降趋势。";
+                bmiStatus = 'warn';
+            } else {
+                bmiDetail = "【肥胖风险】显著增加排卵异常及妊娠期并发症风险。建议在周期前通过减重5-10%来改善盆腔微环境，提高获卵质量。";
+                bmiStatus = 'crit';
+            }
+            d1 += createRow("BMI指数", bmi, bmiDetail, bmiStatus);
+
+            
+            d1 += createRow("血型", _text('s_blood'), "对于 Rh 阴性等稀有血型，需提前评估妊娠期母婴血型不合风险。", 'ok');
+
+            
+            let historyDetail = "";
+            let historyStatus = "ok"; 
+
+            const historyLabel = _text('s_history'); 
+            switch (history) {
+              case '3': 
+               historyStatus = "crit"; 
+               historyDetail = "<b>原发性不孕。</b> 需重点排查子宫内膜种植窗（WOI）是否存在偏移、是否存在隐匿性子宫内膜炎（CD138）或免疫排斥因素。。";
+            break;
+        
+              case '0': 
+               historyStatus = "warn"; 
+               historyDetail = "<b>容受性未验证：</b> 子宫内膜对胚胎的接受能力尚处于“黑盒”状态。建议在排卵期监测子宫内膜血流以评估种植潜能。";
+            break;
+        
+              case '1':
+              case '2': 
+               historyStatus = "ok"; 
+               const childCount = history === '1' ? "单次" : "多次";
+               historyDetail = `<b>经产（分娩史：${childCount}）：</b> 既往成功分娩史是子宫内膜具备良好<b>胚胎容受性</b>的强有力证据。复苏移植成功率预期较好。注意排查随年龄增长可能出现的内膜息肉、肌腺症或剖宫产切口憩室。`;
+            break;
+        
+            default:
+               historyDetail = "需结合详细既往病史进一步评估。";
+             }
+            d1 += createRow("既往生育史", _text('s_history'), historyDetail, 'ok');
+
+            
+            let flowDetail = "";
+            let flowStatus = 'ok';
+            if (flow === 0) {
+                flowDetail = "无流产史。子宫内膜基底层保护完好，无因刮宫导致的人为粘连风险。";
+            } else if (flow === 1) {
+                flowDetail = "有1次流产记录。需关注内膜修复情况，移植前确保内膜厚度 > 9mm 且三线征清晰。";
+                flowStatus = 'ok';
+            } else if (flow >= 2) {
+                flowDetail = "【复发性流产(RSA)】高度警示！需系统筛查抗磷脂综合征（APS）、内分泌紊乱及夫妻双方外周血染色体，排除种植环境障碍。";
+                flowStatus = 'crit';
+            }
+            d1 += createRow("流产史分析", _text('s_flow'), flowDetail, flowStatus);
+
+            
+            
+            
+            const afc = _num('v_afc');
+            const amh = _num('v_amh');
+            const fsh = _num('v_fsh');
+            const lh = _num('v_lh');
+            const e2 = _num('v_e2');
+            const prl = _num('v_prl');
+            const ultra = _get('v_ultra');
+
+            let d2 = "";
+
+            
+            let afcDetail = "";
+            let afcStatus = 'ok';
+            if (afc < 5) {
+                afcDetail = "【波塞冬1/2类风险】窦卵泡数极低，提示单周期促排可采集卵子数量严重不足。临床对策：建议采用微刺激或拮抗剂方案，重点关注卵子获能性而非数量。";
+                afcStatus = 'crit';
+            } else if (afc > 15) {
+                afcDetail = "【高反应预警】窦卵泡发育旺盛。促排中需严密监测，预防卵巢过度刺激综合征（OHSS），建议使用低剂量Gn启动并考虑全胚冷冻。";
+                afcStatus = 'warn';
+            } else {
+                afcDetail = "窦卵泡储备理想。预期促排反应良好，是获取优质卵子数量（8-15枚）的最佳生理基底。";
+                afcStatus = 'ok';
+            }
+            d2 += createRow("窦卵泡计数", afc + " 个", afcDetail, afcStatus);
+
+            
+            let amhDetail = "";
+            let amhStatus = 'ok';
+            if (amh < 1.1) {
+                amhDetail = "【DOR：卵巢储备功能减退】AMH低于1.1ng/mL提示始基卵泡池耗竭。建议尽早进入周期，并配合DHEA及辅酶Q10进行卵巢功能调理。";
+                amhStatus = 'crit';
+            } else if (amh > 4.5) {
+                amhDetail = "【PCOS倾向】储备极高。虽可获卵数多，但需关注可能存在的代谢紊乱及卵子质量不均问题，移植前需评估内分泌代谢背景。";
+                amhStatus = 'warn';
+            } else {
+                amhDetail = "【正常状态】储备水平与生理年龄相符。预示促排卵药物反应性稳定，获卵预期符合临床黄金窗口。";
+                amhStatus = 'ok';
+            }
+            d2 += createRow("抗缪勒管激素", amh + " ng/mL", amhDetail, amhStatus);
+
+            
+            let fshDetail = "";
+            let fshStatus = 'ok';
+            if (fsh > 10) {
+                fshDetail = "【卵巢敏感度下降】FSH升高意味着垂体需加大信号才能刺激卵泡。临床预示可能出现低反应（Poor Response），建议增加促排启动剂量。";
+                fshStatus = 'crit';
+            } else if (fsh < 3) {
+                fshDetail = "【低促性腺】基础FSH过低需警惕下丘脑/垂体功能减退，可能需要额外添加LH类药物辅助促排。";
+                fshStatus = 'warn';
+            } else {
+                fshDetail = "【正常状态】提示下丘脑-垂体-卵巢轴（HPO）反馈机制正常，对药物诱导排卵的敏感性预期良好。";
+                fshStatus = 'ok';
+            }
+            d2 += createRow("基础 FSH", fsh + " mIU/mL", fshDetail, fshStatus);
+
+            
+            let lhDetail = "";
+            let lhStatus = 'ok';
+            const ratio = (lh / fsh).toFixed(2);
+            if (ratio > 2) {
+                lhDetail = `【比值失衡：${ratio}】LH/FSH > 2 是多囊卵巢综合征（PCOS）的重要辅助诊断指标。促排中易出现卵泡发育不均及早发LH峰风险。`;
+                lhStatus = 'warn';
+            } else {
+                lhDetail = "LH水平及其与FSH的反馈比例处于正常生理范围，有利于维持早卵泡期的静息状态。";
+                lhStatus = 'ok';
+            }
+            d2 += createRow("基础 LH", lh + " mIU/mL", lhDetail, lhStatus);
+
+            
+            let e2Detail = "";
+            let e2Status = 'ok';
+            if (e2 > 60) {
+                e2Detail = "【基础E2过高】可能提示有上周期残留的囊肿或卵巢功能早衰。这会负反馈抑制FSH，导致本周期的FSH数值呈现“虚假正常”。";
+                e2Status = 'warn';
+            } else {
+                e2Detail = "早卵泡期基础雌激素水平处于静息态，有助于准确判定FSH的临床意义。";
+                e2Status = 'ok';
+            }
+            d2 += createRow("雌二醇 E2", e2 + " pg/mL", e2Detail, e2Status);
+
+            
+            let prlDetail = "";
+            let prlStatus = 'ok';
+            if (prl > 25) {
+                prlDetail = "【高泌乳素血症】PRL升高会显著干扰促性腺激素的分泌，导致卵泡发育停滞或黄体功能不足。建议使用溴隐亭调理至正常后再行移植。";
+                prlStatus = 'crit';
+            } else {
+                prlDetail = "泌乳素水平正常。未见明显的垂体轴功能干扰，有利于正常的卵泡闭锁机制和后续的黄体维持。";
+                prlStatus = 'ok';
+            }
+            d2 += createRow("泌乳素 PRL", prl + " ng/mL", prlDetail, prlStatus);
+
+            
+            let ultraDetail = "";
+            let ultraStatus = 'ok';
+            if (ultra === '1') {
+                ultraDetail = "【内膜环境受损】怀疑息肉、粘连或内膜不均。这些因素是导致胚胎种植失败（RIF）的物理障碍。强烈建议行宫腔镜（HSC）冷刀切除或分离。";
+                ultraStatus = 'crit';
+            } else if (ultra === '2') {
+                ultraDetail = "【子宫肌瘤/腺肌症】病灶可能改变子宫血流或产生炎症因子。需结合病灶大小及位置，评估是否需先使用GnRH-a类药物缩减病灶后再移植。";
+                ultraStatus = 'warn';
+            } else {
+                ultraDetail = "【理想状态】子宫内膜呈现三线征，厚度与周期相符。未发现明显物理占位，土壤环境具备良好的受孕基础。";
+                ultraStatus = 'ok';
+            }
+            d2 += createRow("阴道B超/内膜", _text('v_ultra'), ultraDetail, ultraStatus);
+
+
+            
+            
+            
+            const tsh = _num('v_tsh');
+            const sugar = _get('v_blood_sugar');
+            const coagulation = _get('v_blood_coagulation');
+            const lipid = _get('v_lipid');
+            const liverKidney = _get('v_liver_kidney');
+            const torch = _get('v_torch');
+            const thalassemia = _get('v_thalassemia');
+            const vaginal = _get('v_vaginal');
+
+            let d3 = "";
+
+            
+            let tshDetail = "";
+            let tshStatus = 'ok';
+            if (tsh > 2.5) {
+                tshDetail = "【甲减/亚甲减预警】生殖内分泌专家共识要求移植前TSH应控制在 2.5 mIU/L 以下。高水平 TSH 与早期流产、胚胎停育及胎儿神经发育风险显著相关。";
+                tshStatus = 'crit';
+            } else if (tsh < 0.1) {
+                tshDetail = "【甲亢风险】TSH过低可能引起母体代谢亢进，增加妊娠期心脏负担及早产风险，建议内分泌科会诊。";
+                tshStatus = 'warn';
+            } else {
+                tshDetail = "【理想状态】甲状腺轴功能处于理想受孕窗口，有利于维持早期妊娠所需的内分泌稳态。";
+                tshStatus = 'ok';
+            }
+            d3 += createRow("TSH (甲功)", tsh + " uIU/mL", tshDetail, tshStatus);
+
+            
+            let sugarDetail = sugar === '1' ? 
+                "【糖代谢异常】高糖微环境具有胚胎毒性，可能导致种植率下降及胎儿畸形风险增加。建议监测 HBA1C（糖化血红蛋白）并先行代谢管理。" : 
+                "【理想状态】血糖指标正常，母体代谢环境支持胚胎的正常能量转换与发育。";
+            d3 += createRow("血糖状态", _text('v_blood_sugar'), sugarDetail, sugar === '0' ? 'ok' : 'crit');
+
+            
+            let coagDetail = coagulation === '1' ? 
+                "【易栓症风险】凝血功能异常可能导致子宫螺旋动脉微血栓形成，引发胎盘血供不足及种植失败。对策：必要时需在医生指导下使用低分子肝素或阿司匹林。" : 
+                "【理想状态】凝血机制正常。未见明显的微血栓形成倾向，有利于胎盘植入后的血流动力学稳定。";
+            d3 += createRow("凝血项", _text('v_blood_coagulation'), coagDetail, coagulation === '0' ? 'ok' : 'warn');
+
+            
+            let safetyDetail = (lipid === '1' || liverKidney === '1') ? 
+                "【围手术期风险】生化指标异常可能增加促排卵药物对肝脏的代谢负担，以及全麻取卵手术的风险。建议先行保肝减脂调理。" : 
+                "【理想状态】生化指标稳健。符合促排卵药物大剂量应用及全麻手术的安全性准入标准。";
+            d3 += createRow("肝肾与血脂", "综合评估", safetyDetail, (lipid === '0' && liverKidney === '0') ? 'ok' : 'warn');
+
+            
+            let torchDetail = torch === '1' ? 
+                "【致畸项风险】检测到弓形虫、风疹病毒或巨细胞病毒活跃期感染，可能通过胎盘屏障导致胎儿畸形。临床要求：必须等待 IgM 转阴后方可进入周期。" : 
+                "【理想状态】优生五项符合妊娠要求。未发现近期活跃期病毒感染风险。";
+            d3 += createRow("TORCH/优生", _text('v_torch'), torchDetail, torch === '0' ? 'ok' : 'crit');
+
+            
+            let thalDetail = thalassemia === '1' ? 
+                "【遗传阻断指征】由于地贫具有高度遗传性，强烈建议配偶进行同项筛查。若双方同型，需行三代试管 PGT-M 技术阻断重症患儿出生。" : 
+                "【理想状态】地贫初筛阴性。减少了单基因遗传性贫血向下一代传递的基准风险。";
+            d3 += createRow("地中海贫血", _text('v_thalassemia'), thalDetail, thalassemia === '0' ? 'ok' : 'warn');
+
+            
+            let vagDetail = "";
+            let vagStatus = 'ok';
+            if (vaginal === '0') {
+                vagDetail = "生殖道微生态平衡。无衣原体、支原体或致病菌干扰，为胚胎植入提供了无菌性物理保护。";
+                vagStatus = 'ok';
+            } else {
+                const map = { '1': '阴道炎症', '2': '衣原体阳性', '3': '支原体阳性', '4': '多重感染' };
+                vagDetail = `【感染风险：${map[vaginal] || '异常'}】感染引起的炎症因子（如 TNF-α）具有杀胚作用。对策：建议夫妻同治，规范使用足量抗生素并复查转阴。`;
+                vagStatus = 'crit';
+            }
+            d3 += createRow("生殖道感染", _text('v_vaginal'), vagDetail, vagStatus);
+
+            
+            
+            
+            const chromosome = _get('v_chromosome');
+            const genetic = _get('v_genetic_diseases');
+            const infect = _get('v_infect');
+
+            let d4 = "";
+
+            
+            let chromoDetail = "";
+            let chromoStatus = 'ok';
+            if (chromosome === '0') {
+                chromoDetail = "【理想状态】外周血染色体核型未见显性异常。减少了因亲本染色体平衡易位、倒位导致的反复流产及胎儿畸形风险。";
+                chromoStatus = 'ok';
+            } else {
+                chromoDetail = "【PGT-SR 强指征】检测到染色体结构异常（如易位、倒位）。此类情况极易产生非整倍体胚胎。临床对策：必须行三代试管胚胎染色体筛查，挑选过检的胚胎植入。";
+                chromoStatus = 'crit';
+            }
+            d4 += createRow("染色体核型", _text('v_chromosome'), chromoDetail, chromoStatus);
+
+            
+            let geneticDetail = "";
+            let geneticStatus = 'ok';
+            if (genetic === '0') {
+                geneticDetail = "【理想状态】无明确家族单基因遗传病史。子代患遗传性代谢病或先天畸形的基准风险较低。";
+                geneticStatus = 'ok';
+            } else if (genetic === '1') {
+                geneticDetail = "【PGT-M 强指征：显性遗传】家族中存在明确显性致病基因（如亨廷顿舞蹈症等）。需通过三代试管单基因病筛查技术，从源头阻断家族病致病链。";
+                geneticStatus = 'crit';
+            } else {
+                geneticDetail = "【隐性遗传风险】提示可能携带隐性致病基因。建议夫妻双方行扩展性携带者筛查（ECS），评估是否需行 PGT-M 技术干预。";
+                geneticStatus = 'warn';
+            }
+            d4 += createRow("家族遗传病", _text('v_genetic_diseases'), geneticDetail, geneticStatus);
+
+            
+            let infectDetail = "";
+            let infectStatus = 'ok';
+            const infectVal = _get('v_infect');
+            
+            
+            if (infectVal === '0') {
+                infectDetail = "【理想状态】感染全指标阴性。符合实验室最高级别生物安全准入标准，无需特殊洗精或独立培养流程。";
+                infectStatus = 'ok';
+            } else if (['2', '4', '7'].includes(infectVal)) {
+                infectDetail = "【临床活动期/未控制】相关病原体处于活跃状态。为保护母婴安全及实验室生物安全，严禁在本阶段启动周期，必须先行专科抗病毒治疗。";
+                infectStatus = 'crit';
+            } else {
+                const infectMap = {
+                    '1': 'HIV已控制', '3': '梅毒已控制', 
+                    '5': '大三阳已控制', '6': '小三阳已控制'
+                };
+                infectDetail = `【特殊准入：${infectMap[infectVal]}】病毒载量已控制在安全窗口。需按照生物安全规范，启用独立胚胎操作间或特殊洗精方案，防止交叉感染。`;
+                infectStatus = 'warn';
+            }
+            d4 += createRow("传染病准入", _text('v_infect'), infectDetail, infectStatus);
+
+
+            
+            const pgt = _get('v_pgt');
+            const exercise = _get('v_exercise');
+            const diet = _get('v_diet');
+            const sleep = _get('v_sleep');
+            const mood = _get('v_mood');
+
+            let d5 = "";
+
+            
+            let pgtDetail = "";
+            let pgtStatus = 'ok';
+            if (pgt === '1') {
+                pgtDetail = "【高成功率导向】患者对三代技术接受度高。PGT-A 能够筛选出染色体倍性正常的胚胎，显著降低因高龄或偶然因素导致的停育率，缩短达到活产的时间（Time to Pregnancy）。";
+            } else if (pgt === '2') {
+                pgtDetail = "【传统方案导向】患者倾向于不进行胚胎植入前筛查。建议通过延长培养（养囊）及形态学评分挑选优质胚胎，以提高一代/二代 IVF 的临床效率。";
+                pgtStatus = 'warn';
+            } else {
+                pgtDetail = "意向不明确。建议结合获卵数及胚胎发育质量，在受精后第 3-5 天由医生根据胚胎价值再次进行 PGT 必要性评估。";
+            }
+            d5 += createRow("三代PGT意向", _text('v_pgt'), pgtDetail, pgtStatus);
+
+            
+            let exerciseDetail = exercise === '0' ? 
+                "【理想状态】运动习惯良好。有助于维持肌肉力量及基础代谢，降低促排期间血栓形成风险，并提升机体应激能力。": 
+                "【久坐风险】缺乏运动会导致盆腔血液循环减慢。适量的有氧运动（如快走、瑜伽）可提高机体代谢，改善子宫内膜血供，建议每周维持 3 次以上中等强度运动。" ; 
+            d5 += createRow("运动频率", _text('v_exercise'), exerciseDetail, exercise === '0' ? 'ok' : 'warn');
+
+            
+            let dietDetail = diet === '0' ? 
+                "【理想状态】规律饮食。均衡的营养摄入（特别是优质蛋白与抗氧化因子）是卵泡液微环境稳定的基础，有利于卵母细胞的胞质成熟。" : 
+                "【营养失衡预警】饮食不规律易引发胰岛素水平波动，干扰性激素合成。建议采用“地中海饮食”模式，增加抗氧化食物（如坚果、深海鱼）摄入。";
+            d5 += createRow("饮食习惯", _text('v_diet'), dietDetail, diet === '0' ? 'ok' : 'warn');
+
+            
+            let sleepDetail = sleep === '0' ? 
+                "【理想状态】作息规律。充足的睡眠有助于褪黑素的分泌，褪黑素作为强效清除剂，能降低卵泡内的氧化应激损伤，保护卵子 DNA 完整性。" : 
+                "【氧化应激风险】熬夜或作息紊乱会严重干扰 HPO 轴的脉冲式分泌。建议在促排期间确保 22:30 前入睡，以保障内源性激素的平稳。";
+            d5 += createRow("睡眠作息", _text('v_sleep'), sleepDetail, sleep === '0' ? 'ok' : 'warn');
+
+            
+            let moodDetail = mood === '0' ? 
+                "【理想状态】情绪稳定。副交感神经占优势，有助于子宫平滑肌保持静息状态，是胚胎植入的理想心理基底。" : 
+                "【心理应激预警】焦虑或情绪波动会诱发儿茶酚胺释放，导致子宫动脉收缩及子宫频率性蠕动增加。建议通过冥想或心理支持舒缓压力，必要时可给予镇静辅助。";
+            d5 += createRow("心理情绪", _text('v_mood'), moodDetail, mood === '0' ? 'ok' : 'warn');
+            
+            let fullHtml = "";
+            fullHtml += createSection("一、 基础概况", d1);
+            fullHtml += createSection("二、 卵巢储备与宫腔", d2);
+            fullHtml += createSection("三、 全身健康状态", d3);
+            fullHtml += createSection("四、 遗传阻断评估", d4);
+            fullHtml += createSection("五、 个体特征干预", d5);
+
+            
+            
+            
+            
+            
+            
+            const idealFactors = [];    
+            const riskFactors = [];     
+            const criticalFactors = []; 
+
+            
+            if (age < 35 && amh >= 1.1) idealFactors.push("年龄与储备处于黄金窗口");
+            if (age >= 38) criticalFactors.push("高龄卵损风险");
+            if (amh < 1.1) criticalFactors.push("DOR (卵巢储备严重减退)");
+
+            
+            if (tsh > 2.5) criticalFactors.push("TSH 异常 (移植高风险)");
+            if (sugar === '1') riskFactors.push("糖代谢异常");
+            if (bmi >= 25) riskFactors.push("超重/肥胖 (代谢应激)");
+            if (prl > 25) riskFactors.push("高泌乳素血症");
+
+            
+            if (ultra !== '0') criticalFactors.push("宫腔形态异常 (内膜占位/粘连)");
+            if (vaginal !== '0') criticalFactors.push("生殖道感染 (致炎风险)");
+            if (coagulation === '1') riskFactors.push("凝血功能异常 (易栓倾向)");
+
+            
+            if (chromosome !== '0' || genetic !== '0') criticalFactors.push("遗传/染色体结构异常");
+
+            
+            let protocolTitle = "";
+            let protocolDetail = "";
+            if (amh < 1.1 || age >= 40 || fsh > 12) {
+                protocolTitle = "拮抗剂方案 或 微刺激方案";
+                protocolDetail = "针对低反应人群，重点在于‘保质’而非‘保量’。避免过度抑制卵巢，建议配合 DHEA 和辅酶Q10 提高卵子获能。";
+            } else if (amh > 4.5 || (lh/fsh) > 2) {
+                protocolTitle = "拮抗剂方案 (预防 OHSS)";
+                protocolDetail = "针对高反应/PCOS人群。需严控促排药物剂量，使用 GnRH-a 触发，并强制全胚冷冻，待代谢环境恢复后再行移植。";
+            } else {
+                protocolTitle = "经典短方案 (同步化促排)";
+                protocolDetail = "针对储备正常人群。核验检查并通过后，经典短方案在保证经济、效率和高可用性的前提下，提高可用胚胎率和囊胚形成率。";
+            }
+
+            
+            const advice = `
+                <div class="advice-card" style="border-left-color: var(--med-pink); background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top:0; color:var(--med-blue); border-bottom:2px solid var(--soft-bg); padding-bottom:10px;">🩺 ADSMed 临床专家意见</h3>
+                    
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                        <div style="flex:1; background:#f0fff4; padding:15px; border-radius:8px;">
+                            <strong style="color:#27ae60;">✅ 理想因素</strong>
+                            <ul style="margin:10px 0 0 0; padding-left:18px; font-size:12px; color:#2d3748;">
+                                ${idealFactors.length ? idealFactors.map(f => `<li>${f}</li>`).join('') : '<li>暂未检出明显优势指标</li>'}
+                            </ul>
+                        </div>
+                        <div style="flex:1; background:#fffaf0; padding:15px; border-radius:8px;">
+                            <strong style="color:#f39c12;">⚠️ 风险因素</strong>
+                            <ul style="margin:10px 0 0 0; padding-left:18px; font-size:12px; color:#2d3748;">
+                                ${riskFactors.length ? riskFactors.map(f => `<li>${f}</li>`).join('') : '<li>暂无中度风险项</li>'}
+                            </ul>
+                        </div>
+                        <div style="flex:1; background:#fff5f5; padding:15px; border-radius:8px;">
+                            <strong style="color:#e74c3c;">🚨 高危因素</strong>
+                            <ul style="margin:10px 0 0 0; padding-left:18px; font-size:12px; color:#2d3748;">
+                                ${criticalFactors.length ? criticalFactors.map(f => `<li>${f}</li>`).join('') : '<li>未检出移植禁忌项</li>'}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="background:var(--soft-bg); padding:20px; border-radius:10px; margin-bottom:20px;">
+                        <h4 style="margin-top:0; color:var(--med-blue);">📅 总体试管策略</h4>
+                        <p style="font-size:13.5px; line-height:1.6; color:#4a5568;">
+                            基于您的<strong>年龄(${age}岁)</strong>与<strong>AMH(${amh}ng/mL)</strong>，当前生育潜能评估为：
+                            <span style="color:var(--med-pink); font-weight:bold;">
+                                ${amh < 1.1 ? '卵巢储备功能减退 (DOR)' : (amh > 4.5 ? '卵巢高反应人群 (PCOS倾向)' : '卵巢储备良好')}
+                            </span>。<br>
+                            针对您的个体情况，临床建议采取 <strong>${protocolTitle}</strong>。
+                        </p>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div style="border:1px solid #e2e8f0; padding:15px; border-radius:8px;">
+                            <strong style="color:var(--med-blue); display:block; margin-bottom:8px;">1. 促排方案细节</strong>
+                            <div style="font-size:12.5px; color:#64748b;">${protocolDetail}</div>
+                        </div>
+                        <div style="border:1px solid #e2e8f0; padding:15px; border-radius:8px;">
+                            <strong style="color:var(--med-blue); display:block; margin-bottom:8px;">2. 移植准入建议</strong>
+                            <div style="font-size:12.5px; color:#64748b;">
+                                ${criticalFactors.some(f => f.includes('TSH') || f.includes('宫腔') || f.includes('感染')) 
+                                    ? '🚩 <span style="color:red">建议推迟移植</span>。必须先处理高危拦截指标（如TSH调控、宫腔镜手术或抗感染治疗）。' 
+                                    : '🟢 <span style="color:green">准予移植计划</span>。目前土壤环境优良，可根据囊胚培养结果择期安排复苏移植。'}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:15px; font-size:11px; color:#94a3b8; text-align:center; border-top:1px dashed #e2e8f0; padding-top:10px;">
+                        * 本报告基于 ADSMed 临床算法生成，仅供专家参考，具体诊疗请遵医嘱。
+                    </div>
+                </div>`;
+
+            
+            
+            dynamicContent.innerHTML = fullHtml + advice;
+
+            document.getElementById('placeholder').style.display = 'none';
+            paper.style.display = 'block';
+
+            if(window.innerWidth < 900) { paper.scrollIntoView({ behavior: 'smooth' }); }            
+        },
+
+        save: function() {
+           const paper = document.getElementById('report-paper');
+           const noPrintBtn = paper.querySelector('.no-print');
+    
+        
+         if(noPrintBtn) noPrintBtn.style.display = 'none';
+
+         html2canvas(paper, { 
+         scale: 2,
+         useCORS: true,
+         backgroundColor: "#ffffff" 
+         }).then(canvas => {
+         const link = document.createElement('a');
+         link.download = `ADSMed_Report_${new Date().getTime()}.jpg`;
+         link.href = canvas.toDataURL("image/jpeg", 0.95);
+         link.click();
+        
+        
+         if(noPrintBtn) noPrintBtn.style.display = 'block';
+         });
+    }
+
+
+    };
+})();
+</script>
+</body>
+</html>

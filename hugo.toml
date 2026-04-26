@@ -193,7 +193,7 @@ pluralizelisttitles = false
     post       = 3
 
 [[menu.main]]
-    name       = "工具集合"
+    name       = "内部工具集合"
     url        = "/service/tools/"
     weight     = 1
     parent     = "section.tool"
@@ -208,6 +208,24 @@ pluralizelisttitles = false
     name       = "三代试管成功率自测工具"
     url        = "/service/pgt-calculator"
     weight     = 3
+    parent     = "section.tool"
+
+[[menu.main]]
+    name       = "三代试管成功率自测工具2"
+    url        = "/service/pgt-calculator2"
+    weight     = 4
+    parent     = "section.tool"
+
+[[menu.main]]
+    name       = "试管生育力评估系统"
+    url        = "/service/tool01"
+    weight     = 4
+    parent     = "section.tool"
+
+[[menu.main]]
+    name       = "试管启动前调养评估系统"
+    url        = "/service/tool02"
+    weight     = 4
     parent     = "section.tool"
 
 [[menu.main]]
@@ -270,9 +288,9 @@ pluralizelisttitles = false
 [params]
     viewMorePostLink = "/blog/"  #指向“查看更多文章”链接的地址。
     author = "adsmed"
-    defaultKeywords = ["爱得生", "试管", "三代"]   #用于 SEO 的默认关键词
+    defaultKeywords = ["爱得生", "试管", "三代", "三代试管", "特殊试管", "高龄试管", "拉拉试管"]   #用于 SEO 的默认关键词
     mainSections = ["blog"]
-    defaultDescription = "爱得生是一家专业的三代试管服务商"  #用于 SEO 的默认描述
+    defaultDescription = "ADSMed面向特殊试管需求客户提供定制化的试管辅助服务"  #用于 SEO 的默认描述
 
     # Social media
     facebook_site = "" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
@@ -303,10 +321,10 @@ pluralizelisttitles = false
     googleRecaptchaKey = "site_key_for_google_recaptcha"
 
     about_us = "<p>一家专业的三代试管服务商，专注于用心服务，以口碑赢得未来.</p>"
-    copyright = "Copyright (c) 2015 - 2025, 爱得生医疗; All Rights Reserved."
+    copyright = "Copyright (c) 2015 - 2026, 爱得生医疗; All Rights Reserved."
 
     # Format dates with Go's time formatting
-    date_format = "2006/01/02"
+    date_format = "2006/02/01"
    
 
   dropdown_mouse_over = false  #false网站下拉菜单通过点击来展开，true通过鼠标悬停。

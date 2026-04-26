@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>试管启动前调养评估系统 - ADSMed</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>   
+        :root { --primary: #6c5ce7; --secondary: #a29bfe; --accent: #ff7675; --bg: #f0f2f5; }
+        body { font-family: -apple-system, "Helvetica Neue", sans-serif; background: var(--bg); margin: 0; padding: 10px; color: #2d3436; }
+        .wrapper { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: row; gap: 15px; }
+        @media (max-width: 900px) { .wrapper { flex-direction: column; } }
+
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 12px; border-radius: 12px; text-align: center; margin-bottom: 10px; box-shadow: 0 2px 10px rgba(108, 92, 231, 0.3); }
+        header h1 { margin: 0; font-size: 1.2rem; }
+        header p { margin: 2px 0 0; font-size: 0.75rem; opacity: 0.9; } 
+        
+        .card { background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .input-sidebar { flex: 1; min-width: 320px; }
+        .report-main { flex: 1.6; border-top: 8px solid var(--primary); position: relative; }
+
+        .h-title { font-size: 1.1rem; color: var(--primary); border-left: 4px solid var(--primary); padding-left: 10px; margin: 20px 0 15px; font-weight: bold; }
+        .form-unit { margin-bottom: 15px; }
+        label { display: block; font-size: 0.85rem; margin-bottom: 6px; color: #636e72; font-weight: 600; }
+        select, input { width: 100%; height: 42px; border: 1px solid #dfe6e9; border-radius: 8px; padding: 0 10px; font-size: 0.95rem; box-sizing: border-box; }
+        
+        .grid-options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .opt-item { background: #f9f9fb; padding: 10px; border-radius: 8px; display: flex; align-items: center; font-size: 0.8rem; cursor: pointer; border: 1px solid transparent; transition: 0.2s; }
+        .opt-item:hover { border-color: var(--secondary); }
+        .opt-item input { width: 14px; height: 14px; margin-right: 8px; }
+
+         
+        .report-content { min-height: 500px; }
+        .summary-banner { background: #f8f7ff; border-radius: 10px; padding: 15px; margin-bottom: 20px; display: flex; justify-content: space-around; flex-wrap: wrap; border: 1px solid var(--secondary); }
+        .stat-item { text-align: center; padding: 5px 15px; min-width: 100px; }
+        .stat-val { display: block; font-size: 1.1rem; font-weight: bold; color: var(--primary); margin-bottom: 4px; }
+        .stat-lab { font-size: 0.75rem; color: #636e72; font-weight: bold; }
+
+        .advice-block { margin-bottom: 25px; }
+        .advice-header { display: flex; align-items: center; gap: 8px; font-weight: bold; color: #2d3436; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .supp-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        .supp-table td { padding: 8px 4px; border-bottom: 1px solid #f1f2f6; }
+        .supp-tag { color: var(--primary); font-weight: bold; text-align: right; font-size: 0.8rem; }
+
+        .lifestyle-card { background: #fffcf0; border: 1px solid #ffeaa7; padding: 12px; border-radius: 8px; font-size: 0.85rem; line-height: 1.6; }
+        .btn-download { background: #00b894; color: white; border: none; width: 100%; padding: 16px; border-radius: 12px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 25px; transition: 0.3s; box-shadow: 0 4px 10px rgba(0, 184, 148, 0.3); }
+        .btn-download:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0, 184, 148, 0.4); }
+        
+        .tag-low { color: #eb4d4b; }
+        .tag-mid { color: #f0932b; }
+        .tag-high { color: #6ab04c; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>IVF 启动前全维度调养评估系统</h1>
+    <p>ADSMed Clinical Support System | 基于循证医学的个性化干预</p>
+</header>
+
+<div class="wrapper">
+    <div class="card input-sidebar">  
+        <div class="h-title">📊 基础指标</div>
+        <div class="form-unit">
+            <label>客户年龄段</label>
+            <select id="age" onchange="run()">
+                <option value="1">20-29岁</option>
+                <option value="2">30-35岁</option>
+                <option value="3" selected>36-40岁</option>
+                <option value="4">40岁以上</option>
+            </select>
+        </div>
+        <div class="form-unit">      
+            <label>AMH 数值 (ng/ml)</label>
+            <input type="number" id="amh" value="1.5" step="0.1" oninput="run()">
+        </div>
+
+        <div class="form-unit">
+            <label>身高(cm) / 体重(kg)</label>
+            <div style="display:flex; gap:10px;">
+                <input type="number" id="h" value="165" placeholder="cm" oninput="run()">
+                <input type="number" id="w" value="60" placeholder="kg" oninput="run()">
+            </div>
+        </div>
+
+        <div class="h-title">🩺 临床特征</div>
+        <div class="grid-options">
+            <div class="opt-item"><input type="checkbox" id="pcos" onchange="run()"> 多囊特征/胰岛素抵抗</div>
+            <div class="opt-item"><input type="checkbox" id="endo" onchange="run()"> 内膜薄/血流灌注差</div>
+            <div class="opt-item"><input type="checkbox" id="egg" onchange="run()"> 既往卵质差</div>
+            <div class="opt-item"><input type="checkbox" id="tube" onchange="run()"> 输卵管炎症/慢性盆腔炎</div>
+        </div>
+
+        <div class="h-title">🌙 生活作息</div>
+        <div class="form-unit">
+            <label>典型入睡时间</label>
+            <select id="sleep" onchange="run()">
+                <option value="1">22:30 之前</option>
+                <option value="2" selected>23:00 之前</option>
+                <option value="3">凌晨以后</option>
+            </select>
+        </div>
+        <div class="form-unit">
+            <label>日均运动量</label>
+            <select id="exercise" onchange="run()">
+                <option value="1">久坐不动</option>
+                <option value="2">轻度(散步)</option>
+                <option value="3" selected>中度(慢跑/瑜伽/波比跳)</option>
+                <option value="4">强度(规律健身/马拉松)</option>
+            </select>
+        </div>
+
+        <div class="h-title">🏠 环境与心理因素</div>
+        <div class="grid-options">
+            <div class="opt-item"><input type="checkbox" id="toxic" onchange="run()"> 环境风险(甲醛/重金属)</div>
+            <div class="opt-item"><input type="checkbox" id="stress" onchange="run()"> 长期高压/抗拒进周</div>
+        </div>
+    </div>
+
+    <div class="card report-main" id="report">
+        <div class="report-content">
+            <div style="text-align:center; margin-bottom:20px;">
+                <h2 style="margin:0; color:var(--primary);">IVF 个体化调养方案建议书</h2>
+                <p style="color:#b2bec3; font-size:0.8rem;">生成日期：<span id="curDate"></span> | ADSMed 临床证据库 v2.0</p>
+            </div>
+
+            <div class="summary-banner">
+                <div class="stat-item">
+                    <span class="stat-lab">体重/BMI</span>
+                    <span class="stat-val" id="res-bmi">评估中</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-lab">卵巢储备评估</span>
+                    <span class="stat-val" id="res-ovary">评估中</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-lab">子宫环境评估</span>
+                    <span class="stat-val" id="res-uterus">评估中</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-lab">建议调养周期</span>
+                    <span class="stat-val" id="res-cycle">90天</span>
+                </div>
+            </div>
+
+            <div class="advice-block">
+                <div class="advice-header">💊 靶向营养补充策略 (Nutraceuticals)</div>
+                <table class="supp-table" id="suppTable"></table>
+            </div>
+
+            <div class="advice-block">
+                <div class="advice-header">🕒 生活作息与环境干预处方</div>
+                <div class="lifestyle-card" id="lifeTxt"></div>
+            </div>
+
+            <div class="advice-block">
+                <div class="advice-header">🥗 助孕饮食干预策略</div>
+                <p id="dietTxt" style="font-size:0.9rem; color:#444; line-height:1.6;"></p>
+            </div>
+            
+            <div style="border-top: 1px dashed #ddd; padding-top: 10px; font-size: 0.75rem; color: #999;">
+                * 注：本评估仅供预康复参考，涉及处方药剂量请遵医嘱。
+            </div>
+        </div>
+
+        <button class="btn-download" id="capBtn" onclick="exportImg()">保存为专属调养图片</button>
+    </div>
+</div>
+
+<script>
+
+    (function() {
+        const AUTH_CODE_ENCODED = "d2Flc3puaHk="; 
+        const STORAGE_KEY = "adsmed_authorized";
+        if (sessionStorage.getItem(STORAGE_KEY) !== "true") {
+            let input = prompt("该工具仅供内部使用，请输入授权码：");
+            if (input && btoa(input) === AUTH_CODE_ENCODED) {
+                sessionStorage.setItem(STORAGE_KEY, "true");
+            } else {
+                alert("授权码错误，无法访问。");
+                document.body.innerHTML = "<h1>403 未授权访问</h1>";
+                window.location.href = "/";
+            }
+        }
+    })();
+
+
+
+    function run() {
+        
+        const age = parseInt(document.getElementById('age').value);
+        const amh = parseFloat(document.getElementById('amh').value);
+        const height = parseFloat(document.getElementById('h').value) / 100;
+        const weight = parseFloat(document.getElementById('w').value);
+        
+        const isPcos = document.getElementById('pcos').checked;
+        const isEndo = document.getElementById('endo').checked;
+        const isEgg = document.getElementById('egg').checked;
+        const isTube = document.getElementById('tube').checked;
+        const isToxic = document.getElementById('toxic').checked;
+        const isStress = document.getElementById('stress').checked;
+        const sleep = document.getElementById('sleep').value;
+        const exercise = document.getElementById('exercise').value;
+
+        document.getElementById('curDate').innerText = new Date().toLocaleDateString();
+
+        
+        let ovaryStatus = "良好";
+        if (amh < 1.1 || age >= 40) ovaryStatus = "储备衰退(DOR)";
+        else if (amh < 1.5 || age >= 3) ovaryStatus = "储备减低预警";
+        else if (isPcos || amh > 6.0) ovaryStatus = "多囊高反风险";
+        document.getElementById('res-ovary').innerText = ovaryStatus;
+
+        let uterusStatus = "正常";
+        if (isEndo && isTube) uterusStatus = "多重挑战(血流+炎症)";
+        else if (isEndo) uterusStatus = "内膜容受性待改良";
+        else if (isTube) uterusStatus = "需防范炎症积水";
+        document.getElementById('res-uterus').innerText = uterusStatus;
+
+
+        let currentBmi = 0;
+        let bmiText = "数据不全";
+        if (height > 0 && weight > 0) {
+            currentBmi = (weight / (height * height)).toFixed(1);
+            let category = currentBmi < 18.5 ? "偏轻" : (currentBmi < 24 ? "理想" : (currentBmi < 28 ? "偏重" : "肥胖"));
+            bmiText = `${currentBmi} (${category})`;
+        }
+        document.getElementById('res-bmi').innerText = bmiText; 
+
+        let cycle = "60天"; 
+        const isHighRisk = age > 3 || amh < 1.2 || isEgg || currentBmi >= 28; 
+        const isPerfect = age <= 3 && amh >= 3.5 && !isPcos && !isEndo && !isEgg && currentBmi >= 18.5 && currentBmi < 24;
+
+        if (isHighRisk) cycle = "90天";
+        else if (isPerfect) cycle = "30天";
+        else cycle = "60天";
+        document.getElementById('res-cycle').innerText = cycle;
+
+
+
+        
+        let s = [
+            {n: "活性叶酸(5-MTHF)", v: "800μg/日", r: "预防神经管畸形及同型半胱氨酸过高"},
+            {n: "复合维生素", v: "1片/日", r: "补充基础微量元素"}
+        ];
+
+        
+        if(age >= 3 || isEgg) {
+            s.push({n: "还原型辅酶Q10", v: "200mg × 2次/日", r: "提升线粒体ATP水平，增强卵子能量"});
+            s.push({n: "PQQ", v: "20mg/日", r: "协同Q10增加线粒体数量"});
+        } else {
+            s.push({n: "普通辅酶Q10", v: "200mg/日", r: "基础抗氧化作用"});
+        }
+
+        
+        if(amh < 1.2 && age < 4) {
+            s.push({n: "DHEA", v: "25mg × 3次/日", r: "改善微环境，增加获卵数"});
+        }
+
+        
+        if(isPcos || currentBmi >= 24) {
+        s.push({n: "辅酶Q10 + 硫辛酸", v: "400mg / 300mg", r: "改善胰岛素抵抗引起的氧化应激"});
+        s.push({n: "肌醇 (Myo-Inositol)", v: "4g/日", r: "早晚分服，临床证明显著提升卵质"});
+        } else if (currentBmi < 18.5) {
+        s.push({n: "乳清蛋白粉", v: "25g/日", r: "随早餐，补充蛋白储备，利于内膜增长"});
+        }
+
+        
+        if(isEndo) {
+            s.push({n: "精氨酸", v: "2g × 2次/日", r: "增加NO合成，改善内膜血流灌注"});
+            s.push({n: "维生素E", v: "200-400IU/日", r: "协同改善内膜厚度"});
+        }
+        if(isTube) {
+            s.push({n: "益生菌(女性专用)", v: "100亿CFU/日", r: "调节微生态，降低炎症因子"});
+        }
+
+        
+        if(sleep === "3" || isStress) {
+            s.push({n: "褪黑素", v: "1-3mg/睡前", r: "中和卵泡液自由基，提高受精率"});
+        }
+
+        document.getElementById('suppTable').innerHTML = s.map(i => 
+            `<tr><td>${i.n}</td><td style="text-align:center; color:#636e72">${i.v}</td><td class="supp-tag">${i.r}</td></tr>`
+        ).join('');
+
+
+        
+        let l = "";
+        if(sleep === "3") l += "⚠️ <b>宵禁指令：</b>凌晨入睡会导致HPO轴功能受损。必须23:00前熄灯，确保睡眠黄金期分泌内源性生长激素。<br>";
+        else if(sleep === "2") l += "✅ <b>睡眠建议：</b>入睡时间尚可，但建议逐步提前，争取23:00前入睡，优化内分泌节律。<br>";       
+        else l += "✅ <b>优质睡眠：</b>维持目前节奏，建议睡前进行10分钟冥想降低皮质醇。<br>";
+
+        l += "🏃 <b>运动建议：</b>";
+        if(exercise === "1") l += "拒绝久坐！每日至少30分钟快走，激活盆腔血液循环，防止血栓前状态。<br>";
+        else if(exercise === "4") l += "高强度运动产生的乳酸和热量压力可能抑制卵泡发育，建议调整为普拉提或瑜伽。<br>";
+        else l += "适度运动可维持BMI稳态，非常理想。<br>";
+
+        if(isToxic) l += "🚫 <b>避毒提醒：</b>严格避开含双酚A（塑料餐具加热）、邻苯二甲酸酯（香水/劣质化妆品）及新装修环境，这些属于类雌激素污染物。";
+        document.getElementById('lifeTxt').innerHTML = l;
+
+
+        
+        let d = "<b>饮食基调：高蛋白、低GI、温食、高抗氧化。</b><br>";        
+        
+        d += "1. <b>推荐主食：</b>拒绝“精制碳水”，以燕麦、黑米、荞麦、糙米、蒸山药/芡实替代白米粥面，稳定血糖波动；<br>";
+        d += "2. <b>优质蛋白：</b>每日确保1个全蛋，500ml豆浆或牛奶，摄入不少于200g瘦肉/禽类/深海鱼；<br>";
+        d += "3. <b>助孕油脂：</b>增加欧米伽-3摄入，每日1小把原味坚果（核桃、黑芝麻、南瓜子），少用调和油，加用亚麻籽油；<br>";
+        d += "4. <b>果蔬摄入：</b>每日500g深色蔬菜（西兰花、菠菜、紫甘蓝），水果选浆果类（蓝莓、草莓）或苹果，避开热性高糖水果；<br>";
+        
+        d += "5. <b>烹饪方式：</b>禁止生冷、寒凉及外卖塑料盒加热食。推崇“蒸、煮、焖”，减少油炸和高温煎烤产生的糖毒素（AGEs）；<br>";
+        
+        if(isPcos || currentBmi >= 24) {
+            d += "<br><span style='color:var(--accent)'>★ <b>PCOS/减重专项：</b></span>推崇“先菜后肉再主食”的进餐顺序。彻底戒断奶茶、甜品及深加工零食，增加膳食纤维以辅助改善胰岛素抵抗。";
+        }
+        
+        if(isEndo) {
+            d += "<br><span style='color:var(--accent)'>★ <b>内膜/血流专项：</b></span>建议每日晚间温水泡脚20分钟；饮食中增加活血温养食材，如当归生姜羊肉汤（经后服用）及红甜菜根汁。";
+        }
+
+        if(age >= 3 || isEgg) {
+            d += "<br><span style='color:var(--accent)'>★ <b>高龄/卵质强化：</b></span>增加富含抗氧化剂的食物，如西红柿（熟食）、紫薯、葡萄籽提取物相关食材，保护卵母细胞线粒体。";
+        }
+        
+        if(isTube) {
+            d += "<br><span style='color:var(--accent)'>★ <b>炎症缓解：</b></span>严禁辛辣刺激及烟酒。增加发酵食品（如无糖酸奶）摄入，辅助改善盆腔微生态环境。";
+        }
+        
+        document.getElementById('dietTxt').innerHTML = d;
+    }
+
+    async function exportImg() {
+        const btn = document.getElementById('capBtn');
+        const report = document.getElementById('report');
+        btn.style.display = 'none';
+        try {
+            const canvas = await html2canvas(report, { 
+                scale: 2, 
+                backgroundColor: "#f0f2f5",
+                useCORS: true
+            });
+            const link = document.createElement('a');
+            link.download = `ADSMed个体化调养方案_${new Date().getTime()}.png`;
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+        } catch(e) {
+            alert("生成图片失败，请检查浏览器权限。");
+        } finally {
+            btn.style.display = 'block';
+        }
+    }
+
+    window.onload = run;
+</script>
+
+</body>
+</html>
