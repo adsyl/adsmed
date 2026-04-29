@@ -14,6 +14,8 @@ summaryLength = 70
 # 禁用对列表页（如文章列表页）标题的复数化处理
 pluralizelisttitles = false
 
+enableRobotsTXT = ture
+
 [services]
     # 配置 Disqus 评论服务
     [services.disqus]
@@ -318,7 +320,7 @@ pluralizelisttitles = false
     contact_form_ajax = false
 
 
-    enableRobotsTXT = false
+    
     enableRecaptchaInContactForm = false
     googleRecaptchaKey = "site_key_for_google_recaptcha"
 
