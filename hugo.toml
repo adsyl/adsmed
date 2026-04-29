@@ -14,7 +14,7 @@ summaryLength = 70
 # 禁用对列表页（如文章列表页）标题的复数化处理
 pluralizelisttitles = false
 
-enableRobotsTXT = ture
+enableRobotsTXT = false
 
 [services]
     # 配置 Disqus 评论服务
