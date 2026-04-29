@@ -1,4 +1,4 @@
-baseurl = "https://adsmed.org/" 
+baseurl = "https://www.adsmed.org/" 
 # Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
 title = "爱得生三代试管中心"
 theme = 'universal'
@@ -317,6 +317,8 @@ pluralizelisttitles = false
     formspree_action = "https://formspree.io/sample/of/endpoint"
     contact_form_ajax = false
 
+
+    enableRobotsTXT = false
     enableRecaptchaInContactForm = false
     googleRecaptchaKey = "site_key_for_google_recaptcha"
 
@@ -352,8 +354,8 @@ pluralizelisttitles = false
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
-    categories = true    #侧边栏中显示一个列表，列出你网站上的所有文章分类
-    tags = true              #侧边栏中显示一个列表，列出你网站上的所有文章标签
+    categories = true      #侧边栏中显示一个列表，列出你网站上的所有文章分类
+    tags = true            #侧边栏中显示一个列表，列出你网站上的所有文章标签
     search = true          #侧边栏中显示一个搜索框，让用户可以搜索网站内容。
 
 #用于配置网站上的**客户轮播图（carousel）**功能的参数组
@@ -385,7 +387,7 @@ pluralizelisttitles = false
     cols = 3 # Default: 3, Available values 2,3,4,6
     # All features are defined in their own files. You can find example items at 'exampleSite/data/features'
 
-
+#配置网站**客户评价（testimonials）**区块的显示内容。
 [params.testimonials]
     enable = true
     # All testimonials are defined in their own files. You can find example items at 'exampleSite/data/testimonials'
@@ -393,6 +395,7 @@ pluralizelisttitles = false
     title = "推荐"
     subtitle = "我们与许多客户合作过，我们总是希望听到他们从合作中得到快乐和满意。看看我们的客户对我们的评价。"
 
+#配置网站**更多（see_more）**区块的显示内容。
 [params.see_more]
     enable = true
     icon = "far fa-file"
@@ -401,6 +404,7 @@ pluralizelisttitles = false
     link_url = "/service/tools/"
     link_text = "点击到其他主页"
 
+#配置网站**最新消息（recent_posts）**区块的显示内容。
 [params.recent_posts]
     enable = true
     title = "最新消息"
@@ -419,3 +423,8 @@ pluralizelisttitles = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
