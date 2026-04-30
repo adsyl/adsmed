@@ -17,8 +17,10 @@
 {{ hugo.Generator }}
 
 <!-- Bootstrap and Font Awesome CSS -->
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="preload" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/css/all.min.css"></noscript>
 <!-- 引入动画效果的 CSS 文件，提供动画支持-->
 <link href="{{ "css/animate.css" | relURL }}" rel="stylesheet">
 
@@ -77,4 +79,3 @@
   {{ with .PublishDate }}<meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
   {{ with .Lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
 {{ end }}
-
