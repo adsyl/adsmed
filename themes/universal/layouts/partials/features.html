@@ -1,68 +1,65 @@
-{{/* 检查 features 功能是否启用 */}}
+{{/* 检查 features 功能是否启用及数据是否存在 */}}
 {{ if and (isset .Site.Params "features") (.Site.Params.features.enable) }}
 {{ if isset .Site.Data "features" }}
-{{ if gt (len .Site.Data.features) 0 }}
+{{ $features := sort .Site.Data.features "weight" }}
+{{ if gt (len $features) 0 }}
+
 <section class="bar background-white">
     <div class="container">
-        {{/* 从 config.toml 获取每行显示的列数，默认为3列 */}}
+        {{/* 配置：获取列数并计算 BootStrap 列宽 */}}
         {{ $cols := default 3 .Site.Params.features.cols }}
-        {{ $features := sort .Site.Data.features "weight" }}
-
-        {{/* 使用 .RelPermalink 访问当前页面的 URL，防止路径错误 */}}
-        {{ $pageURL := .RelPermalink }}
-
-        {{/* 核心优化：使用单层循环，简化逻辑。
-        每次循环都创建一个新行，直到列数达到设定值。
-        这比双重循环更直观，更易于理解。 */}}
+        {{ $colWidth := div 12 $cols }}
         {{ $currentCol := 0 }}
-        {{ range $i, $feature := $features }}
-            {{/* 每次列数归零时（或第一次循环时），创建一个新行 */}}
+
+        {{ range $features }}
+            {{/* 当计数器为 0 时，开启新行 */}}
             {{ if eq $currentCol 0 }}
             <div class="row">
             {{ end }}
 
-            {{/* 计算每个元素的列宽，例如 12 / 3 = 4 */}}
-            <div class="col-md-{{ div 12 $cols }}">
+            <div class="col-md-{{ $colWidth }}">
                 <div class="box-simple">
-                    {{/* 使用 with 语句检查 URL 是否存在，并包裹链接 */}}
-                    {{ with $feature.url }}
-                    <a href="{{ . | safeURL }}" title="{{ $feature.name | markdownify }}">
+                    {{/* 图标渲染 */}}
+                    {{ with .icon }}
+                    <div class="icon">
+                        <i class="{{ . | safeHTML }}"></i>
+                    </div>
                     {{ end }}
-                        {{/* 检查图标字段是否存在，并使用 safeHTML 渲染，以支持 Font Awesome 等 */}}
-                        <div class="icon">
-                            {{ with $feature.icon }}
-                            <i class="{{ . | safeHTML }}"></i>
-                            {{ end }}
-                        </div>
-                    {{ if $feature.url }}
-                    </a>
+
+                    {{/* 标题与链接逻辑 */}}
+                    {{ with .url }}
+                    <a href="{{ . | safeURL }}" title="{{ $.name | default "" | markdownify }}">
                     {{ end }}
+                        {{ with .name }}
+                        <h3>{{ . | markdownify }}</h3>
+                        {{ end }}
+                    {{ if .url }}</a>{{ end }}
                     
-                    {{/* 使用 with 检查 name 和 description 是否存在，并渲染 */}}
-                    {{ with $feature.name }}
-                    <h3>{{ . | markdownify }}</h3>
-                    {{ end }}
-                    {{ with $feature.description }}
+                    {{/* 描述渲染 */}}
+                    {{ with .description }}
                     <p>{{ . | markdownify }}</p>
                     {{ end }}
                 </div>
             </div>
 
-            {{/* 增加列数计数器，并检查是否需要结束当前行 */}}
+            {{/* 增加计数器 */}}
             {{ $currentCol = add $currentCol 1 }}
+            
+            {{/* 当列满时，闭合行并重置计数器 */}}
             {{ if eq $currentCol $cols }}
             </div>
             {{ $currentCol = 0 }}
             {{ end }}
         {{ end }}
 
-        {{/* 确保如果循环结束时最后一行未满，也正确闭合 div */}}
+        {{/* 防错逻辑：如果最后一行未满列数，强制闭合 div */}}
         {{ if ne $currentCol 0 }}
         </div>
         {{ end }}
 
     </div>
 </section>
+
 {{ end }}
 {{ end }}
 {{ end }}

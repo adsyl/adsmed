@@ -2,10 +2,8 @@ baseurl = "https://www.adsmed.org/"
 # Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
 title = "爱得生三代试管中心"
 theme = 'universal'
-#themesDir = "../.."
 resourceDir = "../resources"
 languageCode = "zh-cn"
-# Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "zh"
 
 # 定义自动生成文章摘要时的字数，这里是 70 个单词
@@ -14,7 +12,17 @@ summaryLength = 70
 # 禁用对列表页（如文章列表页）标题的复数化处理
 pluralizelisttitles = false
 
-enableRobotsTXT = false
+enableRobotsTXT = true
+
+[imaging]
+    resampleFilter = "Lanczos"
+    quality = 85
+    anchor = "smart"
+
+[minify]
+    disableHTML = false
+    disableJS = false
+    disableCSS = false
 
 [services]
     # 配置 Disqus 评论服务
@@ -302,6 +310,9 @@ enableRobotsTXT = false
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "pink"
 
+    # Format dates with Go's time formatting
+    date_format = "2006/02/01"
+
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
     # email. Visitors can send up to a 50 emails each month for free.
@@ -317,21 +328,17 @@ enableRobotsTXT = false
     #
     # Enable the contact form by entering your Formspree.io endpoint url
     formspree_action = "https://formspree.io/sample/of/endpoint"
-    contact_form_ajax = false
-
-
-    
+    contact_form_ajax = false  
     enableRecaptchaInContactForm = false
     googleRecaptchaKey = "site_key_for_google_recaptcha"
 
-    about_us = "<p>一家专业的三代试管服务商，专注于用心服务，以口碑赢得未来.</p>"
+    about_us = "<p>一家专业的三代试管服务商.</p>"
     copyright = "Copyright (c) 2015 - 2026, 爱得生医疗; All Rights Reserved."
 
-    # Format dates with Go's time formatting
-    date_format = "2006/02/01"
+
    
 
-  dropdown_mouse_over = false  #false网站下拉菜单通过点击来展开，true通过鼠标悬停。
+    dropdown_mouse_over = false  #false网站下拉菜单通过点击来展开，true通过鼠标悬停。
 
     disabled_logo = false
     logo_text = "爱得生医疗"
@@ -393,9 +400,8 @@ enableRobotsTXT = false
 [params.testimonials]
     enable = true
     # All testimonials are defined in their own files. You can find example items at 'exampleSite/data/testimonials'
-    # For more information take a look at the README.
     title = "推荐"
-    subtitle = "我们与许多客户合作过，我们总是希望听到他们从合作中得到快乐和满意。看看我们的客户对我们的评价。"
+    subtitle = "相信口碑的力量，客户选择我们并达成心愿是我们不断前进的动力"
 
 #配置网站**更多（see_more）**区块的显示内容。
 [params.see_more]

@@ -32,22 +32,21 @@
                                 {{ end }}
                             </div>
                             <div class="bottom">
-                                <div class="icon"><i class="fas fa-quote-left"></i>
-                                </div>
-                                <div class="name-picture">
-                                    {{ with .avatar }}
-                                    {{ $image := resources.Get . }}
-                                    {{ with $image }}
-                                    {{ $resizedImage := .Fill "90x90" }}
-                                    <img class="img-responsive" src="{{ $resizedImage.RelPermalink }}"
-                                         {{/* 在 alt 属性中使用局部变量 $item_name */}}
-                                         alt="{{ with $item_name }}{{ . }}{{ else }}Testimonial Avatar{{ end }}">
-                                    {{ else }}
-                                    <img class="" src="{{ . | relURL }}"
-                                         {{/* 在 alt 属性中使用局部变量 $item_name */}}
-                                         alt="{{ with $item_name }}{{ . }}{{ else }}Testimonial Avatar{{ end }}">
+                              <div class="icon"><i class="fas fa-quote-left"></i></div>
+                              <div class="name-picture">
+                                {{ with .avatar }}
+                                {{/* 注意：这里尝试在 assets 目录中获取图片 */}}
+                                {{ $image := resources.Get . }}
+                                  {{ if $image }}
+                                    {{/* 如果找到图片，使用优化后的尺寸 */}} 
+                                    {{ $resized := $image.Fill "105x104" }}
+                                    <img class="img-responsive" src="{{ $resized.RelPermalink }}" alt="{{ with $item_name }}{{ . }}{{ else }}Testimonial Avatar{{ end }}">
+                                  {{ else }}
+                                    {{/* 如果没找到，发出警告（仅在开发时看到），或加载静态原图（以防页面破裂） */}}
+                                    {{ warnf "图片未找到，请检查路径: %s" . }}
+                                    <img class="img-responsive" src="{{ . | relURL }}" alt="{{ with $item_name }}{{ . }}{{ else }}Testimonial Avatar{{ end }}">
                                     {{ end }}
-                                    {{ end }}
+                                 {{ end }}
                                     {{ with .name }}
                                     <h5>{{ . }}</h5>
                                     {{ end }}
