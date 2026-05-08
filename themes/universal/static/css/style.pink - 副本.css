@@ -1,13 +1,13 @@
 /* Themed colors */
 :root {
-  --primary-accent: #955251;
-  --navbar-border-top: #532e2d;
-  --button-border: #6d3c3b;
-  --link-focus: #633736;
-  --form-shadow: rgba(149, 82, 81, 0.6);
-  --pagination-bg: #d2adad;
-  --link-hover-bg: #74403f;
-  --navbar-focus: #c08c8c;
+  --primary-accent: #c27baa;
+  --navbar-border-top: #934478;
+  --button-border: #af518f;
+  --link-focus: #a44c87;
+  --form-shadow: rgba(194, 123, 170, 0.6);
+  --pagination-bg: #f2e4ed;
+  --link-hover-bg: #b25894;
+  --navbar-focus: #e2c1d7;
 }
 
 .clearfix:before,
@@ -1770,7 +1770,7 @@ fieldset[disabled] .btn-template-primary.active {
   padding: 60px 0;
 }
 .bar.background-pentagon {
-  background: url('../img/texture-bw.png') center center repeat;
+  background: url('../img/texture-bw.webp') center center repeat;
   border-top: solid 1px #999999;
   border-bottom: solid 1px #999999;
 }
@@ -2624,9 +2624,9 @@ fieldset[disabled] .btn-template-primary.active {
 #copyright {
   background: #333;
   color: #ccc;
-  padding: 20px 0;
-  font-size: 15px;
-  line-height: 20px;
+  padding: 50px 0;
+  font-size: 12px;
+  line-height: 28px;
 }
 #copyright p {
   margin: 0;
@@ -3099,7 +3099,7 @@ fieldset[disabled] .btn-template-primary.active {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #555555;
-  background-color: var(--navbar-focus);
+  background-color: var(--navbar-focus)
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,

@@ -8,12 +8,27 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/authors/ads/</loc>
-    <lastmod>2026-05-06T13:47:08+02:00</lastmod>
+    <lastmod>2026-05-07T13:47:08+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/authors/</loc>
-    <lastmod>2026-05-06T13:47:08+02:00</lastmod>
+    <lastmod>2026-05-07T13:47:08+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/product/</loc>
+    <lastmod>2026-05-07T13:47:08+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-05-07T13:47:08+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/product/advanced/</loc>
+    <lastmod>2026-05-07T13:47:08+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -23,11 +38,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-05-06T13:47:08+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2026-05-06T13:47:08+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -352,11 +362,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/product/</loc>
-    <lastmod>2025-08-24T13:47:08+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/blog/special_offers/</loc>
     <lastmod>2025-08-24T13:47:08+02:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -449,10 +454,6 @@
   </url><url>
     <loc>http://localhost:1313/blog/01%E8%AF%95%E7%AE%A1%E6%B5%81%E7%A8%8B%E4%BB%8B%E7%BB%8D/</loc>
     <lastmod>2023-11-09T21:36:22+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/product/advanced/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
