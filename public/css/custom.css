@@ -1,27 +1,171 @@
+.box-image-text .image {
+  min-height: 190px;
+  max-height: 190px;
+}
+
+.box-image-text .image img {
+  max-height: 190px;
+  margin: auto;
+}
+
+.box-simple {
+  min-height: 230px;
+}
+
+
+.fixed-sidebar-wrapper {
+    position: fixed !important;
+    top: 50% !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
+    z-index: 10000 !important;
+
+    /* 物理空间彻底归零，防止任何布局引擎捕捉到它 */
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    
+    /* 关键：防止外边距塌陷影响他人 */
+    float: left !important; 
+    overflow: visible !important; 
+    
+    /* 关键：消除可能存在的行高间隙 */
+    line-height: 0 !important;
+    font-size: 0 !important;
+}
+
+/* 恢复内部容器的正常属性 */
+.sidebar-content-box {
+    position: absolute !important;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+    width: 60px;
+    background: #fff;
+    line-height: normal !important;
+    font-size: 14px !important;
+}
+
+/* 3. 每一个图标项目的统一样式：确保对齐 */
+.sidebar-item {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-accent);
+    position: relative; /* 为弹窗提供定位基准 */
+    border-bottom: 1px solid #eee;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-item:last-child {
+    border-bottom: none;
+}
+
+/* 4. 修复弹窗：使用绝对定位脱离文档流，不影响下方图标位置 */
+.phone-number-box,
+.wechat-qr-code {
+    display: none; 
+    position: absolute;
+    right: 60px; /* 弹出在侧边栏左侧 */
+    top: 0;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    z-index: 10000;
+}
+
+/* 电话弹窗特殊修正 */
+.phone-number-box {
+    white-space: nowrap; /* 保证号码不换行 */
+    line-height: 1.5;
+    top: 50%;
+    transform: translateY(-50%); /* 垂直居中于图标 */
+}
+
+/* 5. 悬停显示逻辑 */
+.phone-item:hover .phone-number-box,
+.wechat-item:hover .wechat-qr-code {
+    display: block !important;
+}
+
+/* 6. 二维码大小强制限制 */
+.wechat-qr-code img {
+    width: 150px !important;
+    height: 180px !important;
+    display: block;
+}
+
+/* --- 移动端适配开始 --- */
+@media (max-width: 767px) {
+    /* 1. 调整位置：从右边中间移到右下角，避免遮挡屏幕中心 */
+    .fixed-sidebar-wrapper {
+        top: auto !important;
+        bottom: 200px !important; /* 留出底部导航或翻页器的空间 */
+        right: 10px !important;  /* 稍微离开边缘，防止误触 */
+        transform: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+    /* 2. 缩小图标尺寸，更适合触屏 */
+    .sidebar-content-box {
+        width: 45px !important; /* 缩小整体宽度 */
+        border-radius: 5px !important; /* 四角圆角，看起来更像悬浮按钮 */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important;
+    }
+
+    .sidebar-item {
+        width: 45px !important;
+        height: 45px !important;
+        line-height: 45px !important;
+        font-size: 18px !important; /* 稍微缩小图标大小 */
+    }
+
+
+
+    /* 4. 优化拨号体验：确保点击图标直接触发系统拨号 */
+    .phone-item a {
+        display: flex !important;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 移动端隐藏电话号码弹窗（因为点击已触发拨号） */
+    .phone-number-box {
+        display: none !important;
+    }
+
+    /* 5. 确保“回到顶部”在手机端足够醒目 */
+    .back-to-top {
+        background-color: var(--primary-accent) !important;
+        color: #fff !important;
+        border-bottom: none !important;
+        border-radius: 0 0 5px 5px !important;
+    }
+}
+/* --- 移动端适配结束 --- */
+
+
+
+
 #copyright {
-  padding: 20px 0;
-  font-size: 15px;
+    margin: 0 !important;
+    padding: 15px 0 !important; /* 强制锁定上下内边距 */
+    min-height: 0 !important;   /* 撤销主题可能有的最小高度 */
+    overflow: hidden !important; /* 强制闭合 BFC，防止外边距穿透 */
+    display: block !important;
 }
 
-/* 优化 FontAwesome 字体加载 */
-@font-face {
-  font-family: 'Font Awesome 5 Brands';
-  font-display: swap;
-  src: url('https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/webfonts/fa-brands-400.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/webfonts/fa-regular-400.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url('https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/webfonts/fa-solid-900.woff2') format('woff2');
+#copyright p {
+    margin: 0 !important; /* 确保文字段落不带下边距 */
 }

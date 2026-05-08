@@ -1,0 +1,43 @@
+/* 1. 强制侧边栏脱离文档流，悬浮在屏幕右侧中间 */
+.fixed-sidebar-wrapper {
+    display: block !important;
+    position: fixed !important;
+    top: 50% !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
+    z-index: 999999 !important; /* 极高层级，防止被首页轮播图挡住 */
+}
+
+/* 2. 强制限制二维码大小，防止它撑开页面 */
+.wechat-qr-code {
+    display: none; 
+    position: absolute;
+    right: 60px; /* 弹出位置在图标左侧 */
+    top: -50px;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.wechat-qr-code img {
+    width: 140px !important; /* 强制锁定宽度 */
+    height: 140px !important; /* 强制锁定高度 */
+    max-width: none !important; /* 覆盖 Bootstrap 的 img-responsive */
+}
+
+/* 3. 悬停交互逻辑 */
+.wechat-item:hover .wechat-qr-code {
+    display: block !important;
+}
+
+/* 4. 解决图标消失或错位 */
+.sidebar-item {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
